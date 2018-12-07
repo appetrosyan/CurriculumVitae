@@ -1,0 +1,294 @@
+\documentclass{article}
+\usepackage{titling}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[super]{nth}
+\usepackage{listings}
+
+\addtolength{\oddsidemargin}{-1.275in}
+\addtolength{\evensidemargin}{-1.365in}
+\addtolength{\textwidth}{2.45in}
+\addtolength{\topmargin}{-1.0in}
+\addtolength{\textheight}{1.3in}
+
+\titleformat{\section}
+{\Large\scshape\filcenter}
+{\thesection}
+{1em}
+{\hrule}
+
+\newcommand{\email}[1]
+{
+  \href{mailto:#1} {\textsc{#1}}
+}
+
+\newcommand{\phone}[3]
+{
+  \href{tel:#1#2#3}{+#1--#2--\num{#3}}
+}
+
+\newcommand{\address}[5]
+{
+  #1,
+  #2,
+  
+  \texttt{#3}~\emph{#4}, \textsc{#5}
+}
+
+\newcommand{\bipart}[2]
+{
+  \noindent
+  \begin{minipage}[h]{0.06\textwidth}
+    #1
+  \end{minipage}
+  \vrule \hspace{0.15in}
+  \begin{minipage}[h]{0.85\textwidth}
+    #2
+  \end{minipage}
+  \vspace{0.15in}
+  \normalsize
+}
+
+\newcommand{\project}[4]
+{
+  \bipart{\textbf{#2}}
+  { \large
+    ``\textsc{#1}''
+    
+    \normalsize
+    #4
+    
+    
+    \footnotesize
+    \hfill \href{http://#3}{\textsf{#3}}}
+}
+
+
+\newcommand{\education}[6]
+{
+  \bipart{\textbf{#2} \textbf{#1} }
+  {\large \textsc{#3}  \normalsize \hfill \textbf{#4}
+
+    \textbf{#5}
+    \vspace{0.07in}
+
+    \normalsize
+    #6}
+}
+
+
+\newcommand{\coverletter}
+{
+  Sample Coverletter. You should sell yourself as a capable young rascal. To change this, please \lstinline{$x^2 + y^2 = r^2$}
+}
+
+\newcommand{\job}[5]
+{
+  \bipart{\textbf{#2} \textbf{#1}}
+  {\large \textsc{#3} \normalsize \hfill \textbf{#4}
+
+    \vspace{0.07in}
+    #5
+
+    \hfill
+    \begin{minipage}[h]{0.85\textwidth}
+      
+    \end{minipage}
+
+  }
+}
+
+\newcommand{\award}[3]{
+  \bipart{\textbf{#1}}
+  {\large \textsc{#2} \normalsize \hfill \textbf{#3}}
+}
+
+
+
+\renewcommand{\maketitle}{
+  \begin{minipage}[t]{.95\textwidth}
+    \Huge  \textsc{\theauthor}
+  \end{minipage}
+  \vspace{0.1in}
+  \hrule
+  \begin{minipage}[t]{0.6\textwidth}
+    \vspace{0.1in}
+    \begin{center}
+      \textbf{About me}
+    \end{center}
+    \small
+    \coverletter
+  \end{minipage}
+  \hspace{0.03\textwidth}
+  \vrule
+  \hspace{0.03\textwidth}
+  \begin{minipage}[t]{.33\textwidth}
+    \vspace{0.1in}
+    \begin{center}
+      \textbf{Contact info.}
+    \end{center}
+    \footnotesize
+    \email{appetrosyan@icloud.com}
+    
+    \phone{44}{7864}{647998}
+
+    \phone{374}{96}{240350}
+
+    \address{Dro~st.~\nth{4} bld.}{apt.52}{0069} {Yerevan}{Armenia}
+  \end{minipage}
+  \normalsize
+}
+
+% Begin Personal Data. 
+
+\renewcommand{\coverletter} {\par I'm a Physics Graduate from the University of Cambridge. I've done a significant amount of Free and Open Source coding for various projects, as I'm proficient in various imperative, and declarative programming languages. I've been a project manager more than once, and have a knack for novel ideas. }
+
+
+\author{Aleksandr Petrosyan}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Work Experience}
+
+\job{}{2018}
+{Cambridge University Computer Lab}
+{Software Development Intern}
+{Design and development of a lightweight graph processing framework, utilising parallelism, on HPC capable Numa machines. Unit testing, debugging of Ligra. }
+
+\job{2017}{2018}
+{KDE}
+{Qt Quick developer}
+{Development of KDE kube email client. Bug Fixing, QA, implementation of the \texttt{imap} back-end. }
+
+\job{2013}{2015}
+{Masterlagebra.org}
+{Backend Developer}
+{Design and implementation of linear Algebra problems. Writing problem generators and solution checkers. Debugging a \texttt{Drupal}-based website. }
+
+\job{}{2018}
+{SkyEng}
+{Tutor}
+{Online tutoring of upper-intermediate to proficiency students in the English Language. Preparing students for international exams like the IELTS, TOEFL and CAE.}
+
+\section*{Education}
+
+\education{2015}{2018}
+{University of Cambridge}
+{BA}{Physical Natural Sciences Tripos}
+{Received the Cambridge Trust scholarship. Formal training in Functional Programming and OOP.\@ Took optional courses in Theoretical Physics. \nth{1} class in Research Review on the topic of ``Charge Fractionalisation in Poly-acetylene''.}
+
+\education{2013}{2015}
+{Russian---Armenian (Slavonic) University}
+{BA}{Electronics and Nano---electronics}
+{Top of my class. \textbf{GPA} \textbf{3.86} Received governmental ``excellence'' scholarship for outstanding academic performance. Discontinued, in favour of Cambridge University.}
+
+\education{2009}{2013}
+{Phys-Math School after A.~Shaghinyan}{Attestate}{General Education}
+{Top of my class. Participated in various Olympiads, received the ``Benhur Pakhchanian'' Scholarship for outstanding academic achievement. }
+
+\section*{Projects}
+
+\project{ADynamicSP}
+{2018}
+{gitlab.com/DynamicSP/ADynamicSP/tree/master}
+{A \texttt{Ligra}/\texttt{Ligra}+ based Shortest path problem solver for dynamic networks. }
+
+\project{KDE Kube}
+{2016}
+{github.com/KDE/kube}
+{A \texttt{Qt}-based email client working with \texttt{Akonadi-next}. My work related to the \texttt{imap}/\texttt{smtp} connectivity. }
+
+\project{Geary}
+{2015}
+{github.com/GNOME/geary}
+{A \texttt{Vala}/\texttt{GTK} based simple email client, conforming to the \texttt{Gnome} \emph{Human Interface Design} guidelines.}
+
+\project{libinput--gestures}
+{2016}
+{github.com/bulletmark/libinput-gestures}
+{A Framework to process and bind three+ finger multi-touch gestures under GNU/Linux. }
+
+\project{org-wild-notifier.el}
+{2017}
+{github.com/appetrosyan/org-wild-notifier.el/blob/master/org-wild-notifier.el}
+{A fork of \texttt{wild-notifier.el}. Produces a random desktop-native notification for incomplete tasks from \texttt{todo.org}. }
+
+
+
+\section*{Skills}
+\setlist{nosep}
+
+\begin{multicols}{4}
+  
+  \begin{itemize}[topsep=0pt]
+    \setlength{\itemsep}{-0.3em}
+  \item Version Control
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item Git
+    \item Gerrit
+    \item SVN
+    \end{itemize}
+  \item Scientific computation
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item Numpy
+    \item MatLab/Octave
+    \item Spigot
+    \item GraphViz
+    \item Cython
+    \end{itemize}
+  \item High Performance computing
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item NUMA
+    \item CILK
+    \item Clang/OpenMP
+    \end{itemize}
+  \item OOP
+  \item Functional Programming
+  \item Test-driven development 
+  \item Programming languages
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item C/C++ (17)
+    \item Java
+    \item Haskell
+    \item Standard ML
+    \item Python
+    \item Bash
+    \item Lisp
+    \end{itemize}
+  \item OS Proficiency
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item Linux
+    \item Windows
+    \item BSD
+    \item Mac OS X
+    \end{itemize}
+    \item XCode (+swift)
+    \item \LaTeX{}
+  \end{itemize}
+  
+\end{multicols}
+
+\section*{Awards}
+
+\award{2013}{\nth{44} International Physics Olympiad}{Bronze Medal}
+
+\award{2013}{\nth{9} International Zhautykov Olympiad}{Bronze Medal}
+
+\award{2012}{\nth{43} International Physics Olympiad}{Honourable Mention}
+
+\section*{References}
+
+
+
+\end{document}
+
