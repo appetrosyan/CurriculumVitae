@@ -1,0 +1,21 @@
+#+Title: A C.V. Template for LaTeX
+* Motivation
+
+  I have seen a couple of cases when people have generated their C.V's using LaTeX. I have found that althought this is a common occurrence, nobody has actually standardised an approach. So I decided to step in and do my part. 
+* How it works. 
+
+  As of now, this is just a .cls file that defines a few standard functions. The appearance is fixed but I plan to implement more options later. 
+* How to use it. 
+
+  Put the Curriculumvitae.cls into the root of a folder, and use 
+
+  =\documentclass{Curriculumvitae}=
+
+  in your .tex file. 
+
+  My =resume.tex= should serve as an example. You are free to add sections and more types of fields using the =\bipart= macro. 
+* Planned features. 
+
+- More than one layout. 
+- Options to control the overall appearance. 
+- Scripts to auto-generate a C.V. based on a job tag. 

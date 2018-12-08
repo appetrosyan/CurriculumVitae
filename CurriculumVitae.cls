@@ -140,3 +140,22 @@
   \end{minipage}
   \normalsize
 }
+
+\makeatletter
+\newcounter{pagecount}
+\newcommand{\limitpages}[1]{
+    \setcounter{pagecount}{0}%
+    \gdef\maxpages{#1}%
+    \ifx\latex@outputpage\@undefined\relax%
+        \global\let\latex@outputpage\@outputpage%
+    \fi%
+    \gdef\@outputpage{%
+        \addtocounter{pagecount}{1}%
+        \ifnum\value{pagecount}>\maxpages\relax%
+            % Do not output the page
+        \else%
+            \latex@outputpage%
+        \fi%
+    }%
+}
+\makeatother

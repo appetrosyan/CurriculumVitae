@@ -3,10 +3,16 @@
 \usepackage{enumitem}
 \usepackage[super]{nth}
 
+
+% Override this to blank if you don't want to have a coverletter. 
 \renewcommand{\coverletter} {\par I'm a Physics Graduate from the University of Cambridge. I've done a significant amount of Free and Open Source coding for various projects, as I'm proficient in various imperative, and declarative programming languages. I've been a project manager more than once, and have a knack for novel ideas. }
 
 \author{Aleksandr Petrosyan}
 \date{\today}
+
+
+\limitpages{2}
+% A C.V. should generally fit on a single double-sided page.
 
 \begin{document}
 \maketitle
@@ -114,7 +120,7 @@
   \item Programming languages
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item C/C++(17)
+    \item C/C++ (17)
     \item Java
     \item Haskell
     \item Standard ML
