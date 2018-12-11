@@ -1,14 +1,38 @@
-\documentclass{CurriculumVitae}
+\documentclass{CurriculumVitae}[10pt, draft]
 \usepackage{multicol}
 \usepackage{enumitem}
 \usepackage[super]{nth}
 
 
-% Override this to blank if you don't want to have a coverletter. 
-\renewcommand{\coverletter} {\par I'm a Physics Graduate from the University of Cambridge. I've done a significant amount of Free and Open Source coding for various projects, as I'm proficient in various imperative, and declarative programming languages. I've been a project manager more than once, and have a knack for novel ideas. }
+% Override this to blank if you don't want to have a coverletter.
+\renewcommand{\coverletter} {\par I'm a Physics Graduate from the
+  University of Cambridge. I've done a significant amount of Free and
+  Open Source coding for various projects, as I'm proficient in
+  various imperative, and declarative programming languages. I've been
+  a project manager more than once, and have a knack for novel
+  ideas. }
 
-\author{Aleksandr Petrosyan}
-\date{\today}
+\author{Aleksandr Petrosyan} \date{\today}
+
+\renewcommand{\myhomephone}
+{
+  \phone{374}{96}{240350}
+}
+
+\renewcommand{\mymobilephone}
+{
+  \phone{44}{7864}{647998}
+}
+
+\renewcommand{\myhomeaddress}
+{
+  \address{Dro~st.~\nth{4} bld.}{apt.52}{0069} {Yerevan}{Armenia}
+}
+
+\renewcommand{\myemail}
+{
+  \email{appetrosyan@icloud.com}
+}
 
 
 \limitpages{2}
@@ -19,68 +43,66 @@
 
 \section*{Work Experience}
 
-\job{}{2018}
-{Cambridge University Computer Lab}
-{Software Development Intern}
-{Design and development of a lightweight graph processing framework, utilising parallelism, on HPC capable Numa machines. Unit testing, debugging of Ligra. }
+\job{}{2018} {Cambridge University Computer Lab} {Software Development
+  Intern} {Design and development of a lightweight graph processing
+  framework, utilising parallelism, on HPC capable Numa machines. Unit
+  testing, debugging of Ligra. }
 
-\job{2017}{2018}
-{KDE}
-{Qt Quick developer}
-{Development of KDE kube email client. Bug Fixing, QA, implementation of the \texttt{imap} back-end. }
+\job{2017}{2018} {KDE} {Qt Quick developer} {Development of KDE Kube
+  email client. Bug Fixing, QA, implementation of the \term{imap}
+  back-end. }
 
-\job{2013}{2015}
-{Masterlagebra.org}
-{Backend Developer}
-{Design and implementation of linear Algebra problems. Writing problem generators and solution checkers. Debugging a \texttt{Drupal}-based website. }
+\job{2013}{2015} {Masterlagebra.org} {Backend Developer} {Design and
+  implementation of linear Algebra problem generators and checkers.
+  Maintaining a \term{Drupal}-based web-service. }
 
-\job{}{2018}
-{SkyEng}
-{Tutor}
-{Online tutoring of upper-intermediate to proficiency students in the English Language. Preparing students for international exams like the IELTS, TOEFL and CAE.}
+\job{}{2018} {SkyEng} {Tutor} {Online tutoring of upper-intermediate
+  to proficiency students in the English Language. Preparing students
+  for international exams like the \examtype{ielts,} \examtype{toefl}
+  and \examtype{cae.}}
 
 \section*{Education}
 
-\education{2015}{2018}
-{University of Cambridge}
-{BA}{Physical Natural Sciences Tripos}
-{Received the Cambridge Trust scholarship. Formal training in Functional Programming and OOP.\@ Took optional courses in Theoretical Physics. \nth{1} class in Research Review on the topic of ``Charge Fractionalisation in Poly-acetylene''.}
+\education{2015}{2018} {University of Cambridge} {BA}{Physical Natural
+  Sciences Tripos} {Received the Cambridge Trust scholarship. Formal
+  training in Functional Programming and OOP.\@ Took optional courses
+  in Theoretical Physics. \nth{1} class in Research Review on the
+  topic of ``Charge Fractionalisation in Poly-acetylene''.}
 
-\education{2013}{2015}
-{Russian---Armenian (Slavonic) University}
-{BA}{Electronics and Nano---electronics}
-{Top of my class. \textbf{GPA} \textbf{3.86} Received governmental ``excellence'' scholarship for outstanding academic performance. Discontinued, in favour of Cambridge University.}
+\education{2013}{2015} {Russian---Armenian (Slavonic) University}
+{BA}{Electronics and Nano---electronics} {Top of my class. \textbf{GPA}
+  \textbf{3.86} Received governmental ``excellence'' scholarship for
+  outstanding academic performance. Discontinued, in favour of
+  Cambridge University.}
 
-\education{2009}{2013}
-{Phys-Math School after A.~Shaghinyan}{Attestate}{General Education}
-{Top of my class. Participated in various Olympiads, received the ``Benhur Pakhchanian'' Scholarship for outstanding academic achievement. }
+\education{2009}{2013} {Phys-Math School after
+  A.~Shaghinyan}{Attestate}{General Education} {Top of my
+  class. Participated in various Olympiads, received the ``Benhur
+  Pakhchanian'' Scholarship for outstanding academic achievement. }
 
 \section*{Projects}
 
-\project{ADynamicSP}
-{2018}
-{gitlab.com/DynamicSP/ADynamicSP/tree/master}
-{A \texttt{Ligra}/\texttt{Ligra}+ based Shortest path problem solver for dynamic networks. }
+\project{ADynamicSP} {2018}
+{gitlab.com/DynamicSP/ADynamicSP/tree/master} {A
+  \term{Ligra}/\term{Ligra}+ based Shortest path problem solver
+  for dynamic networks. }
 
-\project{KDE Kube}
-{2016}
-{github.com/KDE/kube}
-{A \texttt{Qt}-based email client working with \texttt{Akonadi-next}. My work related to the \texttt{imap}/\texttt{smtp} connectivity. }
+\project{KDE Kube} {2016} {github.com/KDE/kube} {A \term{Qt}-based
+  email client working with \term{Akonadi-next}. My work related to
+  the \term{imap}/\term{smtp} connectivity. }
 
-\project{Geary}
-{2015}
-{github.com/GNOME/geary}
-{A \texttt{Vala}/\texttt{GTK} based simple email client, conforming to the \texttt{Gnome} \emph{Human Interface Design} guidelines.}
+\project{Geary} {2015} {github.com/GNOME/geary} {A
+  \term{Vala}/\term{GTK} based simple email client, conforming to
+  the \term{Gnome} \emph{Human Interface Design} guidelines.}
 
-\project{libinput--gestures}
-{2016}
-{github.com/bulletmark/libinput-gestures}
-{A Framework to process and bind three+ finger multi-touch gestures under GNU/Linux. }
+\project{LibInput--Gestures} {2016}
+{github.com/bulletmark/libinput-gestures} {A Framework to process and
+  bind three+ finger multi-touch gestures under GNU/Linux. }
 
-\project{org-wild-notifier.el}
-{2017}
+\project{Org-Wild-Notifier.el} {2017}
 {github.com/appetrosyan/org-wild-notifier.el/blob/master/org-wild-notifier.el}
-{A fork of \texttt{wild-notifier.el}. Produces a random desktop-native notification for incomplete tasks from \texttt{todo.org}. }
+{A fork of \term{wild-notifier.el}. Produces a random desktop-native
+  notification for incomplete tasks from \term{todo.org}. }
 
 
 
@@ -116,7 +138,7 @@
     \end{itemize}
   \item OOP
   \item Functional Programming
-  \item Test-driven development 
+  \item Test-driven development
   \item Programming languages
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
@@ -136,8 +158,8 @@
     \item BSD
     \item Mac OS X
     \end{itemize}
-    \item XCode (+swift)
-    \item \LaTeX{}
+  \item XCode (+swift)
+  \item \LaTeX{}
   \end{itemize}
   
 \end{multicols}
@@ -148,7 +170,8 @@
 
 \award{2013}{\nth{9} International Zhautykov Olympiad}{Bronze Medal}
 
-\award{2012}{\nth{43} International Physics Olympiad}{Honourable Mention}
+\award{2012}{\nth{43} International Physics Olympiad}{Honourable
+  Mention}
 
 \section*{References}
 

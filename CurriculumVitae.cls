@@ -1,11 +1,78 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{CurriculumVitae}[2018/12/08]
+
+%% Passing options through to articles
+\DeclareOption{10pt}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{11pt}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{12pt}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{a4paper}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{a5paper}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{b5paper}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{letterpaper}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{legalpaper}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{executivepaper}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{landscape}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{draft}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\DeclareOption{titlepage}
+{
+  \PassOptionsToClass{\CurrentOption}{article}
+}
+
+\ProcessOptions\relax
 \LoadClass{article}
 \RequirePackage{titling}
 \RequirePackage{hyperref}
 \RequirePackage{siunitx}
 \RequirePackage{titlesec}
 \RequirePackage{listings}
+
+\lstset{%
+  basicstyle=\ttfamily,
+}
 
 \addtolength{\oddsidemargin}{-1.275in}
 \addtolength{\evensidemargin}{-1.365in}
@@ -21,20 +88,20 @@
 
 \newcommand{\email}[1]
 {
-  \href{mailto:#1} {\textsc{#1}}
+  \href{mailto:#1}{\textsc{#1}}%
 }
 
 \newcommand{\phone}[3]
 {
-  \href{tel:#1#2#3}{+#1--#2--\num{#3}}
+  \href{tel:#1#2#3}{+#1--#2--\num{#3}}%
 }
 
-\newcommand{\address}[5]
-{
-  #1,
-  #2,
+\newcommand{\address}[5]%
+{%
+  #1,%
+  #2,%
   
-  \texttt{#3}~\emph{#4}, \textsc{#5}
+  \texttt{#3}~\emph{#4}, \textsc{#5}%
 }
 
 \newcommand{\bipart}[2]
@@ -63,6 +130,7 @@
     
     \footnotesize
     \hfill \href{http://#3}{\textsf{#3}}}
+  \normalsize
 }
 
 
@@ -105,6 +173,24 @@
   {\large \textsc{#2} \normalsize \hfill \textbf{#3}}
 }
 
+\newcommand{\myhomephone}{}
+\newcommand{\mymobilephone}{}
+\newcommand{\myhomeaddress}{}
+\newcommand{\myworkaddress}{}
+\newcommand{\myemail}{}
+\newcommand{\aboutme}{About me}
+\newcommand{\contactme}{Contact info.}
+
+\newcommand{\examtype}[1]%
+{%
+  \emph{{\textsc {#1}}}%
+}%
+
+\newcommand{\term}[1]%
+{%
+  \lstinline{#1}%
+}%
+    
 
 
 \renewcommand{\maketitle}{
@@ -116,7 +202,7 @@
   \begin{minipage}[t]{0.6\textwidth}
     \vspace{0.1in}
     \begin{center}
-      \textbf{About me}
+      \textbf{\aboutme}
     \end{center}
     \small
     \coverletter
@@ -127,21 +213,23 @@
   \begin{minipage}[t]{.33\textwidth}
     \vspace{0.1in}
     \begin{center}
-      \textbf{Contact info.}
+      \textbf{\contactme}
     \end{center}
     \footnotesize
-    \email{appetrosyan@icloud.com}
+    \myemail
     
-    \phone{44}{7864}{647998}
+    \mymobilephone
 
-    \phone{374}{96}{240350}
+    \myhomephone
 
-    \address{Dro~st.~\nth{4} bld.}{apt.52}{0069} {Yerevan}{Armenia}
+    \myhomeaddress
+
+    \myworkaddress
+    
   \end{minipage}
   \normalsize
 }
 
-\makeatletter
 \newcounter{pagecount}
 \newcommand{\limitpages}[1]{
     \setcounter{pagecount}{0}%
@@ -158,4 +246,3 @@
         \fi%
     }%
 }
-\makeatother
