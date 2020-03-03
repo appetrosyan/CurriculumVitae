@@ -1,5 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{CurriculumVitae}[2018/12/08]
+\RequirePackage{pgfornament}
+\PassOptionsToPackage{svgnames}{xcolor}
 
 %% Passing options through to articles
 \DeclareOption{10pt}
@@ -62,6 +64,39 @@
   \PassOptionsToClass{\CurrentOption}{article}
 }
 
+\newcommand{\vseparator}{
+{%
+    \centering
+      \pgfornament[height=0.03in, opacity=0.2]{86}%
+    
+  }%  
+}
+
+
+\newcommand{\job}[5]{
+  {\large \textsc{#3}  (\textbf {#1 -- #2}) \normalsize} \hfill \textbf{#4}
+  
+  \vspace{0.03in}
+  #5
+  \vspace{0.13in}
+}
+
+% \providecommand{\job}[5]
+% {
+%   \bipart{\textbf{#2} \textbf{#1}}
+%   {\large \textsc{#3} \normalsize \hfill \textbf{#4}
+
+%     \vspace{0.07in}
+%     #5
+
+%     \hfill
+%     \begin{minipage}[h]{0.85\textwidth}
+      
+%     \end{minipage}
+
+%   }
+% }
+
 \ProcessOptions\relax
 \LoadClass{article}
 \RequirePackage{titling}
@@ -80,11 +115,13 @@
 \addtolength{\topmargin}{-1.0in}
 \addtolength{\textheight}{1.3in}
 
+\newcommand{\sectionline}[2]{%
+ \pgfornament[color = #1]{#2}
+}
+
 \titleformat{\section}
 {\Large\scshape\filcenter}
-{\thesection}
-{1em}
-{\hrule}
+{\thesection}{0.0em}{}[\sectionline{black}{89}]
 
 \newcommand{\email}[1]
 {
@@ -98,8 +135,8 @@
 
 \newcommand{\address}[5]%
 {%
-  #1,%
-  #2,%
+  #1,
+  #2,
   
   \texttt{#3}~\emph{#4}, \textsc{#5}%
 }
@@ -120,30 +157,40 @@
 
 \newcommand{\project}[4]
 {
-  \bipart{\textbf{#2}}
+  {\setlength{\parindent}{0in}
+  % \bipart{\textbf{#2}}
   { \large
-    ``\textsc{#1}''
-    
-    \normalsize
-    #4
-    
-    
+    \textsc{#1}
     \footnotesize
     \hfill \href{http://#3}{\textsf{#3}}}
+  \hrule
+    \nopagebreak
+    \vspace{0.04in}
+    \footnotesize
+    #4
+    \vspace{0.07in}
+    
+    
   \normalsize
+  }
 }
 
 
 \newcommand{\education}[6]
 {
-  \bipart{\textbf{#2} \textbf{#1} }
-  {\large \textsc{#3}  \normalsize \hfill \textbf{#4}
+  % \bipart{\textbf{#2} \textbf{#1} }
+  {\setlength{\parindent}{0in}
+    
+  {\large \textsc{#3} (\textbf{#1 -- #2})  \normalsize \hfill \textbf{#4}
 
     \textbf{#5}
     \vspace{0.07in}
 
     \normalsize
+    
     #6}
+}
+\vspace{0.21in}
 }
 
 
@@ -152,21 +199,7 @@
   Sample Coverletter. You should sell yourself as a capable young rascal. To change this, please \lstinline{$x^2 + y^2 = r^2$}
 }
 
-\newcommand{\job}[5]
-{
-  \bipart{\textbf{#2} \textbf{#1}}
-  {\large \textsc{#3} \normalsize \hfill \textbf{#4}
 
-    \vspace{0.07in}
-    #5
-
-    \hfill
-    \begin{minipage}[h]{0.85\textwidth}
-      
-    \end{minipage}
-
-  }
-}
 
 \newcommand{\award}[3]{
   \bipart{\textbf{#1}}
@@ -194,16 +227,19 @@
 
 
 \renewcommand{\maketitle}{
+  {\setlength{\parindent}{0in}
   \begin{minipage}[t]{.95\textwidth}
     \Huge  \textsc{\theauthor}
   \end{minipage}
   \vspace{0.1in}
   \hrule
-  \begin{minipage}[t]{0.6\textwidth}
+  \begin{minipage}[t]{0.65\textwidth}
     \vspace{0.1in}
-    \begin{center}
-      \textbf{\aboutme}
-    \end{center}
+    % \begin{center}
+      
+        \textbf{\aboutme}
+        
+    % \end{center}
     \small
     \coverletter
   \end{minipage}
@@ -228,6 +264,7 @@
     
   \end{minipage}
   \normalsize
+  }
 }
 
 \newcounter{pagecount}
@@ -246,3 +283,5 @@
         \fi%
     }%
 }
+
+\pagenumbering{gobble}

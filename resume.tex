@@ -1,32 +1,44 @@
-\documentclass{CurriculumVitae}[10pt, draft]
+\documentclass{CurriculumVitae}[10pt, draft, condensed]
 \usepackage{multicol}
 \usepackage{enumitem}
+
+
 \usepackage[super]{nth}
 
 
 % Override this to blank if you don't want to have a coverletter.
-\renewcommand{\coverletter} {\par I'm a Physics Graduate from the
-  University of Cambridge. I've done a significant amount of Free and
-  Open Source coding for various projects, as I'm proficient in
-  various imperative, and declarative programming languages. I've been
-  a project manager more than once, and have a knack for novel
-  ideas. }
+\renewcommand{\coverletter} {
+
+  I'm a master's degree student in Physics, on the final year,
+  graduating in July 2020. I've been programming as a freelancer for a
+  very long time, and I'm looking for a more permanent position as a
+  graduate software engineer.  I have hands-on experience of coding
+  for commercial OpenSource projects and of working in an academic
+  research team. I'm a team player with extensive leadership
+  experience, but also able to work independently with great gusto and
+  effect. }
 
 \author{Aleksandr Petrosyan} \date{\today}
 
-\renewcommand{\myhomephone}
-{
-  \phone{374}{96}{240350}
-}
+% \renewcommand{\myhomephone}
+% {
+%   \phone{374}{96}{240350}
+% }
+
 
 \renewcommand{\mymobilephone}
 {
   \phone{44}{7864}{647998}
 }
 
+% \renewcommand{\myhomeaddress}
+% {
+%   \address{Dro~st.~\nth{4} bld.}{apt.52}{0069} {Yerevan}{Armenia}
+% }
+
 \renewcommand{\myhomeaddress}
 {
-  \address{Dro~st.~\nth{4} bld.}{apt.52}{0069} {Yerevan}{Armenia}
+  \address{Queens' College}{Silver st.} {CB3 9ET}{Cambridge}{United Kingdom}
 }
 
 \renewcommand{\myemail}
@@ -41,42 +53,61 @@
 \begin{document}
 \maketitle
 
-\section*{Work Experience}
 
-\job{}{2018} {Cambridge University Computer Lab} {Software Development
+\newcommand{\eachpageornament}[1]{%
+  \begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north west, xshift=0.2in, yshift=-0.2in] at (current page.north west){%
+    \pgfornament[width=2cm]{#1}};
+  \node[anchor=north east, xshift=-0.2in, yshift=-0.2in] at (current page.north east){%
+    \pgfornament[width=2cm,symmetry=v]{#1}};
+  \node[anchor=south west, xshift=0.2in, yshift=0.2in] at (current page.south west){%
+    \pgfornament[width=2cm,symmetry=h]{#1}};
+  \node[anchor=south east, xshift=-0.2in, yshift=0.2in] at (current page.south east){%
+    \pgfornament[width=2cm,symmetry=c]{#1}};
+ \end{tikzpicture}
+ }
+
+ \eachpageornament{41}
+\section*{Work Experience}
+{\setlength{\parindent}{0in}
+\job{Jul 2018}{Oct 2018} {Cambridge University Computer Lab} {Software Development
   Intern} {Design and development of a lightweight graph processing
   framework, utilising parallelism, on HPC capable Numa machines. Unit
   testing, debugging of Ligra. }
 
-\job{2017}{2018} {KDE} {Qt Quick developer} {Development of KDE Kube
+
+\job{Feb 2016}{Oct 2018} {KDE} {Qt Quick developer} {Development of KDE Kube
   email client. Bug Fixing, QA, implementation of the \term{imap}
   back-end. }
 
-\job{2013}{2015} {Masterlagebra.org} {Backend Developer} {Design and
+
+\job{Jan 2013}{May 2015} {Masterlagebra.org} {Backend Developer} {Design and
   implementation of linear Algebra problem generators and checkers.
   Maintaining a \term{Drupal}-based web-service. }
 
-\job{}{2018} {SkyEng} {Tutor} {Online tutoring of upper-intermediate
+
+\job{Oct 2018}{present} {SkyEng} {Tutor/Mathematical Corrector} {Online tutoring of upper-intermediate
   to proficiency students in the English Language. Preparing students
   for international exams like the \examtype{ielts,} \examtype{toefl}
   and \examtype{cae.}}
 
+}
 \section*{Education}
 
-\education{2015}{2018} {University of Cambridge} {BA}{Physical Natural
+\education{2015}{2018} {University of Cambridge} {BA 2.i}{Physical Natural
   Sciences Tripos} {Received the Cambridge Trust scholarship. Formal
   training in Functional Programming and OOP.\@ Took optional courses
   in Theoretical Physics. \nth{1} class in Research Review on the
   topic of ``Charge Fractionalisation in Poly-acetylene''.}
 
 \education{2013}{2015} {Russian---Armenian (Slavonic) University}
-{BA}{Electronics and Nano---electronics} {Top of my class. \textbf{GPA}
+{BA 1}{Electronics and Nano---electronics} {Top of my class. \textbf{GPA}
   \textbf{3.86} Received governmental ``excellence'' scholarship for
   outstanding academic performance. Discontinued, in favour of
   Cambridge University.}
 
 \education{2009}{2013} {Phys-Math School after
-  A.~Shaghinyan}{Attestate}{General Education} {Top of my
+  A.~Shaghinyan}{Attestate 1}{General Education} {Top of my
   class. Participated in various Olympiads, received the ``Benhur
   Pakhchanian'' Scholarship for outstanding academic achievement. }
 
@@ -84,7 +115,7 @@
 
 \project{qDoList} {2019}
 {https://github.com/appetrosyan/qDoList}{A To-Do
-  list manager based off of QML and Kirigami. 
+  list manager based off of QML and Kirigami.}
 
 \project{ADynamicSP} {2018}
 {gitlab.com/DynamicSP/ADynamicSP/tree/master} {A
@@ -110,60 +141,60 @@
 
 
 
-\section*{Skills}
+\section*{Skills and Technologies}
 \setlist{nosep}
 
 \begin{multicols}{4}
   
   \begin{itemize}[topsep=0pt]
     \setlength{\itemsep}{-0.3em}
-  \item Version Control
+  \item {\footnotesize Version Control}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item Git
-    \item Gerrit
-    \item SVN
+    \item \term{Git}
+    \item \term{Gerrit}
+    \item \term{SVN}
     \end{itemize}
-  \item Scientific computation
+  \item {\footnotesize Scientific computation}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item Numpy
-    \item MatLab/Octave
-    \item Spigot
-    \item GraphViz
-    \item Cython
+    \item \term{numpy}
+    \item \term{MatLab/Octave}
+    \item \term{Spigot}
+    \item \term{GraphViz}
+    \item \term{Cython}
     \end{itemize}
-  \item High Performance computing
+  \item {\footnotesize High-Performance computing}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item NUMA
-    \item CILK
-    \item Clang/OpenMP
+    \item \term{NUMA}
+    \item \term{CILK}
+    \item \term{Clang/OpenMP}
     \end{itemize}
-  \item OOP
-  \item Functional Programming
-  \item Test-driven development
-  \item Programming languages
+  \item {\footnotesize Object-Oriented Programming}
+  \item {\footnotesize Functional Programming}
+  \item {\footnotesize Test-driven development}
+  \item {\footnotesize Programming languages}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item C/C++ (17)
-    \item Java
-    \item Haskell
-    \item Standard ML
-    \item Python
-    \item Bash
-    \item Lisp
+    \item \term{C/C++} (17)
+    \item \term{Java}
+    \item \term{Haskell}
+    \item \term{Standard ML}
+    \item \term{Python}
+    \item \term{Bash}
+    \item \term{Lisp}
     \end{itemize}
-  \item OS Proficiency
+  \item {\footnotesize OS Proficiency:}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item Linux
-    \item Windows
-    \item BSD
-    \item Mac OS X
+    \item \term{Linux (Arch)}
+    \item \term{Windows}
+    \item \term{BSD}
+    \item \term{Mac OS X}
     \end{itemize}
-  \item XCode (+swift)
-  \item \LaTeX{}
+  \item {\footnotesize XCode (+swift)}
+  \item {\footnotesize \LaTeX{}}
   \end{itemize}
   
 \end{multicols}
@@ -177,8 +208,7 @@
 \award{2012}{\nth{43} International Physics Olympiad}{Honourable
   Mention}
 
-\section*{References}
-
+\eachpageornament{41}
 
 
 \end{document}
