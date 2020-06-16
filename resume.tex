@@ -65,37 +65,49 @@
  }
 
  \eachpageornament{41}
-\section*{Work Experience}
-{\setlength{\parindent}{0in}
-\job{Jul 2018}{Oct 2018} {Cambridge University Computer Lab} {Software Development
-  Intern} {Design and development of a lightweight graph processing
-  framework, utilising parallelism, on HPC capable Numa machines. Unit
-  testing, debugging of Ligra. }
+ \section*{Work Experience} {\setlength{\parindent}{0in}
+   
+
+   \job{Jul 2018}{Oct 2018} {Cambridge University Computer Lab}
+   {Software Development Intern} {I developed a methodology for
+     creating an incremental graph traversal algorithm that uses some
+     ideas from Bellman Ford, utilises parallelism, and is
+     approximately 10 times faster than the Dijkstras' algorithm based
+     competing implementation. My Bug fixes to \term{Ligra} were
+     merged and are responsible for a 20\% reduction in memory
+     usage. }
 
 
-\job{Feb 2016}{Oct 2018} {KDE} {Qt Quick developer} {Development of KDE Kube
-  email client. Bug Fixing, QA, implementation of the \term{imap}
-  back-end. }
+   \job{Feb 2016}{Oct 2018}
+   {KDE}
+   {Qt Quick developer} {Helped develop and document the QML-based Kube email client. I handled the \term{imap} front-end }
 
 
-\job{Jan 2013}{May 2015} {Masterlagebra.org} {Backend Developer} {Design and
-  implementation of linear Algebra problem generators and checkers.
-  Maintaining a \term{Drupal}-based web-service. }
+   \job{Jan 2013}{May 2015} {Masterlagebra.org} {Backend Developer} {I
+     handled Design and implementation of linear Algebra problem
+     generators and checkers. I've created the complex number
+     and the ``straight line and the plane in 3d space'' problems and
+     checkers. }
+
+\job{Oct 2018}{Present} {SkyEng} {Senior methodologist, IELTS/FCE
+     instructor} {I'm a top paid and top rated IELTS and FCE
+     instructor, cmobining my duties with being a methodologist. I
+     held a record number of ``Gold'' students (i.e. students who have
+     stayed with me for 36+ lessons) and had the top salary in my
+     group. }
 
 
-\job{Oct 2018}{present} {SkyEng} {Tutor/Mathematical Corrector} {Online tutoring of upper-intermediate
-  to proficiency students in the English Language. Preparing students
-  for international exams like the \examtype{ielts,} \examtype{toefl}
-  and \examtype{cae.}}
 
-}
 \section*{Education}
 
-\education{2015}{2018} {University of Cambridge} {BA \nth{2}}{Physical Natural
-  Sciences Tripos} {Received the Cambridge Trust scholarship. Formal
-  training in Functional Programming and OOP.\@ Took optional courses
-  in Theoretical Physics. \nth{1} class in Research Review on the
-  topic of ``Charge Fractionalisation in Poly-acetylene''.}
+\education{2015}{2020} {University of Cambridge} {BA+Masters
+  upper-\nth{2}}{Physical Natural Sciences Tripos} {Received the
+  Cambridge Trust scholarship. Formal training in Functional
+  Programming and OOP.\@ Took optional courses in Theoretical
+  Physics. \nth{1} class in Research Review on the topic of ``Charge
+  Fractionalisation in Poly-acetylene''. Masters' thesis ``Accelerated
+  nested sampling for cosmological parameter inference'' among the top
+  10 ranking research projects in cohort. }
 
 \education{2013}{2015} {Russian---Armenian (Slavonic) University}
 {BA \nth{1}}{Electronics and Nano---electronics} {Top of my class. \textbf{GPA}
@@ -109,10 +121,18 @@
   Pakhchanian'' Scholarship for outstanding academic achievement. }
 
 \section*{Projects}
+\project{analgesic}{2020}{}{A python + QML gui frontend for \term{nestcheck} and \term{anesthetic} to fix nested sampler induced headaches.}
+
+\project{superNest}{2020}{https://gitlab.com/a-p-petrosyan/sspr}
+{A python package for including \emph{stochastic superpositional posterior repartitioning} into your nested sampler of choice.}
+
+\project{anesthetic}{2020}
+{https://github.com/appetrosyan/anesthetic}
+{A package for visualising and plotting posterior chains for nested samplers such as \term{PolyChord}.}
 
 \project{qDoList} {2019}
 {https://github.com/appetrosyan/qDoList}{A To-Do
-  list manager based off of QML and Kirigami.}
+  list manager based off of QML and \term{Kirigami}.}
 
 \project{ADynamicSP} {2018}
 {gitlab.com/DynamicSP/ADynamicSP/tree/master} {A
@@ -130,11 +150,6 @@
 \project{LibInput--Gestures} {2016}
 {github.com/bulletmark/libinput-gestures} {A Framework to process and
   bind three+ finger multi-touch gestures under GNU/Linux. }
-
-\project{Org-Wild-Notifier.el} {2017}
-{github.com/appetrosyan/org-wild-notifier.el/blob/master/org-wild-notifier.el}
-{A fork of \term{wild-notifier.el}. Produces a random desktop-native
-  notification for incomplete tasks from \term{todo.org}. }
 
 
 
@@ -160,6 +175,7 @@
     \item \term{Spigot}
     \item \term{GraphViz}
     \item \term{Cython}
+    \item \term{PyPi}
     \end{itemize}
   \item {\footnotesize High-Performance computing}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
@@ -170,14 +186,18 @@
     \end{itemize}
   \item {\footnotesize Object-Oriented Programming}
   \item {\footnotesize Functional Programming}
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item \term{Haskell}
+    \item \term{Rust}
+    \item \term{Standard ML}
+    \end{itemize}
   \item {\footnotesize Test-driven development}
   \item {\footnotesize Programming languages}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
     \item \term{C/C++} (17)
     \item \term{Java}
-    \item \term{Haskell}
-    \item \term{Standard ML}
     \item \term{Python}
     \item \term{Bash}
     \item \term{Lisp}
@@ -192,6 +212,15 @@
     \end{itemize}
   \item {\footnotesize XCode (+swift)}
   \item {\footnotesize \LaTeX{}}
+  \item {\footnotesize Interpersonal Skills}
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item society management\footnote{Former president of Cambridge Armenian Society, QEnts technical director.}
+    \item time management\footnote{I was also the QJCR computer officer, at the same time. }
+    \item negotiation
+    \item teaching
+    \item Sales\footnote{In addition to working through SkyEng, I also worked independently. }
+    \end{itemize}
   \end{itemize}
   
 \end{multicols}
@@ -205,7 +234,11 @@
 \award{2012}{\nth{43} International Physics Olympiad}{Honourable
   Mention}
 
+\award{2008}{Annual School informatics Olympiad}{top ranking}
 \eachpageornament{41}
+
+\section*{Publications}
+
 
 
 \end{document}
