@@ -4,3 +4,12 @@
 *.log
 *.out
 *.pdf 
+resume.{bbl,md,aux}
+/resume.bbl
+/resume.blg
+/resume.docx
+/resume.dvi
+/resume.fdb_latexmk
+/resume.fls
+/auto/
+/resume.md
