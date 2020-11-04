@@ -1,6 +1,8 @@
 \documentclass{CurriculumVitae}[10pt, draft, condensed]
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{abbrvnat}
 
 
 \usepackage[super]{nth}
@@ -44,7 +46,7 @@
 }
 
 
-\limitpages{2}
+\limitpages{3}
 % A C.V. should generally fit on a single double-sided page.
 
 \begin{document}
@@ -66,6 +68,7 @@
 
  \eachpageornament{41}
  \section*{Work Experience} {\setlength{\parindent}{0in}
+
    \job{Jul
      2020}{Oct 2020} {Cambridge Department of Applied MAthematics and
      Theoretical Physics} {QA intern} {Designed a neural network for
@@ -95,8 +98,6 @@
      Language. Preparing students for international exams like the
      \examtype{ielts,} \examtype{toefl} and \examtype{cae.}}
 
-}
-\section*{Education}
 
 \education{2019}{2020} {University of Cambridge} {MSci \nth{1}} {
   Physical Natural Sciences Tripos} {Took courses in Relativistic
@@ -112,11 +113,16 @@
   in Theoretical Physics. \nth{1} class in Research Review on the
   topic of ``Charge Fractionalisation in Poly-acetylene''.}
 
-\education{2013}{2015} {Russian---Armenian (Slavonic) University}
-{BA \nth{1}}{Electronics and Nano---electronics} {Top of my class. \textbf{GPA}
-  \textbf{3.86} Received governmental ``excellence'' scholarship for
-  outstanding academic performance. Discontinued, in favour of
-  Cambridge University.}
+
+\education{2013}{2015} {Russian---Armenian (Slavonic) University} {BA
+  \nth{1}}{Electronics and Nano---electronics} {Top of my
+  class. \textbf{GPA} \textbf{3.86} Received governmental
+  ``excellence'' scholarship for outstanding academic performance. My
+  course-work on ADC/DAC construction still holds the record as the
+  highest rated and most original work. After discontinuing my
+  Bachelors to study at Cambridge University I've taken part in many
+  research activities at RAU, resulting in publication quality
+  research~\cite{cu2o,measurement}}
 
 \education{2009}{2013} {Phys-Math School after
   A.~Shaghinyan}{Attestate \nth{1}}{General Education} {Top of my
@@ -124,32 +130,38 @@
   Pakhchanian'' Scholarship for outstanding academic achievement. }
 
 \section*{Projects}
+\project{analgesic}{2020}{}{A python + QML gui frontend for
+  \term{nestcheck} and \term{anesthetic} to fix nested sampler induced
+  headaches.}
 
-\project{qDoList} {2019}
-{https://github.com/appetrosyan/qDoList}{A To-Do
-  list manager based off of QML and Kirigami.}
+\project{superNest}{2020}{https://gitlab.com/a-p-petrosyan/sspr} {A
+  python package~\cite{sspr-joss} for including \emph{stochastic
+    superpositional posterior repartitioning}~\cite{sspr} into your
+  nested sampler of choice.}
+
+\project{anesthetic}{2020} {https://github.com/appetrosyan/anesthetic}
+{A package for visualising and plotting posterior chains for nested
+  samplers such as \term{PolyChord}.}
+
+\project{qDoList} {2019} {https://github.com/appetrosyan/qDoList}{A
+  To-Do list manager based off of QML and \term{Kirigami}.}
 
 \project{ADynamicSP} {2018}
 {gitlab.com/DynamicSP/ADynamicSP/tree/master} {A
-  \term{Ligra}/\term{Ligra}+ based Shortest path problem solver
-  for dynamic networks. }
+  \term{Ligra}/\term{Ligra}+ based Shortest path problem solver for
+  dynamic networks. }
 
 \project{KDE Kube} {2016} {github.com/KDE/kube} {A \term{Qt}-based
   email client working with \term{Akonadi-next}. My work related to
   the \term{imap}/\term{smtp} connectivity. }
 
 \project{Geary} {2015} {github.com/GNOME/geary} {A
-  \term{Vala}/\term{GTK} based simple email client, conforming to
-  the \term{Gnome} \emph{Human Interface Design} guidelines.}
+  \term{Vala}/\term{GTK} based simple email client, conforming to the
+  \term{Gnome} \emph{Human Interface Design} guidelines.}
 
 \project{LibInput--Gestures} {2016}
 {github.com/bulletmark/libinput-gestures} {A Framework to process and
   bind three+ finger multi-touch gestures under GNU/Linux. }
-
-\project{Org-Wild-Notifier.el} {2017}
-{github.com/appetrosyan/org-wild-notifier.el/blob/master/org-wild-notifier.el}
-{A fork of \term{wild-notifier.el}. Produces a random desktop-native
-  notification for incomplete tasks from \term{todo.org}. }
 
 
 
@@ -175,6 +187,7 @@
     \item \term{Spigot}
     \item \term{GraphViz}
     \item \term{Cython}
+    \item \term{PyPi}
     \end{itemize}
   \item {\footnotesize High-Performance computing}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
@@ -185,14 +198,18 @@
     \end{itemize}
   \item {\footnotesize Object-Oriented Programming}
   \item {\footnotesize Functional Programming}
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item \term{Haskell}
+    \item \term{Rust}
+    \item \term{Standard ML}
+    \end{itemize}
   \item {\footnotesize Test-driven development}
   \item {\footnotesize Programming languages}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
     \item \term{C/C++} (17)
     \item \term{Java}
-    \item \term{Haskell}
-    \item \term{Standard ML}
     \item \term{Python}
     \item \term{Bash}
     \item \term{Lisp}
@@ -207,11 +224,24 @@
     \end{itemize}
   \item {\footnotesize XCode (+swift)}
   \item {\footnotesize \LaTeX{}}
+  \item {\footnotesize Interpersonal Skills}
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item society management\footnote{Former president of Cambridge Armenian Society, QEnts technical director.}
+    \item time management\footnote{I was also the QJCR computer officer, at the same time. }
+    \item negotiation
+    \item teaching
+    \item Sales\footnote{In addition to working through SkyEng, I also worked independently. }
+    \end{itemize}
   \end{itemize}
   
 \end{multicols}
 
 \section*{Awards}
+\award{2015}{Russian Armenian Slavonic University}{Academic
+  Excellence}
+
+\award{2014}{Russian Armenian Slavonic University}{Best Course Work}
 
 \award{2013}{\nth{44} International Physics Olympiad}{Bronze Medal}
 
@@ -220,8 +250,10 @@
 \award{2012}{\nth{43} International Physics Olympiad}{Honourable
   Mention}
 
+\award{2008}{Annual School informatics Olympiad}{\nth{1} Place}
 \eachpageornament{41}
+
+\bibliography{bibliography}
 
 
 \end{document}
-

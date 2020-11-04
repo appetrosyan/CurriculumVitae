@@ -1,0 +1,102 @@
+#+TITLE: demo
+* What this is. 
+
+  This is a "the quick brown fox jumped over the lazy dog" of my coding ability. It shows you a compact enough slcie of the conventions I follow, the flexibility that I can show, and my familiarity with both graph theory and python 3. 
+
+* How to run it. 
+
+  #+begin_src shell
+	python3 main.py [test_case.txt]
+  #+end_src
+
+  The program should output either a string corresponding to the type of exception that was raised, or a single integer, that represents the answer to the challenge problem given the test_case. 
+
+  
+
+* Asymptotic behaviour
+
+  The program consists of three expensive computations, which we need to discuss individually.
+ 
+
+** =read_adjacency_list_graph_from_file= = \(O(n\cdot m)\)
+
+   
+   Assuming that the set and the dict have their average case asymptotic: amortised O(1), this is a straightforward read operation: \(O(n\cdot m)\) followed by creating dictionary entries from the contents, also \(O(n\cdot m)\). 
+   
+   So our complexity becomes 
+
+   \(O(n\cdot m + n\cdot(1 + (m-1)c_{set})\cdot c_{dict})\) where \(c_{set}\) and \(c_{pdict}\) is the complexity of insertions into a =set= and =dict= respectively.
+
+   In the next section we shall justify our assumption that \(c_{dict} = c_{set} = O(1)\). 
+
+*** set and dict \(O(1)\)
+
+	The internal python set and dict are implemented using open-Addressed hash tables. 
+
+	Here it's important to note the following
+	1) identical strings will never appear more than once in the first column,
+	2) The strings, in a real world application represent a person's name. The longest so far has been *'Adolph Blaine Charles David Earl Frederick Gerald Hubert Irvin John Kenneth Lloyd Martin Nero Oliver Paul Quincy Randolph Sherman Thomas Uncas Victor William Xerxes Yancy Zeus Wolfe­schlegel­stein­hausen­berger­dorff­welche­vor­altern­waren­gewissen­haft­schafers­wessen­schafe­waren­wohl­gepflege­und­sorg­faltig­keit­be­schutzen­vor­an­greifen­durch­ihr­raub­gierig­feinde­welche­vor­altern­zwolf­hundert­tausend­jah­res­voran­die­er­scheinen­von­der­erste­erde­mensch­der­raum­schiff­genacht­mit­tung­stein­und­sieben­iridium­elek­trisch­motors­ge­brauch­licht­als­sein­ur­sprung­von­kraft­ge­start­sein­lange­fahrt­hin­zwischen­stern­artig­raum­auf­der­suchen­nach­bar­schaft­der­stern­welche­ge­habt­be­wohn­bar­planeten­kreise­drehen­sich­und­wo­hin­der­neue­rasse­von­ver­stand­ig­mensch­lich­keit­konnte­fort­pflanzen­und­sicher­freuen­an­lebens­lang­lich­freude­und­ru­he­mit­nicht­ein­furcht­vor­an­greifen­vor­anderer­intelligent­ge­schopfs­von­hin­zwischen­stern­art­ig­raum Sr'* which is 989 characters.
+	3) Although the above number is large, python's hash functions were tested against random strings of length 2^12 == 4096, without degeneration to O(n) behaviour. 
+	4) The asymptotic behaviour of dict and set is governed by the number of hash collisions.
+	5) Strings have an intrinsic hash, which is assigned at random when they are initialised.
+	6) Consecutive runs of the same program yield different hashes every time. 
+
+	   So *if* a worst case exists, the case will not be reproducible, therefore while during an individual run, the behaviour of lookups /could/ get \(O(n)\), repeating the operation will yield an \(O(1)\) next run. So our assumption that dictionary lookups are amortised \(O(1)\) is justified. If not per each run of the program, then over multiple runs. 
+	   
+
+** =symmetric_subgraph= \(= O(n\cdot m)\)
+
+   Space complexity of the function is estimated by inspection to be \(O(3*n\cdot m)=O(n\cdot m)\).
+
+   Time complexity can be estimated as follows. We have two nested for loops and one lookup per iteration, after which either three or one insertion into one or two dictionaries/sets takes place. 
+   
+   As was mentioned in the previous section, insertions, lookups and updates to dictionary contents are \(O(1)\), (O(1)() for finding if the =visible_player= is in the =inverse_graph=, \(O(1)\) for inserting). Hence this entire function has complexity \(O(n\cdot m)\)
+
+** =largest_connected_subgraph_size=  \( = O(n+m)\)
+
+   This is a classical depth-first search, which in our implementation uses \(O(n+m)\) time and \(O(n+m)\) space, thereby also making it within constraints. 
+
+
+** =solve= \(O(n\cdot m + n+m)\)
+
+   Care has been taken to minimise instances of the graph in memory. One can expect that the memory complexity of this function is bounded from above by \(O(n\cdot m)\), assuming that the graphs avoid edge-cases where \(n+m >= n\cdot m\) (where the solution is trivial). 
+
+   Time complexity is also trivially bounded by the most expensive operations, \(O(n\cdot m)\).
+
+   
+   Thus the overall complexity of the program is both in space and time \(O(n\cdot m)\).
+
+* Graceful behaviour and data corruption. 
+
+  The program is able to cope with data separated by commas. All characters besides commas, and whitespace surrounding them is considered part of the word, so ``Jean Michel-Godier'' would be intepreted as a single entry, provided no commas were used to separate those words in the first column of the input. 
+
+  The input can be malformed in many ways. 
+
+  1. If the input redefines the adjacency list for one player, regardless of whether the two definitions are identical, the program stops.
+  2. if the adjacency list contains an element which does not appear in the first column, the program stops.
+  3. If the adjacency list contains an element more than once, other copies are ignored. It can be straightforwardly modified to raise an exception, if need be. 
+  4. Parsing errors are treated as 2. or 1.. At least one of the invariants will be violated if the name was parsed incorrectly twice.
+  5. All other exceptions are caught, the stack trace is printed, and the program halts. 
+
+  The above can be improved in production code in the following way. 
+
+  - Redefintion isn't necessarily a breakage, so one could relax the condition, to requiring two definitions to conflict, i.e. differ by the set of the elements present.
+  - Instead of producing an error message in the console, an exception should be properly handled. In this case, the data helpfully packaged with the exceptions can be used to analyse the data, and resume normal functioning.
+  - One should strictly be notified of multiple occurrences of the same name in the adjacency list. This should always raise an exception which should be handled by either ignoring the duplicates, or analysing the cause of the duplication.
+  - Currently everything except commas (and surrounding whitespace) is treated as part of a name. In real life, some names may be corrupted. Raising an exception in that case would also be useful.
+  - Other exceptions need to be handled individually. Since in this case we can do no more than print the stack trace, as we don't have a bigger picture, this is the best that can be done.
+
+
+* Conclusions
+
+  The code has been successfully tested on the included samples. 
+
+  The code had been proved to have amortised worst case asymptotic behaviour of \(O(n\cdot m)\) in both time and space. 
+
+  The code provides documentation for all functions in the numpy format. 
+
+  The code is supplemented with comments explaining and justifying choices where necessary. Simple pieces of code or code where the comment would simply paraphrase code into pseudocode is considered self-explanatory. 
+
+  This document is written in org mode, and can be compiled into .pdf using emacs and LaTeX. 
+
+

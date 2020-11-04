@@ -202,6 +202,7 @@
 
 
 \newcommand{\award}[3]{
+  {\setlength{\parindent}{0in}}
   \bipart{\textbf{#1}}
   {\large \textsc{#2} \normalsize \hfill \textbf{#3}}
 }
