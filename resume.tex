@@ -14,8 +14,12 @@
   High-energy physics and Cosmology. I have had a productive career
   both at the University of Cambridge, with my research projects
   producing some of the top results, as well as at the
-  Russian-Armenian Slavonic University, where I contributed to
-  several internal research papers.  }
+  Russian-Armenian Slavonic University, where I contributed to several
+  internal research papers\cite{measurement,cu2o}. I am currently
+  working on the follow up publications to my masters'
+  thesis,\cite{sspr-joss} as well as an independent collaboration for
+  deriving the Relativistially invariant Lagnevin
+  equation\cite{langev}.}
 
 \author{Aleksandr Petrosyan} \date{\today}
 
@@ -55,14 +59,15 @@
 
 \newcommand{\eachpageornament}[1]{%
   \begin{tikzpicture}[remember picture, overlay]
-  \node[anchor=north west, xshift=0.2in, yshift=-0.2in] at (current page.north west){%
-    \pgfornament[width=2cm]{#1}};
-  \node[anchor=north east, xshift=-0.2in, yshift=-0.2in] at (current page.north east){%
-    \pgfornament[width=2cm,symmetry=v]{#1}};
-  \node[anchor=south west, xshift=0.2in, yshift=0.2in] at (current page.south west){%
-    \pgfornament[width=2cm,symmetry=h]{#1}};
-  \node[anchor=south east, xshift=-0.2in, yshift=0.2in] at (current page.south east){%
-    \pgfornament[width=2cm,symmetry=c]{#1}};
+    \node[anchor=north west, xshift=0.2in, yshift=-0.2in] at (current
+    page.north west){%
+      \pgfornament[width=2cm]{#1}}; \node[anchor=north east,
+    xshift=-0.2in, yshift=-0.2in] at (current page.north east){%
+      \pgfornament[width=2cm,symmetry=v]{#1}}; \node[anchor=south
+    west, xshift=0.2in, yshift=0.2in] at (current page.south west){%
+      \pgfornament[width=2cm,symmetry=h]{#1}}; \node[anchor=south
+    east, xshift=-0.2in, yshift=0.2in] at (current page.south east){%
+      \pgfornament[width=2cm,symmetry=c]{#1}};
  \end{tikzpicture}
  }
 
@@ -70,8 +75,7 @@
  \section*{Work Experience} {\setlength{\parindent}{0in}
 
    \job{Jul
-     2020}{Oct 2020} {Cambridge Department of Applied MAthematics and
-     Theoretical Physics} {QA intern} {Designed a neural network for
+     2020}{Oct 2020} {Cambridge DAMTP} {QA intern} {Designed a neural network for
      vetting the applicability of the NHSx X-ray data for automated
      diagnosis of COVID-19. }
 
@@ -98,7 +102,7 @@
      Language. Preparing students for international exams like the
      \examtype{ielts,} \examtype{toefl} and \examtype{cae.}}
 
-
+\section*{Education}
 \education{2019}{2020} {University of Cambridge} {MSci \nth{1}} {
   Physical Natural Sciences Tripos} {Took courses in Relativistic
   Astrophysics and Cosmology as well as Quantum Field theory read by
@@ -107,11 +111,14 @@
   Parameter estimation''. My optimisations lead to an improvement of
   Nested Sampling's performance by a factor of 30. }
 
+
 \education{2015}{2018} {University of Cambridge} {BA \nth{2}}{Physical Natural
   Sciences Tripos} {Received the Cambridge Trust scholarship. Formal
   training in Functional Programming and OOP.\@ Took optional courses
   in Theoretical Physics. \nth{1} class in Research Review on the
-  topic of ``Charge Fractionalisation in Poly-acetylene''.}
+  topic of ``Charge Fractionalisation in Poly-acetylene''. Was forced to
+  intermit for a year due to mandatory millitary service in my home country of
+  Armenia. }
 
 
 \education{2013}{2015} {Russian---Armenian (Slavonic) University} {BA
@@ -129,7 +136,7 @@
   class. Participated in various Olympiads, received the ``Benhur
   Pakhchanian'' Scholarship for outstanding academic achievement. }
 
-\section*{Projects}
+\section*{Non-exhasutive list of Projects}
 \project{analgesic}{2020}{}{A python + QML gui frontend for
   \term{nestcheck} and \term{anesthetic} to fix nested sampler induced
   headaches.}
@@ -151,19 +158,13 @@
   \term{Ligra}/\term{Ligra}+ based Shortest path problem solver for
   dynamic networks. }
 
-\project{KDE Kube} {2016} {github.com/KDE/kube} {A \term{Qt}-based
-  email client working with \term{Akonadi-next}. My work related to
-  the \term{imap}/\term{smtp} connectivity. }
-
 \project{Geary} {2015} {github.com/GNOME/geary} {A
   \term{Vala}/\term{GTK} based simple email client, conforming to the
   \term{Gnome} \emph{Human Interface Design} guidelines.}
 
-\project{LibInput--Gestures} {2016}
-{github.com/bulletmark/libinput-gestures} {A Framework to process and
-  bind three+ finger multi-touch gestures under GNU/Linux. }
 
 
+}
 
 \section*{Skills and Technologies}
 \setlist{nosep}
@@ -227,11 +228,14 @@
   \item {\footnotesize Interpersonal Skills}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item society management\footnote{Former president of Cambridge Armenian Society, QEnts technical director.}
-    \item time management\footnote{I was also the QJCR computer officer, at the same time. }
+    \item society management\footnote{Former president of Cambridge
+        Armenian Society, QEnts technical director.}
+    \item time management\footnote{I was also the QJCR computer
+        officer, at the same time. }
     \item negotiation
     \item teaching
-    \item Sales\footnote{In addition to working through SkyEng, I also worked independently. }
+    \item Sales\footnote{In addition to working through SkyEng, I also
+        worked independently. }
     \end{itemize}
   \end{itemize}
   
@@ -254,6 +258,5 @@
 \eachpageornament{41}
 
 \bibliography{bibliography}
-
 
 \end{document}
