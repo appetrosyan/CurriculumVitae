@@ -1,0 +1,129 @@
+#+TITLE: Motivational Letter for a PhD application to Skoltech
+#+AUTHOR: Aleksandr Petrosyan
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper, twocolumn]
+#+OPTIONS: toc:nil
+* Introduction
+  In the informational age, we as scientists are more than ever before
+  dependent on technology. True there are those who would view this is
+  as an incursion into the traditional approaches of pen paper and
+  mind, but the world has moved on. Gone are those days, as very few
+  problems remain on a level where an individual's prowess in algebra
+  is sufficient to resolve a crisis in a field of Physics. Problems
+  like the four-colour theorem have a proof so complicated, that not
+  only is a human incapable of producing it within a lifetime, but
+  also barely able to audit the proof. Today's physicists all without
+  exception have to have knowledge of Computer science and advanced
+  computational methods. This is where my expertise would be
+  invaluable.
+* About me. 
+
+  I'm a recent graduate from the University of Cambridge. I've studied
+  in the Natural Sciences Tripos; a prestigious course that
+  encapsulates all areas of Physics, starting from Soft to Quantum
+  condensed matter Physics, and including multiple opportunities to do
+  independent research, my favourite part of the course. 
+
+  I have on multiple occasions had the pleasure of working on rather
+  complex projects which required a large degree of creativity and
+  diligence on my part. I had managed to measure the ratio \(e /
+  \hbar\) to an accuracy and precision of the order of magnitude of
+  the top result in the world: /CODATA/, earning me a high first in the
+  Experimental module. I have conducted theoretical research in
+  collaboration with many of my supervisors, most of which is due to
+  be published in September/October of this year, including research
+  into topic for which I had not been instructed in officially (our
+  course on statistical mechanics does not include non-equilibrium
+  processes at the undergraduate level). Finally, I have 7+ years of
+  programming experience, which I had repeatedly demonstrated in many
+  computational exercises, including ones from the Computer Science
+  Tripos. For example, on my first year I had single-handedly
+  implemented a /Fibonacci heap/. On my third year I designed a
+  /multi-threaded/, high performance simulation of an /Ising model
+  magnet in 2D/. 
+
+  I have a particular passion for problems that are too difficult to
+  be solved from first principles: problems like the aforementioned
+  /four-colour theorem/. As one can see from my academic record, I had
+  shown the best results when presented with a large, and difficult to
+  solve problem, and allowed room to think independently.My best work
+  was the result of countless hours spent trying to solve one big
+  problem. In particular, my most recent work, on accelerating
+  Bayesian inference, had been one of the few top scoring research
+  projects in the year. We had accomplished what several algorithms
+  could not in the past. We had managed to accelerate Nested Sampling
+  to a point where a complicated Cosmological analysis that usually
+  takes *a week on an HPC cluster* was performed on my (mediocre)
+  *home computer within two days*. Not did that not result in a loss
+  of accuracy, but my optimisation managed to improve both speed and
+  precision by two orders of magnitude.  An extension of my method
+  (which I proposed) has the potential to revolutionise model fitting
+  in cosmology and particle physics, where Bayesian inference is a key
+  method.
+
+  Because of economic factors, during my studies I had to have a
+  day-job, which in my case was academic instruction. During my brief
+  tenure as a Tutor I have supervised and instructed approximately 50
+  students, all of which had gone on to remarkable careers (in fact
+  one of my former students was in the same class as I was, because of
+  the fact that I had started studying at RAU before Cambridge). I
+  have had multiple internships, primarily on academic computational
+  projects: currently I'm working on a machine-learning-based
+  algorithm for sorting and quality checking chest X-ray images and CT
+  scans of COVID-19 patients. A year ago, I had been working on
+  /ligra/ in application to dynamical road network optimisation
+  problems, and agent-based models for the city of San Francisco. As
+  such I had managed to make =ligra= approximately ten times faster. 
+
+* How I fit into the project
+
+  As you well know, the anomalous diffusion project involves a
+  significant amount of programming, and in particular one related to
+  neural networks and machine learning, of which I'm a specialist. I
+  have on multiple occasions investigated the performance and
+  applicability of machine learning models, as well as worked on
+  optimising said models to maximum utility.
+
+  The results of my research will also need to be applied and sanity
+  checked. While co-authoring the ``Relativistic Langevin equation''
+  with Prof. A. Zaccone, I had broadened immensely my knowledge of
+  non-equilibrium processes, of which anomalous diffusion is one. I
+  will be able to identify, if my neural network mispredicts the
+  paths, and whether or not a purely image interpolation method would
+  even be valid[fn::Nvidia's DLSS actually uses a hybrid dynamical and
+  static upscaling neural network on their GPUs. ]. 
+
+  Moreover, this work is rather involved; it requires diligence,
+  discipline and unwavering enthusiasm in the face of tedium. These
+  are the qualities that I obtained at Cambridge, during the long
+  hours of exam preparation and the fast-paced practical classes. I
+  had learned how to work on a problem before it crumbles away, but
+  also to do so quickly and efficiently.
+
+  Finally, the results of all of this research to be collated and
+  written in a form suitable for academic readers all throughout the
+  world. This is where my near-native proficiency in English and
+  particular experience of report and article authoring shall be
+  invaluable. We had been writing up a lab report almost every two
+  months, which had to be a publication quality paper. I am so well
+  attuned to LaTeX that it's genuinely easier for me to write-up my CV
+  and motivation letter in it, rather than use a word processor.
+
+  For me, the particular position at Skoltech is an opportunity to
+  breach academia and begin a scientific career, by studying at a
+  world-class institution. Skolkovo is of particular interest to me,
+  as it is closer to my home, both in terms of mentality and
+  geographically. 
+
+
+  
+* Concluding remarks
+
+  I hope that I have convinced the admissions committee of my
+  qualifications, based on both my academic work, my abilities,
+  accomplishments and experience. I sincerely hope that we will have a
+  fruitful collaboration. 
+  
+  
+  
+  
