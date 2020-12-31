@@ -12,12 +12,12 @@
 \renewcommand{\coverletter} {
 
   I'm a recent MSci graduate from the University of Cambridge, with a
-  keen interest in Theoretical and computational cosmology.  I have a
-  knack for finding patterns and diligently pushing through complex
-  calculations. On several occasions I have been able to look at a
-  problem from a different point of view, and come up with elegant
-  solutions that a specialist in the field would not entertain. I also
-  a rather outgoing personality with a swath of teaching experience.
+  keen interest in Machine Learning and Data Science. I have extensive
+  experience of programming and simulation both scientific and
+  statistical. My Masters' project on Accelerated Bayesian Machine
+  Learning, was a new method of proposal injection, that allowed an
+  uplift of 30 times in performance and 100 times in accuracy. My work
+  is available as the \texttt{supernest} Python module.
 
 }
 
@@ -41,7 +41,7 @@
 
 \renewcommand{\myhomeaddress}
 {
-  \address{Dro St.}{4-th Building} {0069}{Yerevan}{Armenia}
+  \address{Dro St.}{\nth{4} Building} {0069}{Yerevan}{Armenia}
 }
 
 \renewcommand{\myemail}
@@ -73,21 +73,30 @@
 
  \eachpageornament{41}
  \section*{Work Experience} {\setlength{\parindent}{0in}
-
    \job{Jul
-     2020}{Oct 2020} {Cambridge DAMTP} {QA intern} {Designed a neural network for
-     vetting the applicability of the NHSx X-ray data for automated
-     diagnosis of COVID-19. }
+     2020}{Oct 2020} {Cambridge DAMTP} {ML QA intern} {Designed a
+     neural network for vetting the applicability of the NHSx X-ray
+     data for automated diagnosis of COVID-19, in collaboration with
+     AstraZeneca. Rather than re-using, as my supervisor suggested,
+     the features extracted by the main diagnostic network, I instead
+     used a simplified convolutional design, that allowed for a
+     simpler approach.  I had not managed to finish the work, nor to
+     present it, due to the recent Armenian Azerbaijani conflict.}
+   \job{Jul 2018}{Oct 2018} {Cambridge University Computer Lab}
+   {Software Development Intern} {Designed, and improved a dynamic
+     road network All-pairs shortest path solver, using a highly
+     paralleliseable graph traversal framework. My optimisation was
+     based on observing that in road networks there are rarely more
+     than a couple of well-known shortest paths, so instead of solving
+     the problem each time, it instead verified that the path was the
+     shortest.}
 
-   \job{Jul 2018}{Oct 2018} {Cambridge
-     University Computer Lab} {Software Development Intern} {Designed,
-     and improved a dynamic road network All-pairs shortest path
-     solver, using a highly paralleliseable graph traversal
-     framework. }
-
-   \job{Feb 2016}{Oct 2018} {KDE} {Qt Quick developer}
-   {Developed of KDE Kube email client. Created the second largest
-     amount of QA tests, helped implement the \term{imap} back-end. }
+   \job{Oct 2018}{Nov 2020} {SkyEng} {Tutor/Mathematical
+     Corrector} {Online tutoring of upper-intermediate to proficiency
+     students in the English Language. Preparing students for
+     international exams like the \examtype{ielts,} \examtype{toefl}
+     and \examtype{cae.}. Discontinued due to need to prioritise joint
+     publications.}
 
    \job{Jan 2013}{May 2015} {Masterlagebra.org} {Backend Developer}
    {Designed and implemented problems for university level automated
@@ -95,12 +104,10 @@
      numbers, Gram-Schmidt ortho-normalisation process, analytical
      geometry problems involving planes and lines in higher
      dimensions. }
+   \job{Feb 2016}{Oct 2018} {KDE} {Qt Quick developer}
+   {Developed of KDE Kube email client. Created the second largest
+     amount of QA tests, helped implement the \term{imap} back-end. }
 
-   \job{Oct 2018}{present} {SkyEng}
-   {Tutor/Mathematical Corrector} {Online tutoring of
-     upper-intermediate to proficiency students in the English
-     Language. Preparing students for international exams like the
-     \examtype{ielts,} \examtype{toefl} and \examtype{cae.}}
 
 \section*{Education}
 \education{2019}{2020} {University of Cambridge} {MSci \nth{1}} {
@@ -137,9 +144,6 @@
   Pakhchanian'' Scholarship for outstanding academic achievement. }
 
 \section*{Non-exhasutive list of Projects}
-\project{analgesic}{2020}{}{A python + QML gui frontend for
-  \term{nestcheck} and \term{anesthetic} to fix nested sampler induced
-  headaches.}
 
 \project{superNest}{2020}{https://gitlab.com/a-p-petrosyan/sspr} {A
   python package~\cite{sspr-joss} for including \emph{stochastic
@@ -161,8 +165,6 @@
 \project{Geary} {2015} {github.com/GNOME/geary} {A
   \term{Vala}/\term{GTK} based simple email client, conforming to the
   \term{Gnome} \emph{Human Interface Design} guidelines.}
-
-
 
 }
 
