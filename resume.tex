@@ -3,6 +3,28 @@
 \usepackage{enumitem}
 \usepackage[square,numbers]{natbib}
 \bibliographystyle{abbrvnat}
+\usepackage{background}
+\usepackage{pgfornament}
+\usetikzlibrary{calc}
+
+\backgroundsetup{
+scale=1,
+opacity=1,
+angle=0,
+color=black,
+contents={%
+\begin{tikzpicture}[every node/.style={inner sep=0pt}]
+\node[anchor=north west](CNW)
+at (current page.north west) {\pgfornament[width=1.75cm]{61}};
+\node[anchor=north east](CNE)
+at (current page.north east) {\pgfornament[width=1.75cm,symmetry=v]{61}};
+\node[anchor=south west](CSW)
+at (current page.south west) {\pgfornament[width=1.75cm,symmetry=h]{61}};
+\node[anchor=south east](CSE)
+at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
+\end{tikzpicture}%
+  }
+}
 
 
 \usepackage[super]{nth}
@@ -67,21 +89,21 @@
 \maketitle
 
 
-\newcommand{\eachpageornament}[1]{%
-  \begin{tikzpicture}[remember picture, overlay]%
-    \node[anchor=north west, xshift=0.2in, yshift=-0.2in] at (current%
-    page.north west){%
-      \pgfornament[width=2cm]{#1}}; \node[anchor=north east,%
-    xshift=-0.2in, yshift=-0.2in] at (current page.north east){%
-      \pgfornament[width=2cm,symmetry=v]{#1}}; \node[anchor=south%
-    west, xshift=0.2in, yshift=0.2in] at (current page.south west){%
-      \pgfornament[width=2cm,symmetry=h]{#1}}; \node[anchor=south%
-    east, xshift=-0.2in, yshift=0.2in] at (current page.south east){%
-      \pgfornament[width=2cm,symmetry=c]{#1}};%
- \end{tikzpicture}
- }
+% \newcommand{\eachpageornament}[1]{%
+%   \begin{tikzpicture}[remember picture, overlay]%
+%     \node[anchor=north west, xshift=0.2in, yshift=-0.2in] at (current%
+%     page.north west){%
+%       \pgfornament[width=2cm]{#1}}; \node[anchor=north east,%
+%     xshift=-0.2in, yshift=-0.2in] at (current page.north east){%
+%       \pgfornament[width=2cm,symmetry=v]{#1}}; \node[anchor=south%
+%     west, xshift=0.2in, yshift=0.2in] at (current page.south west){%
+%       \pgfornament[width=2cm,symmetry=h]{#1}}; \node[anchor=south%
+%     east, xshift=-0.2in, yshift=0.2in] at (current page.south east){%
+%       \pgfornament[width=2cm,symmetry=c]{#1}};%
+%  \end{tikzpicture}
+%  }
 
- \eachpageornament{41}
+ % \eachpageornament{41}
  \section*{Work Experience}
  {\setlength{\parindent}{0in}
    \job{Jul 2020}{Oct 2020} {Cambridge DAMTP} {QA intern} {Designed a neural
@@ -269,7 +291,7 @@
   Mention}
 
 \award{2008}{Annual School informatics Olympiad}{\nth{1} Place}
-\eachpageornament{41}
+% \eachpageornament{41}
 
 \bibliography{bibliography}
 
