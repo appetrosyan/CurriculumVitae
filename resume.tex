@@ -31,16 +31,16 @@
 
 \author{Aleksandr Petrosyan} \date{\today}
 
-% \renewcommand{\myhomephone}
+\renewcommand{\myhomephone}
+{%
+  \phone{374}{96}{240350}%
+}%
+
+
+% \renewcommand{\mymobilephone}
 % {
-%   \phone{374}{96}{240350}
+%   \phone{44}{7864}{647998}
 % }
-
-
-\renewcommand{\mymobilephone}
-{
-  \phone{44}{7864}{647998}
-}
 
 % \renewcommand{\myhomeaddress}
 % {
@@ -48,13 +48,13 @@
 % }
 
 \renewcommand{\myhomeaddress}
-{
-  \address{Dro St.}{4-th Building} {0069}{Yerevan}{Armenia}
-}
+{%
+  \address{Dro St.}{4-th Building} {0069}{Yerevan}{Armenia}%
+}%
 
-\renewcommand{\myemail}
-{
-  \email{appetrosyan@icloud.com}
+\renewcommand{\myemail}%
+{%
+  \email{appetrosyan@icloud.com}%
 }
 
 
@@ -66,16 +66,16 @@
 
 
 \newcommand{\eachpageornament}[1]{%
-  \begin{tikzpicture}[remember picture, overlay]
-    \node[anchor=north west, xshift=0.2in, yshift=-0.2in] at (current
+  \begin{tikzpicture}[remember picture, overlay]%
+    \node[anchor=north west, xshift=0.2in, yshift=-0.2in] at (current%
     page.north west){%
-      \pgfornament[width=2cm]{#1}}; \node[anchor=north east,
+      \pgfornament[width=2cm]{#1}}; \node[anchor=north east,%
     xshift=-0.2in, yshift=-0.2in] at (current page.north east){%
-      \pgfornament[width=2cm,symmetry=v]{#1}}; \node[anchor=south
+      \pgfornament[width=2cm,symmetry=v]{#1}}; \node[anchor=south%
     west, xshift=0.2in, yshift=0.2in] at (current page.south west){%
-      \pgfornament[width=2cm,symmetry=h]{#1}}; \node[anchor=south
+      \pgfornament[width=2cm,symmetry=h]{#1}}; \node[anchor=south%
     east, xshift=-0.2in, yshift=0.2in] at (current page.south east){%
-      \pgfornament[width=2cm,symmetry=c]{#1}};
+      \pgfornament[width=2cm,symmetry=c]{#1}};%
  \end{tikzpicture}
  }
 
@@ -169,7 +169,6 @@
 \setlist{nosep}
 
 \begin{multicols}{4}
-  
   \begin{itemize}[topsep=0pt]
     \setlength{\itemsep}{-0.3em}
   \item {\footnotesize Version Control}
