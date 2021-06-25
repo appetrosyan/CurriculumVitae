@@ -1,6 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{CurriculumVitae}[2018/12/08]
-\RequirePackage{pgfornament}
 \PassOptionsToPackage{svgnames}{xcolor}
 
 %% Passing options through to articles
