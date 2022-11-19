@@ -103,54 +103,57 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 % }
 
 %   \eachpageornament{41}
-\section*{Work Experience} {\setlength{\parindent}{0in}
+\section*{Work Experience} {%
+  \setlength{\parindent}{0in}%
 
-  \job{Sep
-    2021}{Pres.} {Soramitsu}{Tech Lead} { Architect for Iroha v2, the
-    worlds simplest and first parallel blockchain ledger written in
-    Rust.  Designed the transaction parallel processing algorithm
-    (which has no equivalents in other blockchains), Organised the
-    Iroha 2 core team to produce its first long-term support release.
-    Organised the timed-release cadence which reduced time spent on
-    coordinating with SDK developers by a factor of 10.}
+  \job{Sep 2021}{Pres.} {Soramitsu}{Tech Lead} {I am a (senior) Rust
+    software engineer, tech lead and product owner of the project.  I
+    organised and designed the processes of the timed release cadence
+    of Iroha v2. I have the highest number of commits to the project.
+    I assembled the team that is considered the best in the company,
+    and produced the first Long-term support release candidate of
+    Iroha 2\footnote{Pre-release but reliable enough for testing on
+      production systems}. I've reduced the number of known bugs to
+    zero\footnote{Excluding UI/UX issues}, designed four out of five
+    headlining features of Iroha 2 (implemented two), been a reliable
+    leader and the face of Hyperledger Iroha in all public-facing
+    events. More-less sole Maintainer of Hyperledger Ursa since July
+    2022. Nominated to the Hyperledger Technical Oversight
+    Committee. }
 
-  \job{Jul 2020}{Oct 2020} {Cambridge DAMTP} {QA intern} {Designed a neural
-    network for vetting the applicability of the NHSx X-ray data for
-    automated diagnosis of COVID-19, which was comparable in
-    precision, but required 5--6 times less processing power. }
+  \job{Oct 2020}{Sep 2021} {PolyChord} {Software
+    engineer} { Expanded upon and built the package \term{supernest},
+    which accelerates Bayesian inference by a factor of 1000. Worked
+    on Likelihood-free inference, parameter speed hierarchy ---
+    functional programming correspondence. Work was presented at the
+    MaxEnt 2022 conference in Paris (publication accepted).  }
+
+  \job{Jul 2020}{Oct 2020} {Cambridge DAMTP} {QA intern} {Designed a
+    neural network for vetting the applicability of the NHSx X-ray
+    data for automated diagnosis of COVID-19, which was comparable in
+    precision, but required 5--6 times less processing power.  }
 
   \job{Jul 2018}{Oct 2018} {Cambridge University Computer Lab}
   {Software Development Intern} {Designed, and improved a dynamic road
     network All-pairs shortest path solver, using a highly
     paralleliseable graph traversal framework, which improved
-    performance by a factor of 50. }
+    performance by a factor of 50.  }
 
   \job{Jan 2013}{May 2015}
   {Masterlagebra.org} {Backend Developer} {Designed and implemented
     problems for university level automated linear algebra training
     program. Problems were related to complex numbers, Gram-Schmidt
     ortho-normalisation process, analytical geometry problems
-    involving planes and lines in higher dimensions. }
+    involving planes and lines in higher dimensions.  }
+  \pagebreak{} \section*{Education}%
 
-  \job{Oct
-    2018}{present} {SkyEng} {Tutor/Mathematical Corrector} {Online
-    tutoring of upper-intermediate to proficiency students in the
-    English Language. Preparing students for international exams like
-    the \examtype{ielts,} \examtype{toefl} and \examtype{cae.}. I was
-    the top paid teacher in my department, showing the highest success
-    rate in achieving the desired \examtype{ielts}
-    score. }
-
-  \section*{Education}
-
-  \education{2019}{2020} {University
-    of Cambridge} {MSci \nth{1}} { Physical Natural Sciences Tripos}
-  {Took courses in Relativistic Astrophysics and Cosmology as well as
-    Quantum Field theory read by the Department of Mathematics. One of
-    the top results in my Research project on ``Accelerated Nested
-    Sampling in context of Cosmological Parameter estimation''. My
-    optimisations lead to an improvement of Nested Sampling's
-    performance by a factor of 30. }
+  \education{2019}{2020} {University of Cambridge} {MSci \nth{1}}
+  {Physical Natural Sciences Tripos} {Took courses in Relativistic
+    Astrophysics and Cosmology as well as Quantum Field theory read by
+    the Department of Mathematics. One of the top results in my
+    Research project on ``Accelerated Nested Sampling in context of
+    Cosmological Parameter estimation''. My optimisations lead to an
+    improvement of Nested Sampling's performance by a factor of 30. }
 
   \education{2015}{2018}
   {University of Cambridge} {BA \nth{2}}{Physical Natural Sciences
@@ -159,29 +162,30 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     Theoretical Physics. \nth{1} class in Research Review on the topic
     of ``Charge Fractionalisation in Poly-acetylene''. Was forced to
     intermit for a year due to mandatory millitary service in my home
-    country of Armenia. }  \education{2013}{2015} {Russian---Armenian
-    (Slavonic) University} {BA \nth{1}}{Electronics and
-    Nano---electronics} {Top of my class. \textbf{GPA} \textbf{3.86}
-    Received governmental ``excellence'' scholarship for outstanding
-    academic performance. Was second highest-ranked overall, top
-    ranked in my cohort. My course-work on ADC/DAC construction still
-    holds the record as the highest rated and most original work (99\%
-    originality). After discontinuing my Bachelors to study at
-    Cambridge University I've taken part in many research activities
-    at RAU, resulting in publication quality
-    research~\cite{cu2o,measurement}}
-
-  \education{2009}{2013} {Phys-Math School after
-    A.~Shaghinyan}{Attestate \nth{1}}{General Education} {Top of my
-    class. Participated in various Olympiads, received the ``Benhur
-    Pakhchanian'' Scholarship for outstanding academic achievement. }
+    country of Armenia. }
 
   \section*{Non-exhasutive list of Projects}%
-  %
+  % 
+  \project{Hyperledger Iroha v2.0}{2022}{https://github.com/hyperledger/iroha}
+  {A Rust rewrite of the popular blockchain ledger based on a custom
+    RISC architecture, with vector extensions and a parallel consensus
+    algorithm without sharding}
 
+  \project{Hyperledger Ursa}{2022}{https://github.com/hyperledger/ursa}{
+    The one and only cryptographic library used across hyperledger
+    projects. 
+  }
+    
+  \project{analgesic}{2021}{private}{A Rust reimplementation of
+    \term{getdist} for analysis of Bayesian inference samples, with an
+    emphasis on precision, and performance. }
 
+  \project{Rusty-nail}{2021}{https://gitlab.com/a-p-petrosyan/rusty-nail}{A
+    rewrite of Quake 1 Darkplaces engine in Rust with additional
+    Vulkan support. }
+  
   \project{paranestamol}{2020}{https://github.com/appetrosyan/paranestamol}{A
-    python + QML gui frontend for \term{nestcheck} and \term{anesthetic}
+    Rust + python + QML gui frontend for \term{nestcheck} and \term{anesthetic}
     to fix nested sampler induced headaches.}
 
   \project{superNest}{2020}{https://gitlab.com/a-p-petrosyan/sspr} {A
@@ -197,16 +201,16 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     To-Do list manager based off of QML and \term{Kirigami}.}
 
   \project{ADynamicSP} {2018}
-  {gitlab.com/DynamicSP/ADynamicSP/tree/master} {A
+  {https://gitlab.com/DynamicSP/ADynamicSP/tree/master} {A
     \term{Ligra}/\term{Ligra}+ based Shortest path problem solver for
     dynamic networks. }
 
-  \project{Geary} {2015} {github.com/GNOME/geary} {A
+  \project{Geary} {2015} {https://github.com/GNOME/geary} {A
     \term{Vala}/\term{GTK} based simple email client, conforming to the
     \term{Gnome} \emph{Human Interface Design} guidelines.}
 
-  }
-
+}
+\pagebreak{}
 \section*{Skills and Technologies}
 \setlist{nosep}
 
@@ -218,15 +222,23 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
       \setlength{\itemsep}{-0.3em}
     \item \term{Git}
     \item \term{Gerrit}
-    \item \term{SVN}
+    \item \term{Pijul}
+    \item \term{darcs}
     \end{itemize}
-  \item {\footnotesize Scientific computation}
+  \item {\footnotesize CI/CD}
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item {\footnotesize GitHub actions}
+    \item {\footnotesize GitLab CI}
+    \end{itemize}
+  \item {\footnotesize DataScience}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
     \item \term{numpy}
     \item \term{MatLab/Octave}
     \item \term{Spigot}
-    \item \term{GraphViz}
+    \item \term{Seaborn}
+    \item \term{Tensorflow}
     \item \term{Cython}
     \item \term{PyPi}
     \end{itemize}
@@ -236,16 +248,15 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     \item \term{NUMA}
     \item \term{HPC}
     \item \term{CILK}
-    \item \term{Clang}
+    \item \term{OpenMPI}
     \item \term{OpenMP}
     \end{itemize}
-  \item {\footnotesize Object-Oriented Programming}
+  \item {\footnotesize OOP}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item \term{Java}
     \item \term{C++}
-    \item \term{Objective-C}
-    \item \term{Swift}
+    \item \term{Java/Kotlin}
+    \item \term{OCaML}
     \end{itemize}
   \item {\footnotesize Functional Programming}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
@@ -253,8 +264,15 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     \item \term{Haskell}
     \item \term{Rust}
     \item \term{Standard ML}
+    \item \term{Scheme}
     \end{itemize}
-  \item {\footnotesize Test-driven development}
+  \item {\footnotesize Testing techniques}
+    \begin{itemize}[topsep=0pt, partopsep=0pt]
+      \setlength{\itemsep}{-0.3em}
+    \item {\footnotesize Property-based}
+    \item {\footnotesize Fuzzing}
+    \item {\footnotesize Functional}
+    \end{itemize}
   \item {\footnotesize Programming languages}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
@@ -262,26 +280,26 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     \item \term{Bash}
     \item \term{Elisp}
     \end{itemize}
-  \item {\footnotesize OS Proficiency:}
+  \item {\footnotesize OS container proficiency:}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item \term{Linux (NixOS)}
-    \item \term{Windows}
-    \item \term{Mac OS X}
+    \item \term{Linux}\footnote{Mainly Arch-based, but with experience
+        of deploying Alpine based containers and static linking}
+    \item \term{BSD}
+    \item \term{Mac OS X}\footnote{With low-level API knowledge for
+        mouse tracking, key-logging, SIP circumvention}
     \end{itemize}
-  \item {\footnotesize XCode (+swift)}
   \item {\footnotesize \LaTeX{}}
   \item {\footnotesize Interpersonal Skills}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item society management\footnote{Former president of Cambridge
-        Armenian Society, QEnts technical director.}
-    \item time management\footnote{I was also the QJCR computer
-        officer, at the same time. }
-    \item negotiation
+    \item society management\footnote{President of Cambridge Armenian
+        Society, Queens' Ents technical director and Queens' Junior
+        Combination Regalia Computer officer. }
+    \item negotiation\footnote{With Asian Development Bank ---
+        contract on designing a cross-border DVP system; Hyperledger
+        foundation ---  marketing Iroha 2}
     \item teaching
-    \item Sales\footnote{In addition to working through SkyEng, I also
-        worked independently. }
     \end{itemize}
   \end{itemize}
 
