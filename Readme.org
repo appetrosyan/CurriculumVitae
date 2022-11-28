@@ -1,7 +1,16 @@
 #+Title: A C.V. Template for LaTeX
+* If I sent you this link as my CV
+
+  Hello! If you only want to view this document, please go to the
+  releases tab (as you normally would). 
+
 * Motivation
 
-  I have seen a couple of cases when people have generated their C.V's using LaTeX. I have found that althought this is a common occurrence, nobody has actually standardised an approach. So I decided to step in and do my part. 
+  I have seen a couple of cases when people have generated their C.V's
+  using LaTeX. I have found that althought this is a common
+  occurrence, nobody has actually standardised an approach. So I
+  decided to step in and do my part.
+
 * How it works. 
 
   As of now, this is just a .cls file that defines a few standard functions. The appearance is fixed but I plan to implement more options later. 
@@ -13,7 +22,10 @@
 
   in your .tex file. 
 
-  My =resume.tex= should serve as an example. You are free to add sections and more types of fields using the =\bipart= macro. 
+  My =resume.tex= should serve as an example. You are free to add
+  sections and more types of fields using the =\bipart= macro.
+
+  
 * Planned features. 
 
 - More than one layout. 
