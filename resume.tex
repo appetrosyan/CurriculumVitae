@@ -1,4 +1,4 @@
-\documentclass{CurriculumVitae}[10pt, draft, condensed]
+\documentclass{CurriculumVitae}[10pt, condensed]
 \usepackage{multicol}
 \usepackage{enumitem}
 \usepackage[square,numbers]{natbib}
@@ -52,6 +52,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 
 }
 
+
 \author{Aleksandr Petrosyan} \date{\today}
 
 \renewcommand{\myhomephone}
@@ -72,7 +73,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 
 \renewcommand{\myhomeaddress}
 {%
-  \address{Dro St.}{4-th Building} {0069}{Yerevan}{Armenia}%
+  \address{Dro St.}{\nth{4} Building} {0069}{Yerevan}{Armenia}%
 }%
 
 \renewcommand{\myemail}%
@@ -80,8 +81,12 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
   \email{appetrosyan@icloud.com}%
 }
 
+\renewcommand{\myGitHub}{%
+  \href{https://github.com/appetrosyan}{github.com/appetrosyan}
+}
 
-\limitpages{3}
+
+\limitpages{4}
 % A C.V. should generally fit on a single double-sided page.
 
 \begin{document}
@@ -234,7 +239,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
   \item {\footnotesize DataScience}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item \term{numpy}
+    \item \term{numpy/pandas/bokeh}
     \item \term{MatLab/Octave}
     \item \term{Spigot}
     \item \term{Seaborn}
@@ -242,7 +247,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     \item \term{Cython}
     \item \term{PyPi}
     \end{itemize}
-  \item {\footnotesize High-Performance computing}
+  \item {\footnotesize HPC}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
       \setlength{\itemsep}{-0.3em}
     \item \term{NUMA}
@@ -250,6 +255,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     \item \term{CILK}
     \item \term{OpenMPI}
     \item \term{OpenMP}
+    \item \term{MPI}
     \end{itemize}
   \item {\footnotesize OOP}
     \begin{itemize}[topsep=0pt, partopsep=0pt]
@@ -305,6 +311,32 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 
 \end{multicols}
 
+\section*{Soft Skills}
+
+\job{2015}{2017}{Queens' College} {Technical director} {I supervised a
+  self-motivated team of volunteers to set up and dismantle
+  decorations at the Queens' College Fitzpatrick Hall, as well as
+  handle Audio visual equiment including but not limited to ROBE
+  colorspots, human sized speakers, trusses, stage hydraulics, a laser
+  projector and multiple smoke machines. 
+
+\textbf{Skills}
+\begin{itemize}
+\item Orgsanisation
+\item Team management
+\item Resourcefulness
+\item Responsibility
+\item Time management
+\end{itemize}
+
+On QErgs 2016 (which is the largest indoors rowing competition in the
+world), we had a large issue. The Ergs (devices which measured the
+sportspeople's performance) were located at the far side of
+Fitzpatrick hall, right under the projector screen and opposite the
+projector. They had to be connected to the projector via a CAT6
+shielded wire, that eventually lost signal. Instead of panicking, I
+quickly made a skype call with desktop sharing to the Wi-Fi connected
+laptop at the far side and resumed the event. }
 \section*{Awards}
 \award{2015}{Russian Armenian Slavonic University}{Academic
   Excellence}

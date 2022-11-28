@@ -53,10 +53,6 @@
   \PassOptionsToClass{\CurrentOption}{article}
 }
 
-\DeclareOption{draft}
-{
-  \PassOptionsToClass{\CurrentOption}{article}
-}
 
 \DeclareOption{titlepage}
 {
@@ -111,16 +107,21 @@
 \addtolength{\oddsidemargin}{-1.275in}
 \addtolength{\evensidemargin}{-1.365in}
 \addtolength{\textwidth}{2.45in}
-\addtolength{\topmargin}{-1.0in}
-\addtolength{\textheight}{1.3in}
+\addtolength{\topmargin}{-1.25in}
+\addtolength{\textheight}{1.75in}
+\setlength{\parindent}{0in}
+\addtolength{\baselineskip}{-0.33in}
+\addtolength{\parskip}{-0.25em}
+\addtolength{\columnsep}{-5em}
+
 
 \newcommand{\sectionline}[2]{%
- \pgfornament[color = #1]{#2}
+  % \pgfornament[color = #1]{#2}
 }
 
 \titleformat{\section}
-{\Large\scshape\filcenter}
-{\thesection}{0.0em}{}[\sectionline{black}{89}]
+{\vspace{-2em}\Large\scshape\filcenter}
+{\thesection}{0.0em}{}[\vspace{-0.5em}]
 
 \newcommand{\email}[1]
 {
@@ -211,6 +212,7 @@
 \newcommand{\myhomeaddress}{}
 \newcommand{\myworkaddress}{}
 \newcommand{\myemail}{}
+\newcommand{\myGitHub}{}
 \newcommand{\aboutme}{About me}
 \newcommand{\contactme}{Contact info.}
 
@@ -252,15 +254,17 @@
       \textbf{\contactme}
     \end{center}
     \footnotesize
-    \myemail
+    \myemail%
     
-    \mymobilephone
+    \mymobilephone%
 
-    \myhomephone
+    \myhomephone%
 
-    \myhomeaddress
+    \myhomeaddress%
 
-    \myworkaddress
+    \myworkaddress%
+
+    \myGitHub%
     
   \end{minipage}
   \normalsize
