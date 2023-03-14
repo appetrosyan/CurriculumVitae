@@ -116,12 +116,12 @@
 
 
 \newcommand{\sectionline}[2]{%
-  % \pgfornament[color = #1]{#2}
+  \pgfornament[color = #1]{#2}
 }
 
 \titleformat{\section}
 {\vspace{-2em}\Large\scshape\filcenter}
-{\thesection}{0.0em}{}[\vspace{-0.5em}]
+{\thesection}{0.0em}{}[\sectionline{black}{89}]
 
 \newcommand{\email}[1]
 {
