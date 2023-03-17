@@ -5,6 +5,7 @@
 \bibliographystyle{abbrvnat}
 \usepackage{background}
 \usepackage{pgfornament}
+\usepackage{comment}
 \usetikzlibrary{calc}
 \usepackage[super]{nth}
 
@@ -32,36 +33,30 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 % Override this to blank if you don't want to have a coverletter.
 \renewcommand{\coverletter} {
 
-  I'm a former Physicist who works as a Tech Lead at Hyperledger, a
-  subsidiary of the Linux Foundation, currently leading the
-  development and design of Hyperledger Iroha, the world's first
-  parallel blockchain ledger.  I graduated with an MSci from the
-  University of Cambridge in 2020.  I've ranked near the top in both
-  my Masters' (accelerated nested sampling\cite{cpi}), and Bachelor's
-  (charge fractionalisation in Polyacetylene\cite{charge-frac})
-  theses. I mainly focused on Quantum cryptography and quantum
-  algorithms in my later years. I'm still an active scientist, I
-  recently published two papers Relativistic Langevin equation derived
-  from a particle-bath Lagrangian\cite{langev}, as well as ongoing
-  work on \texttt{Supernest}\cite{sspr}.
-
-  I'm the de-facto product owner of Iroha~2,  
+  I'm a former Physicist\cite{langev,measurement,cpi,charge-frac,cu2o}
+  who works as a Tech Lead at Hyperledger, a subsidiary of the Linux
+  Foundation, currently leading the development and design of
+  Hyperledger Iroha, the world's first parallel blockchain ledger.
+  I'm actively involved in the design of its architecture, as such I'm
+  involved with the creation of the runtime system the permission
+  validation system of Iroha. We are designing a fully dynamic data
+  model based on WASM.
 
 }
 
 
 \author{Aleksandr Petrosyan} \date{\today}
 
+% \renewcommand{\myhomephone}
+% {%
+%   \phone{374}{96}{240350}%
+% }%
+
+
 \renewcommand{\myhomephone}
-{%
-  \phone{374}{96}{240350}%
-}%
-
-
-% \renewcommand{\mymobilephone}
-% {
-%   \phone{44}{7864}{647998}
-% }
+{
+  \phone{44}{7864}{647998}
+}
 
 % \renewcommand{\myhomeaddress}
 % {
@@ -108,28 +103,32 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 \section*{Work Experience} {%
   \setlength{\parindent}{0in}%
 
-  \job{Sep 2021}{Pres.} {Soramitsu}{Tech Lead} {I am a (senior) Rust
-    software engineer, tech lead and product owner of the project.  I
-    organised and designed the processes of the timed release cadence
-    of Iroha v2. I have the highest number of commits to the project.
-    I assembled the team that is considered the best in the company,
-    and produced the first Long-term support release candidate of
-    Iroha 2\footnote{Pre-release but reliable enough for testing on
-      production systems}. I've reduced the number of known bugs to
-    zero\footnote{Excluding UI/UX issues}, designed four out of five
-    headlining features of Iroha 2 (implemented two), been a reliable
-    leader and the face of Hyperledger Iroha in all public-facing
-    events. More-less sole Maintainer of Hyperledger Ursa since July
-    2022. Nominated to the Hyperledger Technical Oversight
-    Committee. }
+  \job{Sep 2021}{Present} {Soramitsu}{Tech Lead} {I am a senior Rust
+    software engineer, Tech Lead and product owner of Hyperledger
+    Iroha~v2.  I assembled the team that is considered the best in the
+    company, and produced the first Long-term support release
+    candidate of Iroha~v2\footnote{Pre-release but reliable enough for
+      testing on production systems}. I organised a bug triage system
+    that reduced the average lifetime of a bug in Iroha~v2 to just one
+    week. I designed our trigger system (with WASM support), our WASM
+    optimisation pipeline and smartcontract system, integrated
+    Iroha~v2 with Hyperledger Cactus, improved the throughput of
+    Iroha's consensus from 10~TPS to 30000~TPS. I was the architect of
+    the CSD/RTGS linkages PoC (done with Asian Development Bank),
+    where I also produced a 60 page report commended for an in-depth
+    analysis. I'm now working on integrating Iroha~v2 with Parity
+    Substrate and Polkaswap. As part of my work on Iroha I also
+    maintain Hyperledger Ursa, a cryptographic library with the
+    world's fastest bulletproofs. }
 
-  \job{Oct 2020}{Sep 2021} {PolyChord} {Software
-    engineer} { Expanded upon and built the package \term{supernest},
-    which accelerates Bayesian inference by a factor of 1000. Worked
-    on Likelihood-free inference, parameter speed hierarchy ---
-    functional programming correspondence. Work was presented at the
-    MaxEnt 2022 conference in Paris.  }
-  
+
+  \job{Oct 2020}{Sep 2021}
+  {PolyChord} {Software engineer} { Expanded upon and built the
+    package \term{supernest}, which accelerates Bayesian inference by
+    a factor of 1000. Worked on Likelihood-free inference, parameter
+    speed hierarchy --- functional programming correspondence. Work
+    was presented at the MaxEnt 2022 conference in Paris. Follow up
+    research to be presented at MaxEnt 2023 in Munich. }
   \job{Jul 2020}{Oct 2020} {Cambridge DAMTP} {QA intern} {Designed a
     neural network for vetting the applicability of the NHSx X-ray
     data for automated diagnosis of COVID-19, which was comparable in
@@ -147,7 +146,6 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     numbers, Gram-Schmidt ortho-normalisation process, analytical geometry
     problems involving planes and lines in higher dimensions.
   }
-
   \section*{Volunteer work} \job{2015}{2017}{Queens' College}
   {Technical director} {I supervised a self-motivated team of
     volunteers to set up and dismantle decorations at the Queens'
@@ -163,9 +161,9 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     out, the shielded wire didn't have enough range, and the race
     would have been called off.  I quickly made a skype call with
     desktop sharing to the Wi-Fi connected laptop at the far side. }
-  \pagebreak{} \section*{Education}%
+  \section*{Education}%
 
-  \education{2019}{2020} {University of Cambridge} {MSci \nth{1}}
+  \education{2019}{2020} {University of Cambridge} {MSci, \nth{1}}
   {Physical Natural Sciences Tripos} {Took courses in Relativistic
     Astrophysics and Cosmology as well as Quantum Field theory read by
     the Department of Mathematics. One of the top results in my
@@ -174,7 +172,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     improvement of Nested Sampling's performance by a factor of 30. }
 
   \education{2015}{2018}
-  {University of Cambridge} {BA \nth{2}}{Physical Natural Sciences
+  {University of Cambridge} {BA, Upper \nth{2}}{Physical Natural Sciences
     Tripos} {Received the Cambridge Trust scholarship. Formal training
     in Functional Programming and OOP.\@ Took optional courses in
     Theoretical Physics. \nth{1} class in Research Review on the topic
@@ -187,7 +185,8 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
   \project{Hyperledger Iroha v2.0}{2022}{https://github.com/hyperledger/iroha}
   {A Rust rewrite of the popular blockchain ledger based on a custom
     RISC architecture, with vector extensions and a parallel consensus
-    algorithm without sharding}
+    algorithm without sharding.
+  }
 
   \project{Hyperledger Ursa}{2022}{https://github.com/hyperledger/ursa}{
     The one and only cryptographic library used across hyperledger
@@ -209,121 +208,147 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
   \project{superNest}{2020}{https://gitlab.com/a-p-petrosyan/sspr} {A
     python package~\cite{sspr-maxent} for including \emph{stochastic
       superpositional posterior repartitioning}~\cite{sspr} into your
-    nested sampler of choice.}
+    nested sampler of choice.
+  }
 
   \project{anesthetic}{2020} {https://github.com/appetrosyan/anesthetic}
   {A package for visualising and plotting posterior chains for nested
-    samplers such as \term{PolyChord}.}
+    samplers such as \term{PolyChord}.
+  }
 
   \project{qDoList} {2019} {https://github.com/appetrosyan/qDoList}{A
-    To-Do list manager based off of QML and \term{Kirigami}.}
+    To-Do list manager based off of QML and \term{Kirigami}.
+  }
 
   \project{ADynamicSP} {2018}
   {https://gitlab.com/DynamicSP/ADynamicSP/tree/master} {A
     \term{Ligra}/\term{Ligra}+ based Shortest path problem solver for
     dynamic networks. }
-
   \project{Geary} {2015} {https://github.com/GNOME/geary} {A
     \term{Vala}/\term{GTK} based simple email client, conforming to the
     \term{Gnome} \emph{Human Interface Design} guidelines.}
 
 }
-\pagebreak{}
-\section*{Skills and Technologies}
-\setlist{nosep}
+\pagebreak
+  \section*{Skills and Technologies}
+  \setlist{nosep}
 
-\begin{multicols}{4}
-  \begin{itemize}[topsep=0pt]
-    \setlength{\itemsep}{-0.3em}
-  \item {\footnotesize Version Control}
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
+  \begin{multicols}{4}
+    \begin{itemize}[topsep=0pt]
       \setlength{\itemsep}{-0.3em}
-    \item \term{Git}
-    \item \term{Gerrit}
-    \item \term{Pijul}
-    \item \term{darcs}
+    \item {\footnotesize Version Control}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+      \item \term{Git}
+      \item \term{Gerrit}
+      \item \term{Pijul}
+      \item \term{darcs}
+      \end{itemize}
+      
+    \item {\footnotesize CI/CD}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+      \item {\footnotesize GitHub actions}
+      \item {\footnotesize GitLab CI}
+      \end{itemize}
+      
+    \item {\footnotesize Data Science}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+      \item \term{numpy/pandas/bokeh}
+      \item \term{MatLab/Octave}
+      \item \term{Spigot}
+      \item \term{Seaborn}
+      \item \term{Tensorflow}
+      \item \term{Cython}
+      \item \term{PyPi}
+      \end{itemize}
+      
+    \item {\footnotesize HPC}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+      \item \term{NUMA}
+      \item \term{HPC}
+      \item \term{CILK}
+      \item \term{OpenMPI}
+      \item \term{OpenMP}
+      \item \term{MPI}
+      \end{itemize}
+      
+    \item {\footnotesize OOP}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+      \item \term{C++}
+      \item \term{Java/Kotlin}
+      \item \term{OCaML}
+      \end{itemize}
+      
+    \item {\footnotesize Functional Programming}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+      \item \term{Haskell}
+      \item \term{Rust}
+      \item \term{Standard ML}
+      \item \term{Scheme}
+      \end{itemize}
+      
+    \item {\footnotesize Testing techniques}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+      \item {\footnotesize Property-based}
+      \item {\footnotesize Fuzzing}
+      \item {\footnotesize Functional}
+      \end{itemize}
+      
+    \item {\footnotesize Programming languages}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+      \item \term{Python}
+      \item \term{Bash}
+      \item \term{Elisp}
+      \end{itemize}
+      
+    \item {\footnotesize OS container proficiency:}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+        
+      \item \term{NixOS}
+      \item \term{Linux}\footnote{Mainly Arch-based, but with experience
+          of deploying Alpine based containers and static linking}
+      \item \term{BSD}
+      \item \term{Mac OS X}\footnote{With low-level API knowledge for
+          mouse tracking, key-logging, SIP circumvention}
+      \end{itemize}
+      
+    \item {\footnotesize \LaTeX{}}
+      
+    \item {\footnotesize Blockchain tech}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+      \item \term{WASM}
+      \item \term{WAT}
+      \item \term{Substrate}
+      \item Zero knowledge proof
+      \item Nominated Proof of Stake
+      \item Proof of space
+      \item \term{DEX}
+      \end{itemize}
+      
+    \item {\footnotesize Interpersonal Skills}
+      \begin{itemize}[topsep=0pt, partopsep=0pt]
+        \setlength{\itemsep}{-0.3em}
+      \item society management\footnote{President of Cambridge Armenian
+          Society, Queens' Ents technical director and Queens' Junior
+          Combination Regalia Computer officer. }
+      \item negotiation\footnote{With Asian Development Bank ---
+          contract on designing a cross-border DVP system; Hyperledger
+          foundation ---  marketing Iroha 2}
+      \item teaching
+      \end{itemize}
+      
     \end{itemize}
-  \item {\footnotesize CI/CD}
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
-      \setlength{\itemsep}{-0.3em}
-    \item {\footnotesize GitHub actions}
-    \item {\footnotesize GitLab CI}
-    \end{itemize}
-  \item {\footnotesize DataScience}
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
-      \setlength{\itemsep}{-0.3em}
-    \item \term{numpy/pandas/bokeh}
-    \item \term{MatLab/Octave}
-    \item \term{Spigot}
-    \item \term{Seaborn}
-    \item \term{Tensorflow}
-    \item \term{Cython}
-    \item \term{PyPi}
-    \end{itemize}
-  \item {\footnotesize HPC}
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
-      \setlength{\itemsep}{-0.3em}
-    \item \term{NUMA}
-    \item \term{HPC}
-    \item \term{CILK}
-    \item \term{OpenMPI}
-    \item \term{OpenMP}
-    \item \term{MPI}
-    \end{itemize}
-  \item {\footnotesize OOP}
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
-      \setlength{\itemsep}{-0.3em}
-    \item \term{C++}
-    \item \term{Java/Kotlin}
-    \item \term{OCaML}
-    \end{itemize}
-  \item {\footnotesize Functional Programming}
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
-      \setlength{\itemsep}{-0.3em}
-    \item \term{Haskell}
-    \item \term{Rust}
-    \item \term{Standard ML}
-    \item \term{Scheme}
-    \end{itemize}
-  \item {\footnotesize Testing techniques}
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
-      \setlength{\itemsep}{-0.3em}
-    \item {\footnotesize Property-based}
-    \item {\footnotesize Fuzzing}
-    \item {\footnotesize Functional}
-    \end{itemize}
-  \item {\footnotesize Programming languages}
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
-      \setlength{\itemsep}{-0.3em}
-    \item \term{Python}
-    \item \term{Bash}
-    \item \term{Elisp}
-    \end{itemize}
-  \item {\footnotesize OS container proficiency:}
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
-      \setlength{\itemsep}{-0.3em}
-    \item \term{Linux}\footnote{Mainly Arch-based, but with experience
-        of deploying Alpine based containers and static linking}
-    \item \term{BSD}
-    \item \term{Mac OS X}\footnote{With low-level API knowledge for
-        mouse tracking, key-logging, SIP circumvention}
-    \end{itemize}
-  \item {\footnotesize \LaTeX{}}
-  \item {\footnotesize Interpersonal Skills}
-    \begin{itemize}[topsep=0pt, partopsep=0pt]
-      \setlength{\itemsep}{-0.3em}
-    \item society management\footnote{President of Cambridge Armenian
-        Society, Queens' Ents technical director and Queens' Junior
-        Combination Regalia Computer officer. }
-    \item negotiation\footnote{With Asian Development Bank ---
-        contract on designing a cross-border DVP system; Hyperledger
-        foundation ---  marketing Iroha 2}
-    \item teaching
-    \end{itemize}
-  \end{itemize}
 
-\end{multicols}
-
+  \end{multicols}
 
 
 
