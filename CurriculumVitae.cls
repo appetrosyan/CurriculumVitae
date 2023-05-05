@@ -76,6 +76,16 @@
   \vspace{0.13in}
 }
 
+\newenvironment{skills}[1]{
+  \textsc{#1}
+    \begin{itemize}[topsep=0pt, partopsep=0pt, leftmargin=1em, itemindent=0.3em]
+      \setlength{\itemsep}{-0.3em}
+  }
+  {
+  \end{itemize}
+  \vspace{1em}
+}
+
 % \providecommand{\job}[5]
 % {
 %   \bipart{\textbf{#2} \textbf{#1}}
@@ -99,6 +109,7 @@
 \RequirePackage{siunitx}
 \RequirePackage{titlesec}
 \RequirePackage{listings}
+
 
 \lstset{%
   basicstyle=\ttfamily,
@@ -143,16 +154,16 @@
 
 \newcommand{\bipart}[2]
 {
-  \noindent
+  \noindent%
   \begin{minipage}[h]{0.06\textwidth}
     #1
-  \end{minipage}
-  \vrule \hspace{0.15in}
+  \end{minipage}%
+  \vrule \hspace{0.15in}%
   \begin{minipage}[h]{0.85\textwidth}
     #2
-  \end{minipage}
-  \vspace{0.15in}
-  \normalsize
+  \end{minipage}%
+  \vspace{0.15in}%
+  \normalsize%
 }
 
 \newcommand{\project}[4]
@@ -179,8 +190,7 @@
 \newcommand{\education}[6]
 {
   % \bipart{\textbf{#2} \textbf{#1} }
-  {\setlength{\parindent}{0in}
-    
+  {\setlength{\parindent}{0in}%
   {\large \textsc{#3} (\textbf{#1 -- #2})  \normalsize \hfill \textbf{#4}
 
     \textbf{#5}
@@ -199,12 +209,11 @@
   Sample Coverletter. You should sell yourself as a capable young rascal. To change this, please \lstinline{$x^2 + y^2 = r^2$}
 }
 
-
-
-\newcommand{\award}[3]{
-  {\setlength{\parindent}{0in}}
-  \bipart{\textbf{#1}}
-  {\large \textsc{#2} \normalsize \hfill \textbf{#3}}
+\newcommand{\award}[3]{%
+  {\setlength{\parindent}{0in}%
+    \textsc{#2} --- \textbf{#1}  \hfill \textsc{#3}%
+    \vspace{0.3em}%
+  }
 }
 
 \newcommand{\myhomephone}{}

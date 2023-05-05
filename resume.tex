@@ -34,14 +34,14 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 \renewcommand{\coverletter} {
 
   I'm a former Physicist\cite{langev,measurement,cpi,charge-frac,cu2o}
-  who works as a Tech Lead at Hyperledger, a subsidiary of the Linux
-  Foundation, currently leading the development and design of
-  Hyperledger Iroha, the world's first parallel blockchain ledger.
-  I'm actively involved in the design of its architecture, as such I'm
-  involved with the creation of the runtime system the permission
-  validation system of Iroha. We are designing a fully dynamic data
-  model based on WASM.
-
+  who works as a full-time Tech Lead at Hyperledger, a subsidiary of
+  the Linux Foundation, currently leading the development and design
+  of Hyperledger Iroha, the world's first parallel blockchain ledger.
+  I'm involved with almost every aspect of Iroha, from the development
+  of SDKs, architectural decisions of the base ledger, and
+  contributions to our dependency projects, which until recently
+  included Hyperledger Ursa. I believe that work on blockchains is
+  making the world a better place, albeit slowly.
 }
 
 
@@ -54,9 +54,9 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 
 
 \renewcommand{\myhomephone}
-{
-  \phone{44}{7864}{647998}
-}
+{%
+  \phone{44}{7864}{647998}%
+}%
 
 % \renewcommand{\myhomeaddress}
 % {
@@ -74,7 +74,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 }
 
 \renewcommand{\myGitHub}{%
-  \href{https://github.com/appetrosyan}{github.com/appetrosyan}
+  \href{https://github.com/appetrosyan}{github.com/appetrosyan}%
 }
 
 
@@ -161,6 +161,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     out, the shielded wire didn't have enough range, and the race
     would have been called off.  I quickly made a skype call with
     desktop sharing to the Wi-Fi connected laptop at the far side. }
+  \pagebreak
   \section*{Education}%
 
   \education{2019}{2020} {University of Cambridge} {MSci, \nth{1}}
@@ -180,6 +181,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     intermit for a year due to mandatory millitary service in my home
     country of Armenia. }
 
+  \vfill
   \section*{Non-exhasutive list of Projects}%
   % 
   \project{Hyperledger Iroha v2.0}{2022}{https://github.com/hyperledger/iroha}
@@ -227,132 +229,113 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
   \project{Geary} {2015} {https://github.com/GNOME/geary} {A
     \term{Vala}/\term{GTK} based simple email client, conforming to the
     \term{Gnome} \emph{Human Interface Design} guidelines.}
+  \vfill
 
 }
 \pagebreak
   \section*{Skills and Technologies}
   \setlist{nosep}
-
+  \setlength{\parindent}{0in}%
+  
   \begin{multicols}{4}
-    \begin{itemize}[topsep=0pt]
-      \setlength{\itemsep}{-0.3em}
-    \item {\footnotesize Version Control}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-      \item \term{Git}
-      \item \term{Gerrit}
-      \item \term{Pijul}
-      \item \term{darcs}
-      \end{itemize}
-      
-    \item {\footnotesize CI/CD}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-      \item {\footnotesize GitHub actions}
-      \item {\footnotesize GitLab CI}
-      \end{itemize}
-      
-    \item {\footnotesize Data Science}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-      \item \term{numpy/pandas/bokeh}
-      \item \term{MatLab/Octave}
-      \item \term{Spigot}
-      \item \term{Seaborn}
-      \item \term{Tensorflow}
-      \item \term{Cython}
-      \item \term{PyPi}
-      \end{itemize}
-      
-    \item {\footnotesize HPC}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-      \item \term{NUMA}
-      \item \term{HPC}
-      \item \term{CILK}
-      \item \term{OpenMPI}
-      \item \term{OpenMP}
-      \item \term{MPI}
-      \end{itemize}
-      
-    \item {\footnotesize OOP}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-      \item \term{C++}
-      \item \term{Java/Kotlin}
-      \item \term{OCaML}
-      \end{itemize}
-      
-    \item {\footnotesize Functional Programming}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-      \item \term{Haskell}
-      \item \term{Rust}
-      \item \term{Standard ML}
-      \item \term{Scheme}
-      \end{itemize}
-      
-    \item {\footnotesize Testing techniques}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-      \item {\footnotesize Property-based}
-      \item {\footnotesize Fuzzing}
-      \item {\footnotesize Functional}
-      \end{itemize}
-      
-    \item {\footnotesize Programming languages}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-      \item \term{Python}
-      \item \term{Bash}
-      \item \term{Elisp}
-      \end{itemize}
-      
-    \item {\footnotesize OS container proficiency:}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-        
-      \item \term{NixOS}
-      \item \term{Linux}\footnote{Mainly Arch-based, but with experience
-          of deploying Alpine based containers and static linking}
-      \item \term{BSD}
-      \item \term{Mac OS X}\footnote{With low-level API knowledge for
-          mouse tracking, key-logging, SIP circumvention}
-      \end{itemize}
-      
-    \item {\footnotesize \LaTeX{}}
-      
-    \item {\footnotesize Blockchain tech}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-      \item \term{WASM}
-      \item \term{WAT}
-      \item \term{Substrate}
-      \item Zero knowledge proof
-      \item Nominated Proof of Stake
-      \item Proof of space
-      \item \term{DEX}
-      \end{itemize}
-      
-    \item {\footnotesize Interpersonal Skills}
-      \begin{itemize}[topsep=0pt, partopsep=0pt]
-        \setlength{\itemsep}{-0.3em}
-      \item society management\footnote{President of Cambridge Armenian
-          Society, Queens' Ents technical director and Queens' Junior
-          Combination Regalia Computer officer. }
-      \item negotiation\footnote{With Asian Development Bank ---
-          contract on designing a cross-border DVP system; Hyperledger
-          foundation ---  marketing Iroha 2}
-      \item teaching
-      \end{itemize}
-      
-    \end{itemize}
 
+    \begin{skills}{Rust}
+    \item adv.~\term{serde}
+    \item \term{SCALE}
+    \item \term{kani}
+    \item \term{nextest}
+    \item \term{rayon}
+    \item \term{tokio}
+    \item \term{clippy-driver}
+    \end{skills}
+
+    \begin{skills}{Blockchain}
+    \item \term{WASM}
+    \item \term{WAT}
+    \item \term{Substrate}
+    \item Zero knowledge proof
+    \item Nominated PoS
+    \item Proof of space
+    \item \term{DEX}
+    \end{skills}
+
+    \begin{skills}{Functional}
+    \item \term{Haskell}
+    \item \term{Rust}\footnote{Although Rust isn't technically a functional language, it supports the functional style very well}
+    \item \term{Standard ML}
+    \item \term{Scheme}
+    \end{skills}
+
+    \begin{skills}{CI/CD}
+    \item Github actions
+    \item \term{DCO}
+    \item Gitlab CI
+    \end{skills}
+
+
+    \begin{skills}{Data Science}
+    \item \term{numpy/pandas/bokeh}
+    \item \term{MatLab/Octave}
+    \item \term{Spigot}
+    \item \term{Seaborn}
+    \item \term{Tensorflow}
+    \item \term{Cython}
+    \item \term{PyPi}
+    \end{skills}
+
+    \begin{skills}{HPC}
+    \item \term{NUMA}
+    \item \term{HPC}
+    \item \term{CILK}
+    \item \term{OpenMPI}
+    \item \term{OpenMP}
+    \item \term{MPI}
+    \end{skills}
+
+    \begin{skills}{Interpersonal}
+    \item society management\footnote{President of Cambridge Armenian
+        Society, Queens' Ents technical director and Queens' Junior
+        Combination Regalia Computer officer. }
+    \item negotiation\footnote{With Asian Development Bank ---
+        contract on designing a cross-border DVP system; Hyperledger
+        foundation ---  marketing Iroha 2}
+    \item teaching
+    \end{skills}
+
+    \begin{skills}{OOP}
+    \item \term{C++}
+    \item \term{Java/Kotlin}
+    \item \term{OCaML}
+    \end{skills}
+
+    
+    \begin{skills}{Testing}
+    \item {\footnotesize Property-based}
+    \item {\footnotesize Fuzzing}
+    \item {\footnotesize Functional}
+    \end{skills}
+
+    \begin{skills}{Other Languages}
+    \item \term{Python}
+    \item \term{Bash}
+    \item \term{Elisp}
+    \end{skills}
+
+    \begin{skills}{OS/Containers}
+    \item \term{NixOS}
+    \item \term{Linux}\footnote{Mainly Arch-based, but with experience
+        of deploying Alpine based containers and static linking}
+    \item \term{BSD}
+    \item \term{Mac OS X}\footnote{With low-level API knowledge for
+        mouse tracking, key-logging, SIP circumvention}
+    \end{skills}
+    
   \end{multicols}
-
+\vfill
 
 
 \section*{Awards}
+\setlength{\parindent}{0in}%
 \award{2015}{Russian Armenian Slavonic University}{Academic
   Excellence}
 
@@ -367,7 +350,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 
 \award{2008}{Annual School informatics Olympiad}{\nth{1} Place}
 % \eachpageornament{41}
-
+\vfill
 \bibliography{bibliography}
 
 \end{document}

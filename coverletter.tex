@@ -1,0 +1,166 @@
+% Created 2023-02-15 Wed 18:07
+\documentclass[11pt]{scrlttr2}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontsize}
+\usepackage{anyfontsize}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[skip=10pt,indent=5pt]{parskip}
+\usepackage[a4paper, total={7in, 9in}]{geometry}
+
+\usepackage{ebgaramond}
+\usepackage{lato}
+% \usepackage[letterspace=50]{microtype}
+\usepackage{fontawesome5}
+\changefontsize[17pt]{12.5pt}
+
+\setkomavar{fromname}{Aleksandr Petrosyan} % Your name
+\setkomavar{signature}{Aleksandr Petrosyan, Iroha 2 Tech Lead} 
+
+\newkomavar{subtitle}\setkomavar{subtitle}{Iroha 2 Technical Lead} 
+
+\setkomavar{fromaddress}{Dro st. 4-th building, Apartment 57, Yerevan 0069, Armenia}
+\setkomavar{fromphone}{+374-33-647-998} % Your phone number
+\setkomavar{fromemail}{appetrosyan@icloud.com} % Your email address
+\setkomavar{place}{Yerevan, Armenia} 
+\setkomavar{date}{\today} 
+\setkomavar{subject}{Cover Letter to Ontropy} 
+
+%\setkomavar{fromfax}{+1 (123) 456 7890} % Your fax number
+%\setkomavar{fromurl}{https://www.LaTeXTemplates.com} % Your personal website
+\setkomavar{firsthead}{ % Style the first page header
+	\centering\scshape % Text position and styling
+	{\huge\textls{\usekomavar{fromname}}}\\[4pt] % Your name
+	{\large\usekomavar{subtitle}} % Subtitle
+}
+
+\setplength{firstheadvpos}{0.045\paperheight} 
+\setkomavar{firstfoot}{
+	\centering\scshape\lsstyle
+	{\renewcommand{\\}{~{\large\textperiodcentered}~}%
+      \usekomavar{fromaddress}}\\
+	{\small{\footnotesize\faEnvelope}%
+      \hspace{4pt}\usekomavar{fromemail}%
+      \hspace{8pt}{\footnotesize\faMobile*}%
+      \hspace{4pt}\usekomavar{fromphone}} 
+}
+\setplength{firstfootvpos}{0.92\paperheight}
+
+\setlength{\parindent}{0pt}
+\author{Aleksandr Petrosyan}
+\date{\today}
+\title{About me}
+\hypersetup{
+ pdfauthor={Aleksandr Petrosyan},
+ pdftitle={About me},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={English}}
+\begin{document}
+\begin{letter}{
+	% Name and address of the person to whom the letter is being sent
+}
+
+\opening{Dear Ontropy}
+
+I typicallly send a covering letter to draw attention to some aspects
+of my career that don't exactly fit into the C. V. format, as well as
+things that might not fit into the natural flow of conversation during
+the first interview. I have predominantly an academic background. I've
+15 years of C++ experience under my belt: 7 competitive and 7 in a
+research capacity. These 15 years include problem solving in a diverse
+expanse of fields with one common thread being efficiency and
+accuracy. I will not go much into the details of competitive problem
+solving, other than it made my University Education tuition-free, and
+with good marks. The research is far more interesting to look at,
+because real-world problems are amenable to certain kinds of
+outside-the-box thinking that I'm known for.
+
+During tenure at the Cambridge University Computer lab, I was working
+on an incremental graph traversal problem, where I was essentially
+supposed to solve an all-pairs shortest path problem on a graph with
+deterministically varying weights. A preliminary human-sale
+statistical analysis revealed quite a few heuristics which improved
+the performance of my solution to be 10 times more efficient than the
+predicted maximum. What is particularly surprising is that the common
+wisdom would suggest using a Fibonacci-heap backed Dijksra's
+traversal, but the essence of the changing weights meant that the
+normally asymptotically efficient solution was sub-optimal and instead
+the much more easily parallelisable Bellman-Ford turned out to be
+faster.
+
+During the time after graduation from Cambridge I've produced 3
+publications on Nested sampling, which are all based off of an idea of
+stochastic superpositional prior mixing. Without getting into too much
+detail about Bayesian inference, \texttt{supernest} allows inferences
+which used to require a supercomputer crunching numbers for a week to
+be done in 36 hours on a laptop. This one discovery got me a seat at
+both the MaxEnt 2022 and MaxEnt 2023 conferences (as an invited
+speaker), and may eventually end up winning John Skilling a Nobel
+Prize (yes, \emph{that} John Skilling). I'd be happy to go into
+technical details of the inner workings of \texttt{supernest} during
+an in-person conversation during the interview. 
+
+Now at this point, you might be wondering why have I chosen to move
+away from academia. There are multiple reasons, the one I'd like to
+focus on is the genuine intrigue I espouse towards blockchains as a
+technology. I have been a firm believer in Free and Open Source
+Software for most of my conscious life, and placed great value in
+decentralisation and censorship resistance. Blockchains allow for more
+people to achieve financial (and other kinds of) independence. It
+allows creating foundamentally fair economic systems and perfect
+institutional oversight as well as complete anonymity depending on
+application. As such, it should not be surprising to you that when I
+was looking for my first job in industry, it was in the sphere of
+blockchains.
+
+I have both a fairly recent and profoundly deep connection to
+Rust. The language itself I'm only using for the past three years in
+an official capacity. I learned the language by porting Quake, which
+unfortunately got cut short by my first job in industry. Almost two
+weeks after learning the ropes of the language, I was offered a senior
+position at Soramitsu. How, you might ask? Rust is C++ with elements
+of OCaml, which I knew very well from university and competitive
+programming, hence how I was able to scale the ranks so quickly. The
+trend of meteoric rise continued as three months afterwards I was
+offered the position of technical lead for the Hyperledger Iroha~v2
+project. I was the first choice among four other senior engineers, due
+to a combination of hard skills and management ability on my side.
+During my ongoing tenure as Technical Lead I hired fourteen members
+into the Iroha~2 core team, which is considered the best in the
+company. I've worked on the CSD/RTGS linkages proof of concept, for
+which I've received a personal commendation. I am the representative
+of the Iroha project and Soramitsu in general to the Hyperledger
+Technical Oversight Comiittee. I've been nominated to become a voting
+member at the TOC, in addition to being involved with the Hyperledger
+Ursa, a cryptographic library which has sadly been retired
+recently\footnote{Although if we're being completely fair, the current
+  state of affairs is far more advantageous to Soramitsu}.
+
+Owing to my written (and spoken) communication skills I'm often the
+face of the company when selling the product to a new customer. My
+voice has appeared on many of the adverts circulated espousing the
+benefits of Hyperledger Iroha~v2 as compared to competing
+technologies, namely Parity Substrate and Iroha~v1. As such I'm well
+regarded in both technical and marketing circles.
+
+As a closing statement, I'd like to provide you with references:
+Dr~William Handley (\href{mailto:wh260@cam.ac.uk}{wh260@cam.ac.uk}) is
+my academic supervisor and frequent
+collaborator. Ry~Jones(\href{mailto:ry@linux.com}{ry@linux.com}) is
+the senior architect at Hyperledger, and the person I've had the most
+intensive interactions with.
+
+Sincerely, \\
+\usekomavar{signature}
+\end{letter}
+\end{document}
