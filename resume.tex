@@ -33,17 +33,15 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 % Override this to blank if you don't want to have a coverletter.
 \renewcommand{\coverletter} {
 
-  I'm a former Physicist\cite{langev,measurement,cpi,charge-frac,cu2o}
-  who works as a full-time Tech Lead at Hyperledger, a subsidiary of
-  the Linux Foundation, currently leading the development and design
-  of Hyperledger Iroha, the world's first parallel blockchain ledger.
-  I'm involved with almost every aspect of Iroha, from the development
-  of SDKs, architectural decisions of the base ledger, and
-  contributions to our dependency projects, which until recently
-  included Hyperledger Ursa. I believe that work on blockchains is
-  making the world a better place, albeit slowly.
-}
+  I'm a Physicist\cite{langev,measurement,cpi,charge-frac,cu2o}
+  working as a full-time Tech Lead at Hyperledger developing the
+  ledger Iroha.  I'm the main architect, involved in research,
+  development testing and maintenance of the project. My latest
+  contributions to the project involved the design of a fully-dynamic
+  permissions system, and an Iroha ISA.  The goal is to support a
+  fully programmable domain-specific VM, similar to Parity Substrate.
 
+}
 
 \author{Aleksandr Petrosyan} \date{\today}
 
@@ -65,7 +63,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 
 \renewcommand{\myhomeaddress}
 {%
-  \address{Dro St.}{\nth{4} Building} {0069}{Yerevan}{Armenia}%
+  % \address{Dro St.}{\nth{4} Building} {0069}{Yerevan}{Armenia}%
 }%
 
 \renewcommand{\myemail}%
@@ -100,52 +98,65 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 % }
 
 %   \eachpageornament{41}
+\vfill
 \section*{Work Experience} {%
   \setlength{\parindent}{0in}%
 
-  \job{Sep 2021}{Present} {Soramitsu}{Tech Lead} {I am a senior Rust
-    software engineer, Tech Lead and product owner of Hyperledger
-    Iroha~v2.  I assembled the team that is considered the best in the
-    company, and produced the first Long-term support release
-    candidate of Iroha~v2\footnote{Pre-release but reliable enough for
-      testing on production systems}. I organised a bug triage system
-    that reduced the average lifetime of a bug in Iroha~v2 to just one
-    week. I designed our trigger system (with WASM support), our WASM
-    optimisation pipeline and smartcontract system, integrated
-    Iroha~v2 with Hyperledger Cactus, improved the throughput of
-    Iroha's consensus from 10~TPS to 30000~TPS. I was the architect of
-    the CSD/RTGS linkages PoC (done with Asian Development Bank),
-    where I also produced a 60 page report commended for an in-depth
-    analysis. I'm now working on integrating Iroha~v2 with Parity
-    Substrate and Polkaswap. As part of my work on Iroha I also
-    maintain Hyperledger Ursa, a cryptographic library with the
-    world's fastest bulletproofs. }
+  \job{Sep 2021}%
+  {Present}%
+  {Soramitsu}%
+  {Tech Lead}%
+  {I am a senior Rust software engineer, Tech Lead and product owner
+    of Hyperledger Iroha~v2.  I assembled the team that is considered
+    the best in the company, and produced the first Long-term support
+    release candidate of Iroha~v2\footnote{Pre-release but reliable
+      enough for testing on production systems}. I built a bug triage
+    system that reduced the average lifetime of a bug in Iroha~v2 to
+    just one week. I designed our trigger system (with WASM support)
+    and smartcontract system, integrated Iroha~v2 with Hyperledger
+    Cactus, improved the throughput of Iroha's consensus from 10~TPS
+    to 30000~TPS. I architected the ADB CSD/RTGS linkages PoC, results
+    presented at the Asia Impact Webinar 2023.  I'm now working on
+    integrating Iroha~v2 with Parity Substrate and Polkaswap.  I'm now
+    mainly focused on optimising the Iroha ISA, and creating a
+    stable-ABI fully programmable blockchain. }%
 
+  \job{Oct 2020}%
+  {Sep 2021}%
+  {PolyChord}%
+  {Software engineer}%
+  { Worked on \term{supernest}, which accelerates Bayesian inference
+    by a factor of 1000. Work was presented at the MaxEnt 2022
+    conference in Paris. Follow up research to be presented at MaxEnt
+    2023 in Munich. }
 
-  \job{Oct 2020}{Sep 2021}
-  {PolyChord} {Software engineer} { Expanded upon and built the
-    package \term{supernest}, which accelerates Bayesian inference by
-    a factor of 1000. Worked on Likelihood-free inference, parameter
-    speed hierarchy --- functional programming correspondence. Work
-    was presented at the MaxEnt 2022 conference in Paris. Follow up
-    research to be presented at MaxEnt 2023 in Munich. }
+  
+  
+\begin{comment}
   \job{Jul 2020}{Oct 2020} {Cambridge DAMTP} {QA intern} {Designed a
     neural network for vetting the applicability of the NHSx X-ray
     data for automated diagnosis of COVID-19, which was comparable in
     precision, but required 5--6 times less processing power.  }
+\end{comment}
   
+\begin{comment}
   \job{Jul 2018}{Oct 2018} {Cambridge University Computer Lab}
   {Software Development Intern} {Designed, and improved a dynamic road
     network All-pairs shortest path solver, using a highly
     paralleliseable graph traversal framework, which improved
     performance by a factor of 50.  }
+\end{comment}
   
+\begin{comment}
   \job{Jan 2013}{May 2015}  {Masterlagebra.org} {Backend Developer}
   {Designed and implemented problems for university level automated
     linear algebra training program. Problems were related to complex
     numbers, Gram-Schmidt ortho-normalisation process, analytical geometry
     problems involving planes and lines in higher dimensions.
   }
+\end{comment}
+  
+\begin{comment}
   \section*{Volunteer work} \job{2015}{2017}{Queens' College}
   {Technical director} {I supervised a self-motivated team of
     volunteers to set up and dismantle decorations at the Queens'
@@ -161,7 +172,9 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     out, the shielded wire didn't have enough range, and the race
     would have been called off.  I quickly made a skype call with
     desktop sharing to the Wi-Fi connected laptop at the far side. }
-  \pagebreak
+\end{comment}
+  % \pagebreak
+  \vfill
   \section*{Education}%
 
   \education{2019}{2020} {University of Cambridge} {MSci, \nth{1}}
@@ -172,6 +185,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     Cosmological Parameter estimation''. My optimisations lead to an
     improvement of Nested Sampling's performance by a factor of 30. }
 
+\begin{comment}
   \education{2015}{2018}
   {University of Cambridge} {BA, Upper \nth{2}}{Physical Natural Sciences
     Tripos} {Received the Cambridge Trust scholarship. Formal training
@@ -180,6 +194,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     of ``Charge Fractionalisation in Poly-acetylene''. Was forced to
     intermit for a year due to mandatory millitary service in my home
     country of Armenia. }
+\end{comment}
 
   \vfill
   \section*{Non-exhasutive list of Projects}%
@@ -197,143 +212,32 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     
   \project{analgesic}{2021}{private}{A Rust reimplementation of
     \term{getdist} for analysis of Bayesian inference samples, with an
-    emphasis on precision, and performance. }
+    emphasis on precision, and performance.
+  }
 
   \project{Rusty-nail}{2021}{https://gitlab.com/a-p-petrosyan/rusty-nail}{A
     rewrite of Quake 1 Darkplaces engine in Rust with additional
-    Vulkan support. }
+    Vulkan support.
+  }
   
   \project{paranestamol}{2020}{https://github.com/appetrosyan/paranestamol}{A
-    Rust + python + QML gui frontend for \term{nestcheck} and \term{anesthetic}
-    to fix nested sampler induced headaches.}
+    Rust + python + QML gui front-end for \term{nestcheck} and \term{anesthetic}
+    to fix nested sampler induced headaches.
+  }
 
   \project{superNest}{2020}{https://gitlab.com/a-p-petrosyan/sspr} {A
     python package~\cite{sspr-maxent} for including \emph{stochastic
       superpositional posterior repartitioning}~\cite{sspr} into your
     nested sampler of choice.
   }
-
+  
   \project{anesthetic}{2020} {https://github.com/appetrosyan/anesthetic}
   {A package for visualising and plotting posterior chains for nested
     samplers such as \term{PolyChord}.
   }
 
-  \project{qDoList} {2019} {https://github.com/appetrosyan/qDoList}{A
-    To-Do list manager based off of QML and \term{Kirigami}.
-  }
-
-  \project{ADynamicSP} {2018}
-  {https://gitlab.com/DynamicSP/ADynamicSP/tree/master} {A
-    \term{Ligra}/\term{Ligra}+ based Shortest path problem solver for
-    dynamic networks. }
-  \project{Geary} {2015} {https://github.com/GNOME/geary} {A
-    \term{Vala}/\term{GTK} based simple email client, conforming to the
-    \term{Gnome} \emph{Human Interface Design} guidelines.}
-  \vfill
-
 }
-\pagebreak
-  \section*{Skills and Technologies}
-  \setlist{nosep}
-  \setlength{\parindent}{0in}%
-  
-  \begin{multicols}{4}
-
-    \begin{skills}{Rust}
-    \item adv.~\term{serde}
-    \item \term{SCALE}
-    \item \term{kani}
-    \item \term{nextest}
-    \item \term{rayon}
-    \item \term{tokio}
-    \item \term{clippy-driver}
-    \end{skills}
-
-    \begin{skills}{Blockchain}
-    \item \term{WASM}
-    \item \term{WAT}
-    \item \term{Substrate}
-    \item Zero knowledge proof
-    \item Nominated PoS
-    \item Proof of space
-    \item \term{DEX}
-    \end{skills}
-
-    \begin{skills}{Functional}
-    \item \term{Haskell}
-    \item \term{Rust}\footnote{Although Rust isn't technically a functional language, it supports the functional style very well}
-    \item \term{Standard ML}
-    \item \term{Scheme}
-    \end{skills}
-
-    \begin{skills}{CI/CD}
-    \item Github actions
-    \item \term{DCO}
-    \item Gitlab CI
-    \end{skills}
-
-
-    \begin{skills}{Data Science}
-    \item \term{numpy/pandas/bokeh}
-    \item \term{MatLab/Octave}
-    \item \term{Spigot}
-    \item \term{Seaborn}
-    \item \term{Tensorflow}
-    \item \term{Cython}
-    \item \term{PyPi}
-    \end{skills}
-
-    \begin{skills}{HPC}
-    \item \term{NUMA}
-    \item \term{HPC}
-    \item \term{CILK}
-    \item \term{OpenMPI}
-    \item \term{OpenMP}
-    \item \term{MPI}
-    \end{skills}
-
-    \begin{skills}{Interpersonal}
-    \item society management\footnote{President of Cambridge Armenian
-        Society, Queens' Ents technical director and Queens' Junior
-        Combination Regalia Computer officer. }
-    \item negotiation\footnote{With Asian Development Bank ---
-        contract on designing a cross-border DVP system; Hyperledger
-        foundation ---  marketing Iroha 2}
-    \item teaching
-    \end{skills}
-
-    \begin{skills}{OOP}
-    \item \term{C++}
-    \item \term{Java/Kotlin}
-    \item \term{OCaML}
-    \end{skills}
-
-    
-    \begin{skills}{Testing}
-    \item {\footnotesize Property-based}
-    \item {\footnotesize Fuzzing}
-    \item {\footnotesize Functional}
-    \end{skills}
-
-    \begin{skills}{Other Languages}
-    \item \term{Python}
-    \item \term{Bash}
-    \item \term{Elisp}
-    \end{skills}
-
-    \begin{skills}{OS/Containers}
-    \item \term{NixOS}
-    \item \term{Linux}\footnote{Mainly Arch-based, but with experience
-        of deploying Alpine based containers and static linking}
-    \item \term{BSD}
-    \item \term{Mac OS X}\footnote{With low-level API knowledge for
-        mouse tracking, key-logging, SIP circumvention}
-    \end{skills}
-    
-  \end{multicols}
 \vfill
-
-
 \section*{Awards}
 \setlength{\parindent}{0in}%
 \award{2015}{Russian Armenian Slavonic University}{Academic
@@ -351,6 +255,104 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 \award{2008}{Annual School informatics Olympiad}{\nth{1} Place}
 % \eachpageornament{41}
 \vfill
-\bibliography{bibliography}
+% \pagebreak
+\vfill
+  \section*{Skills and Technologies}
+  \setlist{nosep}
+  \setlength{\parindent}{0in}%
+  
+  \begin{multicols}{4}
 
+    \begin{skills}{Rust}
+    \item adv.~\term{serde}
+    \item \term{SCALE}
+    \item \term{kani}
+    \item \term{rayon}
+    \item \term{tokio}
+    \end{skills}
+
+    \begin{skills}{Blockchain}
+    \item \term{WASM}
+    \item \term{Substrate}
+    \item \term{zkStark}
+    \item \term{DEX}
+    \end{skills}
+
+    \begin{skills}{Functional}
+    \item \term{Haskell}
+    \item \term{Rust}\footnote{Although Rust isn't technically a functional language, it supports the functional style very well}
+    \item \term{Standard ML}
+    \item \term{Scheme}
+    \end{skills}
+
+    \begin{skills}{CI/CD}
+    \item Github actions
+    \item Docker
+    \item \term{Allure/pytest}
+    \item \term{DCO}
+    \item Gitlab CI
+    \end{skills}
+
+
+    \begin{skills}{Data Science}
+    \item \term{numpy/pandas/bokeh}
+    \item \term{MatLab/Octave}
+    \item \term{Tensorflow}
+    \item \term{PyPi}
+    \end{skills}
+
+    \begin{skills}{HPC}
+    \item \term{NUMA}
+    \item \term{OpenMPI}
+    \item \term{OpenMP}
+    \end{skills}
+
+    \begin{skills}{Interpersonal}
+    \item Society management\footnote{President of Cambridge Armenian
+        Society, Queens' Ents technical director and Queens' Junior
+        Combination Regalia Computer officer. }
+    \item Negotiation\footnote{With Asian Development Bank ---
+        contract on designing a cross-border DVP system; Hyperledger
+        foundation ---  marketing Iroha 2}
+    \item Teaching
+    \end{skills}
+
+    \begin{skills}{OOP}
+    \item \term{C++}
+    \item \term{Java/Kotlin}
+    \item \term{OCaML}
+    \end{skills}
+
+    
+    \begin{skills}{Testing}
+    \item {\footnotesize Property-based}
+    \item {\footnotesize Fuzzing}
+    \item {\footnotesize Functional}
+    \item {\footnotesize Load testing}
+    \item {\footnotesize Test-driven development}
+    \end{skills}
+\begin{comment}
+  \begin{skills}{Other Languages}
+  \item \term{Python}
+  \item \term{Bash}
+  \item \term{Elisp}
+  \end{skills}
+\end{comment}
+\begin{comment}
+  \begin{skills}{OS/Containers}
+  \item \term{NixOS}
+  \item \term{Linux}\footnote{Mainly Arch-based, but with experience
+      of deploying Alpine based containers and static linking}
+  \item \term{BSD}
+  \item \term{Mac OS X}\footnote{With low-level API knowledge for
+      mouse tracking, key-logging, SIP circumvention}
+  \end{skills}
+\end{comment}
+  \end{multicols}
+\vfill
+
+
+
+\bibliography{bibliography}
+\vfill
 \end{document}
