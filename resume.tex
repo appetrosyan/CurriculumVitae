@@ -31,23 +31,30 @@
 
 
 % Override this to blank if you don't want to have a coverletter.
-\renewcommand{\coverletter} {
+\renewcommand{\coverletter} {%
+%
+  I'm a Physicist working as a full-time Consultant for {Eclipse
+    Laboratories Inc.} and {Croquet Laboratories} performing the
+  duties of a principal protocol engineer and architectural advisor
+  respectively.  My work is mainly concerned with the design and
+  implementation of the ``syzygy'' canonical bridge, where I do both
+  research and development and designing the blockchain
+  interoperability for the \emph{Multisynq} distributed system.
+  Before this, I was a full-time technical lead for the Hyperledger
+  Iroha v2 project, orchestrating the assembly of the core development
+  team, decisions on technologies and the architecture of the ledger.
 
-  I'm a Physicist\cite{langev,measurement,cpi,charge-frac,cu2o}
-  working as a full-time Consultant for Eclipse Laboratories
-  Inc. performing the duties of a principal protocol engineer.  My
-  work is mainly concerned with the design and implementation of the
-  ``syzygy'' canonical bridge, where I do both research and
-  development.  Before Eclipse I was a full-time technical lead for
-  the Hyperledger Iroha v2 project, orchestrating the assembly of the
-  core development team, decisions on technologies and the
-  architecture of the ledger. My latest contributions to the project
-  involved the design of a fully-dynamic permissions system, and an
-  Iroha ISA\footnote{The goal is to support a fully programmable
-  domain-specific VM, similar to Parity Substrate}.
-}
+  I'm an active participant in
+  scientific\cite{sspr-mdpi,stress-test-mdpi} and
+  industry\cite{rl-video} conferences.  I have penned scientific
+  publications both during my
+  studies\cite{cu2o,measurement,charge-frac,cpi}, as well as during the
+  free time I had as a full time employee\cite{PhysRevD.108.096012,langev,sspr-mdpi,sspr}.
+%
+}%
 
-\author{Aleksandr Petrosyan} \date{\today}
+\author{Aleksandr Petrosyan}
+\date{\today}
 
 % \renewcommand{\myhomephone}
 % {%
@@ -66,7 +73,7 @@
 
 \renewcommand{\myhomeaddress}
 {%
-  % \address{Dro St.}{\nth{4} Building} {0069}{Yerevan}{Armenia}%
+  \address{Dro St.}{\nth{4} Building} {0069}{Yerevan}{Armenia}%
 }%
 
 \renewcommand{\myemail}%
@@ -85,74 +92,37 @@
 \begin{document}
 \maketitle
 
-
-% \newcommand{\eachpageornament}[1]{%
-% \begin{tikzpicture}[remember picture, overlay]%
-%   \node[anchor=north west, xshift=0.2in, yshift=-0.2in] at (current%
-%   page.north west){%
-%   \pgfornament[width=2cm]{#1}}; \node[anchor=north east,%
-%   xshift=-0.2in, yshift=-0.2in] at (current page.north east){%
-%   \pgfornament[width=2cm,symmetry=v]{#1}}; \node[anchor=south%
-%   west, xshift=0.2in, yshift=0.2in] at (current page.south west){%
-%   \pgfornament[width=2cm,symmetry=h]{#1}}; \node[anchor=south%
-%   east, xshift=-0.2in, yshift=0.2in] at (current page.south east){%
-%   \pgfornament[width=2cm,symmetry=c]{#1}};%
-% \end{tikzpicture}
-% }
-
 %   \eachpageornament{41}
+\vfill
 \section*{Consulting}
-
 \job{Sep. 2023}%
-{Present}%
-{Eclipse Laboratories}%
-{Senior Distributed Systems Consultant}%
-{%
-  I provided research into modular blockchains and guided the
-  development of the Canonical bridge \texttt{syzygy} Between Ethereum
-  and Solana.  Oversaw the deployment of the Eclipse test network
-}
+    {Present}%
+    {Eclipse Laboratories}%
+    {Senior Distributed Systems Consultant}%
+    {%
+      I provided research into modular blockchains and guided the
+      development of the Canonical bridge \texttt{syzygy} Between Ethereum
+      and Solana.  Oversaw the deployment of the Eclipse test network
+    }
 
 \job{Feb. (April\footnote{This is when an official contract has been signed}) 2024}%
-{Present}%
-{Croquet/Multisynq (former Multisync)}%
-{Blockchain Technology Advisor}%
-{%
-  I provided detailed explanations and expositions, guiding the choice
-  of correct blockchain technology and tokenomic model. I've done
-  preliminary training of Multisynq employees in the
-  \href{https://github.com/Greybeard-Entertainment/rust}{Rust
-    programming language}, as well as vetted other contractors'
-  work. In the summer of 2024, I shall be implementing their test
-  network.
-}%
-
-\job{May\footnote{Contract negotiation} 2024}%
-{Present}%
-{Superchain}%
-{Blockchain Query Language Consultant}%
-{
-  I will be guiding the design and development of the Superchain query language.
-}
+    {Present}%
+    {Croquet/Multisynq\footnote{Former Multisync}}%
+    {Blockchain Technology Advisor}%
+    {%
+      I provided detailed explanations and expositions, guiding the choice
+      of correct blockchain technology and tokenomic model. I've done
+      preliminary training of Multisynq employees in the
+      \href{https://github.com/Greybeard-Entertainment/rust}{Rust
+        programming language}, as well as vetted other contractors'
+      work. In the summer of 2024, I shall be implementing their test
+      network.
+    }%
 
 
 \vfill
 \section*{Employment history} {%
 \setlength{\parindent}{0in}%
-
-\job{Sep 2023}%
-    {Present}%
-    {Eclipse Laboratories Inc.}%
-    {Consulting Principal Protocol Engineer}
-    {Spearheading the development of the Eclipse canonical bridge.  I was
-      the core researcher behind modular blockchain architecture, and made
-      the decision to use a so-called Celestium rollup architecture.  I
-      then implemented a \texttt{BLS12-381} sig-verify as a Solana
-      instruction in our private fork of the Solana Code base for testing.
-      I integrated the \texttt{eigerco} Celestia client into our Canonical
-      bridge, which led Eclipse to releasing the testnet on time.
-      I performed an internal audit of the Ethereum smartcontracts
-      anticipating mainnet launch.}%
 
 \job{Sep 2021}%
     {Sep 2023}%
@@ -225,43 +195,74 @@
     desktop sharing to the Wi-Fi connected laptop at the far side. }
 \end{comment}
 
-  % \pagebreak
-  \vfill
-  \section*{Education}%
+% \pagebreak
+\vfill
+\section*{Education}%
 
-  \education{2019}{2020} {University of Cambridge} {MSci, \nth{1}}
-  {Physical Natural Sciences Tripos} {Took courses in Relativistic
-    Astrophysics and Cosmology as well as Quantum Field theory read by
-    the Department of Mathematics. One of the top results in my
-    Research project on ``Accelerated Nested Sampling in context of
-    Cosmological Parameter estimation''. My optimisations lead to an
-    improvement of Nested Sampling's performance by a factor of 30. }
+\education{2019}%
+          {2020}%
+          {University of Cambridge}%
+          {MSci, \nth{1}}
+          {Physical Natural Sciences Tripos}%
+          {%
 
-\begin{comment}
-  \education{2015}{2018}
-  {University of Cambridge} {BA, Upper \nth{2}}{Physical Natural Sciences
-    Tripos} {Received the Cambridge Trust scholarship. Formal training
-    in Functional Programming and OOP.\@ Took optional courses in
-    Theoretical Physics. \nth{1} class in Research Review on the topic
-    of ``Charge Fractionalisation in Poly-acetylene''. Was forced to
-    intermit for a year due to mandatory millitary service in my home
-    country of Armenia. }
-\end{comment}
+            Took courses in Relativistic Astrophysics and Cosmology as
+            well as Quantum Field theory read by the Department of
+            Mathematics. One of the top results in my Research project
+            on ``Accelerated Nested Sampling in context of
+            Cosmological Parameter estimation''% \cite{sspr}. My
+            optimisations lead to an improvement of Nested Sampling's
+            performance by a factor of 30.
+          }%
 
-  \vfill
-  \section*{Non-exhasutive list of Projects}%
-  %
-  \project{Hyperledger Iroha v2.0}{2022}{https://github.com/hyperledger/iroha}
-  {A Rust rewrite of the popular blockchain ledger based on a custom
-    RISC architecture, with vector extensions and a parallel consensus
-    algorithm without sharding.
-  }
+
+\education{2015}%
+          {2018}%
+          {University of Cambridge}%
+          {BA, Upper \nth{2}}%
+          {Physical Natural Sciences Tripos}%
+          {
+            Received the Cambridge Trust scholarship. Formal training
+            in Functional Programming and OOP.\@ Took optional courses
+            in Theoretical Physics. \nth{1} class in Research Review
+            on the topic of ``Charge Fractionalisation in Poly-acetylene''%
+            \cite{charge-frac}. I was forced to intermit for a year due to
+            mandatory millitary service in my home country of Armenia,
+            which resulted in a lower test score.
+          }
+
+\education{2013}%
+          {2015}%
+          {Russian-Armenian (Slavonic) University (RAU)}
+          {BA, GPA 3.82\footnote{Discontinued in favour of Cambridge}}%
+          {Electronics and Nanoelectronics}%
+          {%
+
+            I was an active participant\cite{cu2o,measurement} in the
+            scientific research happening at the RAU solid state
+            laboratory.  I was consistently the top student at the
+            Institute of Mathematics and High Technology of RAU.  My
+            coursework on digital circuits was given the first and to
+            this date only perfect score for coursework at RAU.
+          }%
+
+\vfill
+\section*{Non-exhasutive list of Projects}%
+%
+\project{Hyperledger Iroha v2.0}%
+        {2022}%
+        {https://github.com/hyperledger/iroha}
+        {
+          A Rust rewrite of the popular blockchain ledger based on a custom
+          RISC architecture, with vector extensions and a parallel consensus
+          algorithm without sharding.
+        }
 
   \project{Hyperledger Ursa}{2022}{https://github.com/hyperledger/ursa}{
     The one and only cryptographic library used across hyperledger
     projects.
   }
-  
+
   \project{analgesic}{2021}{private}{A Rust reimplementation of
     \term{getdist} for analysis of Bayesian inference samples, with an
     emphasis on precision, and performance.
@@ -278,7 +279,7 @@
   }
 
   \project{superNest}{2020}{https://gitlab.com/a-p-petrosyan/sspr} {A
-    python package~\cite{sspr-maxent} for including \emph{stochastic
+    python package~\cite{sspr-mdpi} for including \emph{stochastic
       superpositional posterior repartitioning}~\cite{sspr} into your
     nested sampler of choice.
   }
@@ -307,7 +308,8 @@
 \award{2008}{Annual School informatics Olympiad}{\nth{1} Place}
 % \eachpageornament{41}
 \vfill
-% \pagebreak
+\pagebreak
+\section*{Technologies}
 \vfill
   \begin{multicols}{4}
     \begin{skills}{Rust}
