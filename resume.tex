@@ -33,7 +33,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 % Override this to blank if you don't want to have a coverletter.
 \renewcommand{\coverletter} {
 
-  I'm a Physicist\cite{langev,measurement,cpi,charge-frac,cu2o}
+  I'm a Physicist\cite{langev,cpi,charge-frac}
   working as a full-time Tech Lead at Hyperledger developing the
   ledger Iroha.  I'm the main architect, involved in research,
   development testing and maintenance of the project. My latest
@@ -98,12 +98,47 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 % }
 
 %   \eachpageornament{41}
+\section*{Consulting}
+
+\job{Sep. 2023}%
+{Present}%
+{Eclipse Laboratories}%
+{Senior Distributed Systems Consultant}%
+{%
+  I provided research into modular blockchains and guided the
+  development of the Canonical bridge \texttt{syzygy} Between Ethereum
+  and Solana.  Oversaw the deployment of the Eclipse test network 
+}
+
+\job{Feb. (April\footnote{This is when an official contract has been signed}) 2024}%
+{Present}%
+{Croquet/Multisynq (former Multisync)}%
+{Blockchain Technology Advisor}%
+{%
+  I provided detailed explanations and expositions, guiding the choice
+  of correct blockchain technology and tokenomic model. I've done
+  preliminary training of Multisynq employees in the
+  \href{https://github.com/Greybeard-Entertainment/rust}{Rust
+    programming language}, as well as vetted other contractors'
+  work. In the summer of 2024, I shall be implementing their test
+  network.
+}%
+
+\job{May\footnote{Contract negotiation} 2024}%
+{Present}%
+{Superchain}%
+{Blockchain Query Language Consultant}%
+{
+  I will be guiding the design and development of the Superchain query language. 
+}
+
+
 \vfill
-\section*{Work Experience} {%
+\section*{Employment history} {%
   \setlength{\parindent}{0in}%
 
   \job{Sep 2021}%
-  {Present}%
+  {Sep 2023}%
   {Soramitsu}%
   {Tech Lead}%
   {I am a senior Rust software engineer, Tech Lead and product owner
@@ -209,7 +244,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     The one and only cryptographic library used across hyperledger
     projects. 
   }
-    
+  
   \project{analgesic}{2021}{private}{A Rust reimplementation of
     \term{getdist} for analysis of Bayesian inference samples, with an
     emphasis on precision, and performance.
@@ -257,11 +292,11 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 \vfill
 % \pagebreak
 \vfill
-  \section*{Skills and Technologies}
-  \setlist{nosep}
-  \setlength{\parindent}{0in}%
-  
-  \begin{multicols}{4}
+\section*{Skills and Technologies}
+\setlist{nosep}
+\setlength{\parindent}{0in}%
+
+\begin{multicols}{4}
 
     \begin{skills}{Rust}
     \item adv.~\term{serde}
