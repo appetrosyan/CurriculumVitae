@@ -23,34 +23,34 @@
 \changefontsize[17pt]{12.5pt}
 
 \setkomavar{fromname}{Aleksandr Petrosyan} % Your name
-\setkomavar{signature}{Aleksandr Petrosyan, Iroha 2 Tech Lead} 
+\setkomavar{signature}{Aleksandr Petrosyan, Eclipse Laboratories Principal Protocol Engineer}
 
-\newkomavar{subtitle}\setkomavar{subtitle}{Iroha 2 Technical Lead} 
+\newkomavar{subtitle}\setkomavar{subtitle}{Eclipse Laboratories Principal Protocol Engineer}
 
 \setkomavar{fromaddress}{Dro st. 4-th building, Apartment 57, Yerevan 0069, Armenia}
-\setkomavar{fromphone}{+374-33-647-998} % Your phone number
+\setkomavar{fromphone}{+44-7864-647-998} % Your phone number
 \setkomavar{fromemail}{appetrosyan@icloud.com} % Your email address
-\setkomavar{place}{Yerevan, Armenia} 
-\setkomavar{date}{\today} 
-\setkomavar{subject}{Cover Letter to Eclipse} 
+\setkomavar{place}{Yerevan, Armenia}
+\setkomavar{date}{\today}
+\setkomavar{subject}{Cover Letter to Hyperlane}
 
 %\setkomavar{fromfax}{+1 (123) 456 7890} % Your fax number
 %\setkomavar{fromurl}{https://www.LaTeXTemplates.com} % Your personal website
 \setkomavar{firsthead}{ % Style the first page header
-	\centering\scshape % Text position and styling
-	{\huge\textls{\usekomavar{fromname}}}\\[4pt] % Your name
-	{\large\usekomavar{subtitle}} % Subtitle
+    \centering\scshape % Text position and styling
+    {\huge\textls{\usekomavar{fromname}}}\\[4pt] % Your name
+    {\large\usekomavar{subtitle}} % Subtitle
 }
 
-\setplength{firstheadvpos}{0.045\paperheight} 
+\setplength{firstheadvpos}{0.045\paperheight}
 \setkomavar{firstfoot}{
-	\centering\scshape\lsstyle
-	{\renewcommand{\\}{~{\large\textperiodcentered}~}%
+    \centering\scshape\lsstyle
+    {\renewcommand{\\}{~{\large\textperiodcentered}~}%
       \usekomavar{fromaddress}}\\
-	{\small{\footnotesize\faEnvelope}%
+    {\small{\footnotesize\faEnvelope}%
       \hspace{4pt}\usekomavar{fromemail}%
       \hspace{8pt}{\footnotesize\faMobile*}%
-      \hspace{4pt}\usekomavar{fromphone}} 
+      \hspace{4pt}\usekomavar{fromphone}}
 }
 \setplength{firstfootvpos}{0.92\paperheight}
 
@@ -63,33 +63,35 @@
  pdftitle={About me},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)},
  pdflang={English}}
 \begin{document}
 \begin{letter}{
-	% Name and address of the person to whom the letter is being sent
+    % Name and address of the person to whom the letter is being sent
 }
 
-\opening{Dear Eclipse}
+\opening{Dear Hyperlane}
 
-I am a Physicist turned Software Architect working on the Hyperledger
-Iroha distributed ledger.  I've been working on a combination of
-consensus, protocol Instruction set architecture and zero-knowledge
-problems and in this document I'd like to provide you with a guided
-tour of my career and talk about a few of the more recent aspects of
-Iroha that I worked on.
+I am a Physicist turned Software Architect who worked on the
+Hyperledger Iroha distributed ledger and the Eclipse canonical bridge
+``syzygy''.  I've been working on a combination of consensus, protocol
+Instruction set architecture and zero-knowledge problems and in this
+document I'd like to provide you with a guided tour of my career and
+talk about a few of the more recent aspects of Iroha that I worked on.
 
-Firstly, after being hired in 2021, I've been swiftly promoted to
-technical lead in 2022. This greatly expanded the roster of my
-responsibilities. While I still solve engineering tasks on occasion, I
-now primarily focus on research, management, mentorship and
-communication between projects. I up-sized the Iroha team from three
-engineers to 12, oversaw the establishment of synchronisation
-processes between projects using Iroha, namely the four SDKs. From
-that point onward had a steady stream of monthly releases, reduced the
-number of in-production API-breakages to zero, established a cadence
-and roadmap for the project and, finally, produced our first LTS
-release.
+Firstly, I shall begin with my histoy at Soramitsu, as this is a
+closer point of comparison to the position of technical lead, than the
+work that I currently do for Eclipse.  After being hired in 2021, I've
+been swiftly promoted to technical lead in 2022. This greatly expanded
+the roster of my responsibilities. While I still solve engineering
+tasks on occasion, I now primarily focus on research, management,
+mentorship and communication between projects. I up-sized the Iroha
+team from three engineers to 12, oversaw the establishment of
+synchronisation processes between projects using Iroha, namely the
+four SDKs. From that point onward had a steady stream of monthly
+releases, reduced the number of in-production API-breakages to zero,
+established a cadence and roadmap for the project and, finally,
+produced our first LTS release.
 
 As an architect, I was mainly responsible for prototyping, researching
 and implementing the key features of our ledger. Namely, the
@@ -105,40 +107,30 @@ budget constraints) it was also my responsibility to break the tasks
 down into manageable chunks, and assign them such that they maximised
 the productivity and educational value.
 
-During my brief involvement in Hyperledger Ursa, I gained a cursory
-understanding of the zero knowledge infrastructure and methods of its
-implementation using Rust and integrated circuitry.  While I am no
-cryptographer, I can make an informed decision on whether to use
-\texttt{Snarks}, \texttt{Starks} or \texttt{bulletproofs}.
+At Eclipse I was involved in Architectural decisions and research from
+the very start.  Though I am technically a consultant, my
+responsibilities lied on the intersection of R&D and Protocol
+Engineering, with a pinch of DevOps.  I was to design the fault proof
+protocol in collaboration with other engineers.  After finalising the
+design, I implemented a part of the canonical bridge, shifting focus
+to helping other engineers in my team.  I kept coordinating with
+DevOps and during the launch week, was able to fix several major
+issues in the canonical bridge.  As a result, despite an incredibly
+optimistic deadline, the canonical bridge was launched on time for the
+test network, and with no failures recorded to date.  In parallel I
+worked on implementing an in-house fork of Solana, which contained an
+instruction for BLS12-381 native sig-verify.
 
-My expertise in Rust is a little hard to explain.  I've been doing
-competitive programming up to 2015 and afterwards scientific research
-programming all the way until 2021, with a mix of C++, Python and
-StandardML.  As a consequence, when I decided to change direction and
-take up Rust, the transition was extremely fast; I got my first job
-and was nominated Senior Rust engineer two weeks after starting to
-officially learn the language.  Prior exposure to ownership in Qt,
-templated programming in C++, Procedural macros in Emacs lisp,
-Haskell's type system and \texttt{async} programming in Python 3.6
-meant that I was mainly focused on learning the tooling, and mapping
-C++'s implicit lifetime models onto Rust's explicit lifetime paradigm.
-I have a good background in compiler construction and exposure to
-automatic theorem proving (using \texttt{Isobel}).  As such, I was
-involved in hiring decisions for every engineering position involving
-Rust, Python, Kotlin, Java, C++ and Swift throughout the company.
-
-As a final note, I have a rich history of participation in the
-marketing and presentation aspects of the projects that I am working
-on.  I frequently co-write documents presented to potential clients
-and users of Iroha.  I am frequently attending conferences as a
-speaker, this year, for example, I was presenting at MaxEnt 2023, and
-will present at EuroRust 2023.  I had been the coordinator for our
-company's team participating in the CSD/RTGS Proof-of-concept in
-conjunction with the Asian development bank.  In addition to producing
-the code and presenting the successful execution of the PoC, I also
-authored a 60~page report on our conclusions and took part in the
-panel discussion at the Asia Impact Webinar alongside blockchain
-vendors such as Consensys and R3. 
+At Eclipse the most important contribution to the business aspect was
+a comprehensive document on the comparison of various modular
+blockchain architectures.  This is where I came across Hyperlane, and
+your IBC solution.  I wrote up the equivalent of a 50 page document
+providing a relatively detailed risk-benefit analysis of the so-called
+Celestium architecture, the usage of the Celestia Blobstream (formerly
+Quantum gravity bridge), which was accepted and my responsibility to
+implement for the canonical bridge.  I've regularly advised Neel
+Somani (the CEO of Eclipse) on matters pertaining to the project,
+including the project's internal name: ``syzygy''.
 
 As a closing statement, I'd like to provide you with references:
 Ry~Jones(\href{mailto:ry@linux.com}{ry@linux.com}) is the senior

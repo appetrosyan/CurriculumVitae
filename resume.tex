@@ -11,21 +11,21 @@
 
 
 \backgroundsetup{
-scale=1,
-opacity=1,
-angle=0,
-color=black,
-contents={%
-\begin{tikzpicture}[every node/.style={inner sep=0pt}]
-\node[anchor=north west](CNW)
-at (current page.north west) {\pgfornament[width=1.75cm]{61}};
-\node[anchor=north east](CNE)
-at (current page.north east) {\pgfornament[width=1.75cm,symmetry=v]{61}};
-\node[anchor=south west](CSW)
-at (current page.south west) {\pgfornament[width=1.75cm,symmetry=h]{61}};
-\node[anchor=south east](CSE)
-at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
-\end{tikzpicture}%
+  scale=1,
+  opacity=1,
+  angle=0,
+  color=black,
+  contents={%
+    \begin{tikzpicture}[every node/.style={inner sep=0pt}]
+      \node[anchor=north west](CNW)
+      at (current page.north west) {\pgfornament[width=1.75cm]{61}};
+      \node[anchor=north east](CNE)
+      at (current page.north east) {\pgfornament[width=1.75cm,symmetry=v]{61}};
+      \node[anchor=south west](CSW)
+      at (current page.south west) {\pgfornament[width=1.75cm,symmetry=h]{61}};
+      \node[anchor=south east](CSE)
+      at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
+    \end{tikzpicture}%
   }
 }
 
@@ -33,14 +33,18 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 % Override this to blank if you don't want to have a coverletter.
 \renewcommand{\coverletter} {
 
-  I'm a Physicist\cite{langev,cpi,charge-frac}
-  working as a full-time Tech Lead at Hyperledger developing the
-  ledger Iroha.  I'm the main architect, involved in research,
-  development testing and maintenance of the project. My latest
-  contributions to the project involved the design of a fully-dynamic
-  permissions system, and an Iroha ISA.  The goal is to support a
-  fully programmable domain-specific VM, similar to Parity Substrate.
-
+  I'm a Physicist\cite{langev,measurement,cpi,charge-frac,cu2o}
+  working as a full-time Consultant for Eclipse Laboratories
+  Inc. performing the duties of a principal protocol engineer.  My
+  work is mainly concerned with the design and implementation of the
+  ``syzygy'' canonical bridge, where I do both research and
+  development.  Before Eclipse I was a full-time technical lead for
+  the Hyperledger Iroha v2 project, orchestrating the assembly of the
+  core development team, decisions on technologies and the
+  architecture of the ledger. My latest contributions to the project
+  involved the design of a fully-dynamic permissions system, and an
+  Iroha ISA\footnote{The goal is to support a fully programmable
+  domain-specific VM, similar to Parity Substrate}.
 }
 
 \author{Aleksandr Petrosyan} \date{\today}
@@ -50,16 +54,15 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 %   \phone{374}{96}{240350}%
 % }%
 
-
 \renewcommand{\myhomephone}
 {%
   \phone{44}{7864}{647998}%
 }%
 
-% \renewcommand{\myhomeaddress}
-% {
-%   \address{Dro~st.~\nth{4} bld.}{apt.52}{0069} {Yerevan}{Armenia}
-% }
+%% \renewcommand{\myhomeaddress}
+%% {
+%%   \address{Dro~st.~\nth{4} bld.}{apt.52}{0069} {Yerevan}{Armenia}
+%% }
 
 \renewcommand{\myhomeaddress}
 {%
@@ -72,7 +75,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 }
 
 \renewcommand{\myGitHub}{%
-  \href{https://github.com/appetrosyan}{github.com/appetrosyan}%
+  \href{https://github.com/appetrosyan}{\faIcon{github}/appetrosyan}%
 }
 
 
@@ -107,7 +110,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 {%
   I provided research into modular blockchains and guided the
   development of the Canonical bridge \texttt{syzygy} Between Ethereum
-  and Solana.  Oversaw the deployment of the Eclipse test network 
+  and Solana.  Oversaw the deployment of the Eclipse test network
 }
 
 \job{Feb. (April\footnote{This is when an official contract has been signed}) 2024}%
@@ -129,51 +132,64 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 {Superchain}%
 {Blockchain Query Language Consultant}%
 {
-  I will be guiding the design and development of the Superchain query language. 
+  I will be guiding the design and development of the Superchain query language.
 }
 
 
 \vfill
 \section*{Employment history} {%
-  \setlength{\parindent}{0in}%
+\setlength{\parindent}{0in}%
 
-  \job{Sep 2021}%
-  {Sep 2023}%
-  {Soramitsu}%
-  {Tech Lead}%
-  {I am a senior Rust software engineer, Tech Lead and product owner
-    of Hyperledger Iroha~v2.  I assembled the team that is considered
-    the best in the company, and produced the first Long-term support
-    release candidate of Iroha~v2\footnote{Pre-release but reliable
+\job{Sep 2023}%
+    {Present}%
+    {Eclipse Laboratories Inc.}%
+    {Consulting Principal Protocol Engineer}
+    {Spearheading the development of the Eclipse canonical bridge.  I was
+      the core researcher behind modular blockchain architecture, and made
+      the decision to use a so-called Celestium rollup architecture.  I
+      then implemented a \texttt{BLS12-381} sig-verify as a Solana
+      instruction in our private fork of the Solana Code base for testing.
+      I integrated the \texttt{eigerco} Celestia client into our Canonical
+      bridge, which led Eclipse to releasing the testnet on time.
+      I performed an internal audit of the Ethereum smartcontracts
+      anticipating mainnet launch.}%
+
+\job{Sep 2021}%
+    {Sep 2023}%
+    {Soramitsu}%
+    {Tech Lead}%
+    {I am a senior Rust software engineer, Tech Lead and product owner
+      of Hyperledger Iroha~v2.  I assembled the team that is considered
+      the best in the company, and produced the first Long-term support
+      release candidate of Iroha~v2\footnote{Pre-release but reliable
       enough for testing on production systems}. I built a bug triage
-    system that reduced the average lifetime of a bug in Iroha~v2 to
-    just one week. I designed our trigger system (with WASM support)
-    and smartcontract system, integrated Iroha~v2 with Hyperledger
-    Cactus, improved the throughput of Iroha's consensus from 10~TPS
-    to 30000~TPS. I architected the ADB CSD/RTGS linkages PoC, results
-    presented at the Asia Impact Webinar 2023.  I'm now working on
-    integrating Iroha~v2 with Parity Substrate and Polkaswap.  I'm now
-    mainly focused on optimising the Iroha ISA, and creating a
-    stable-ABI fully programmable blockchain. }%
+      system that reduced the average lifetime of a bug in Iroha~v2 to
+      just one week. I designed our trigger system (with WASM support)
+      and smartcontract system, integrated Iroha~v2 with Hyperledger
+      Cactus, improved the throughput of Iroha's consensus from 10~TPS
+      to 30000~TPS. I architected the ADB CSD/RTGS linkages PoC, results
+      presented at the Asia Impact Webinar 2023.  I'm now working on
+      integrating Iroha~v2 with Parity Substrate and Polkaswap.  I'm now
+      mainly focused on optimising the Iroha ISA, and creating a
+      stable-ABI fully programmable blockchain. }%
 
-  \job{Oct 2020}%
-  {Sep 2021}%
-  {PolyChord}%
-  {Software engineer}%
-  { Worked on \term{supernest}, which accelerates Bayesian inference
-    by a factor of 1000. Work was presented at the MaxEnt 2022
-    conference in Paris. Follow up research to be presented at MaxEnt
-    2023 in Munich. }
+\job{Oct 2020}%
+    {Sep 2021}%
+    {PolyChord}%
+    {Software engineer}%
+    { Worked on \term{supernest}, which accelerates Bayesian inference
+      by a factor of 1000. Work was presented at the MaxEnt 2022
+      conference in Paris. Follow up research to be presented at MaxEnt
+      2023 in Munich. }
 
-  
-  
+
 \begin{comment}
   \job{Jul 2020}{Oct 2020} {Cambridge DAMTP} {QA intern} {Designed a
     neural network for vetting the applicability of the NHSx X-ray
     data for automated diagnosis of COVID-19, which was comparable in
     precision, but required 5--6 times less processing power.  }
 \end{comment}
-  
+
 \begin{comment}
   \job{Jul 2018}{Oct 2018} {Cambridge University Computer Lab}
   {Software Development Intern} {Designed, and improved a dynamic road
@@ -181,7 +197,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     paralleliseable graph traversal framework, which improved
     performance by a factor of 50.  }
 \end{comment}
-  
+
 \begin{comment}
   \job{Jan 2013}{May 2015}  {Masterlagebra.org} {Backend Developer}
   {Designed and implemented problems for university level automated
@@ -190,7 +206,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     problems involving planes and lines in higher dimensions.
   }
 \end{comment}
-  
+
 \begin{comment}
   \section*{Volunteer work} \job{2015}{2017}{Queens' College}
   {Technical director} {I supervised a self-motivated team of
@@ -208,6 +224,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     would have been called off.  I quickly made a skype call with
     desktop sharing to the Wi-Fi connected laptop at the far side. }
 \end{comment}
+
   % \pagebreak
   \vfill
   \section*{Education}%
@@ -233,7 +250,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 
   \vfill
   \section*{Non-exhasutive list of Projects}%
-  % 
+  %
   \project{Hyperledger Iroha v2.0}{2022}{https://github.com/hyperledger/iroha}
   {A Rust rewrite of the popular blockchain ledger based on a custom
     RISC architecture, with vector extensions and a parallel consensus
@@ -242,7 +259,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 
   \project{Hyperledger Ursa}{2022}{https://github.com/hyperledger/ursa}{
     The one and only cryptographic library used across hyperledger
-    projects. 
+    projects.
   }
   
   \project{analgesic}{2021}{private}{A Rust reimplementation of
@@ -254,7 +271,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     rewrite of Quake 1 Darkplaces engine in Rust with additional
     Vulkan support.
   }
-  
+
   \project{paranestamol}{2020}{https://github.com/appetrosyan/paranestamol}{A
     Rust + python + QML gui front-end for \term{nestcheck} and \term{anesthetic}
     to fix nested sampler induced headaches.
@@ -265,7 +282,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
       superpositional posterior repartitioning}~\cite{sspr} into your
     nested sampler of choice.
   }
-  
+
   \project{anesthetic}{2020} {https://github.com/appetrosyan/anesthetic}
   {A package for visualising and plotting posterior chains for nested
     samplers such as \term{PolyChord}.
@@ -292,12 +309,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
 \vfill
 % \pagebreak
 \vfill
-\section*{Skills and Technologies}
-\setlist{nosep}
-\setlength{\parindent}{0in}%
-
-\begin{multicols}{4}
-
+  \begin{multicols}{4}
     \begin{skills}{Rust}
     \item adv.~\term{serde}
     \item \term{SCALE}
@@ -358,7 +370,7 @@ at (current page.south east) {\pgfornament[width=1.75cm,symmetry=c]{61}};
     \item \term{OCaML}
     \end{skills}
 
-    
+
     \begin{skills}{Testing}
     \item {\footnotesize Property-based}
     \item {\footnotesize Fuzzing}

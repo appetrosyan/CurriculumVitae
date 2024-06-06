@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{CurriculumVitae}[2018/12/08]
 \PassOptionsToPackage{svgnames}{xcolor}
+\RequirePackage{fontawesome5}
 
 %% Passing options through to articles
 \DeclareOption{10pt}
@@ -61,16 +62,16 @@
 
 \newcommand{\vseparator}{
 {%
-    \centering
-      \pgfornament[height=0.03in, opacity=0.2]{86}%
-    
-  }%  
+	\centering
+	  \pgfornament[height=0.03in, opacity=0.2]{86}%
+
+  }%
 }
 
 
 \newcommand{\job}[5]{
   {\large \textsc{#3}  (\textbf {#1 -- #2}) \normalsize} \hfill \textbf{#4}
-  
+
   \vspace{0.03in}
   #5
   \vspace{0.13in}
@@ -78,8 +79,8 @@
 
 \newenvironment{skills}[1]{
   \textsc{#1}
-    \begin{itemize}[topsep=0pt, partopsep=0pt, leftmargin=1em, itemindent=0.3em]
-      \setlength{\itemsep}{-0.3em}
+	\begin{itemize}[topsep=0pt, partopsep=0pt, leftmargin=1em, itemindent=0.3em]
+	  \setlength{\itemsep}{-0.3em}
   }
   {
   \end{itemize}
@@ -96,7 +97,7 @@
 
 %     \hfill
 %     \begin{minipage}[h]{0.85\textwidth}
-      
+
 %     \end{minipage}
 
 %   }
@@ -141,14 +142,14 @@
 
 \newcommand{\phone}[3]
 {
-  \href{tel:#1#2#3}{+#1--#2--\num{#3}}%
+  \href{tel:#1#2#3}{\faIcon{phone}+#1--#2--\num{#3}}%
 }
 
 \newcommand{\address}[5]%
 {%
   #1,
   #2,
-  
+
   \texttt{#3}~\emph{#4}, \textsc{#5}%
 }
 
@@ -156,11 +157,11 @@
 {
   \noindent%
   \begin{minipage}[h]{0.06\textwidth}
-    #1
+	#1
   \end{minipage}%
   \vrule \hspace{0.15in}%
   \begin{minipage}[h]{0.85\textwidth}
-    #2
+	#2
   \end{minipage}%
   \vspace{0.15in}%
   \normalsize%
@@ -171,17 +172,17 @@
   {\setlength{\parindent}{0in}
   % \bipart{\textbf{#2}}
   { \large
-    \textsc{#1}
-    \footnotesize
-    \hfill \href{http://#3}{\textsf{#3}}}
+	\textsc{#1}
+	\footnotesize
+	\hfill \href{http://#3}{\textsf{#3}}}
   \hrule
-    \nopagebreak
-    \vspace{0.04in}
-    \footnotesize
-    #4
-    \vspace{0.07in}
-    
-    
+	\nopagebreak
+	\vspace{0.04in}
+	\footnotesize
+	#4
+	\vspace{0.07in}
+
+
   \normalsize
   }
 }
@@ -193,12 +194,12 @@
   {\setlength{\parindent}{0in}%
   {\large \textsc{#3} (\textbf{#1 -- #2})  \normalsize \hfill \textbf{#4}
 
-    \textbf{#5}
-    \vspace{0.07in}
+	\textbf{#5}
+	\vspace{0.07in}
 
-    \normalsize
-    
-    #6}
+	\normalsize
+
+	#6}
 }
 \vspace{0.21in}
 }
@@ -211,8 +212,8 @@
 
 \newcommand{\award}[3]{%
   {\setlength{\parindent}{0in}%
-    \textsc{#2} --- \textbf{#1}  \hfill \textsc{#3}%
-    \vspace{0.3em}%
+	\textsc{#2} --- \textbf{#1}  \hfill \textsc{#3}%
+	\vspace{0.3em}%
   }
 }
 
@@ -234,47 +235,47 @@
 {%
   \lstinline{#1}%
 }%
-    
+
 
 
 \renewcommand{\maketitle}{
   {\setlength{\parindent}{0in}
   \begin{minipage}[t]{.95\textwidth}
-    \Huge  \textsc{\theauthor}
+	\Huge  \textsc{\theauthor}
   \end{minipage}
   \vspace{0.1in}
   \hrule
   \begin{minipage}[t]{0.65\textwidth}
-    \vspace{0.1in}
-    % \begin{center}
-      
-        \textbf{\aboutme}
-        
-    % \end{center}
-    \small
-    \coverletter
+	\vspace{0.1in}
+	% \begin{center}
+
+		\textbf{\aboutme}
+
+	% \end{center}
+	\small
+	\coverletter
   \end{minipage}
   \hspace{0.03\textwidth}
   \vrule
   \hspace{0.03\textwidth}
   \begin{minipage}[t]{.33\textwidth}
-    \vspace{0.1in}
-    \begin{center}
-      \textbf{\contactme}
-    \end{center}
-    \footnotesize
-    \myemail%
-    
-    \mymobilephone%
+	\vspace{0.1in}
+	\begin{center}
+	  \textbf{\contactme}
+	\end{center}
+	\footnotesize
+	\faIcon{envelope}\myemail%
 
-    \myhomephone%
+	\mymobilephone%
 
-    \myhomeaddress%
+	\myhomephone%
 
-    \myworkaddress%
+	\myhomeaddress%
 
-    \myGitHub%
-    
+	\myworkaddress%
+
+	\myGitHub%
+
   \end{minipage}
   \normalsize
   }
@@ -282,19 +283,19 @@
 
 \newcounter{pagecount}
 \newcommand{\limitpages}[1]{
-    \setcounter{pagecount}{0}%
-    \gdef\maxpages{#1}%
-    \ifx\latex@outputpage\@undefined\relax%
-        \global\let\latex@outputpage\@outputpage%
-    \fi%
-    \gdef\@outputpage{%
-        \addtocounter{pagecount}{1}%
-        \ifnum\value{pagecount}>\maxpages\relax%
-            % Do not output the page
-        \else%
-            \latex@outputpage%
-        \fi%
-    }%
+	\setcounter{pagecount}{0}%
+	\gdef\maxpages{#1}%
+	\ifx\latex@outputpage\@undefined\relax%
+		\global\let\latex@outputpage\@outputpage%
+	\fi%
+	\gdef\@outputpage{%
+		\addtocounter{pagecount}{1}%
+		\ifnum\value{pagecount}>\maxpages\relax%
+			% Do not output the page
+		\else%
+			\latex@outputpage%
+		\fi%
+	}%
 }
 
 \pagenumbering{gobble}
