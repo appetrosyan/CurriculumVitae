@@ -1,6 +1,15 @@
-% Created 2023-02-15 Wed 18:07
-\documentclass[11pt]{scrlttr2}
-\usepackage[utf8]{inputenc}
+\documentclass[
+    12pt,
+    a4paper,
+    subject=titled,
+    parskip=half,
+    firsthead=true,
+    fromalign=right,
+    fromemail=true,
+    fromurl=true,
+    frommobilephone=true,
+    backaddress=true,
+]{scrlttr2}
 \usepackage[T1]{fontenc}
 \usepackage{fontsize}
 \usepackage{anyfontsize}
@@ -13,36 +22,26 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\usepackage[skip=10pt,indent=5pt]{parskip}
-\usepackage[a4paper, total={7in, 9in}]{geometry}
 
 \usepackage{ebgaramond}
 \usepackage{lato}
-% \usepackage[letterspace=50]{microtype}
+\usepackage[letterspace=50]{microtype}
 \usepackage{fontawesome5}
-\changefontsize[17pt]{12.5pt}
 
-\setkomavar{fromname}{Aleksandr Petrosyan} % Your name
-\setkomavar{signature}{Aleksandr Petrosyan, Eclipse Laboratories Principal Protocol Engineer}
+\setkomavar{fromname}{Aleksandr Petrosyan}
+\setkomavar{signature}{Aleksandr Petrosyan, \\CEO Greybeard Consultancy}
 
-\newkomavar{subtitle}\setkomavar{subtitle}{Eclipse Laboratories Principal Protocol Engineer}
-
-\setkomavar{fromaddress}{Dro st. 4-th building, Apartment 57, Yerevan 0069, Armenia}
-\setkomavar{fromphone}{+44-7864-647-998} % Your phone number
-\setkomavar{fromemail}{appetrosyan@icloud.com} % Your email address
+\newkomavar{subtitle}\setkomavar{subtitle}{CEO Greybeard Consultancy}
+\setkomavar{fromaddress}{Dro st. 4-th building, Apartment 57, \\Yerevan 0069, Armenia}
+\setkomavar{frommobilephone}{+374-33-647-998}
+\setkomavar{fromemail}{appetrosyan@icloud.com}
 \setkomavar{place}{Yerevan, Armenia}
 \setkomavar{date}{\today}
-\setkomavar{subject}{Cover Letter to Hyperlane}
+\setkomavar{subject}{Cover Letter to Gattaca}
 
-%\setkomavar{fromfax}{+1 (123) 456 7890} % Your fax number
-%\setkomavar{fromurl}{https://www.LaTeXTemplates.com} % Your personal website
-\setkomavar{firsthead}{ % Style the first page header
-    \centering\scshape % Text position and styling
-    {\huge\textls{\usekomavar{fromname}}}\\[4pt] % Your name
-    {\large\usekomavar{subtitle}} % Subtitle
-}
-
-\setplength{firstheadvpos}{0.045\paperheight}
+\setkomavar{fromurl}{https://appetrosyan.github.io/} % Your personal website
+%\setplength{firstheadvpos}{0.045\paperheight}
+%\setplength{firstfootvpos}{0.92\paperheight}
 \setkomavar{firstfoot}{
     \centering\scshape\lsstyle
     {\renewcommand{\\}{~{\large\textperiodcentered}~}%
@@ -51,86 +50,107 @@
       \hspace{4pt}\usekomavar{fromemail}%
       \hspace{8pt}{\footnotesize\faMobile*}%
       \hspace{4pt}\usekomavar{fromphone}}
-}
-\setplength{firstfootvpos}{0.92\paperheight}
+  }
 
-\setlength{\parindent}{0pt}
+\setkomavar{firsthead}{ % Style the first page header
+    \centering\scshape % Text position and styling
+    {\huge\textls{\usekomavar{fromname}}}\\[4pt] % Your name
+    {\large\usekomavar{subtitle}} % Subtitle
+}
 \author{Aleksandr Petrosyan}
-\date{\today}
 \title{About me}
 \hypersetup{
  pdfauthor={Aleksandr Petrosyan},
  pdftitle={About me},
- pdfkeywords={},
- pdfsubject={},
- pdfcreator={Emacs 28.2 (Org mode 9.5.5)},
  pdflang={English}}
+
 \begin{document}
-\begin{letter}{
-    % Name and address of the person to whom the letter is being sent
-}
+\begin{letter}{Gattaca}
+\opening{Dear Gattaca}
+Given that you have asked a few questions related to my past
+experience I have taken the opportunity to provide you with a more
+guided tour of my corpus of work.
 
-\opening{Dear Hyperlane}
+Currently I am a full time distributed systems consultant for Eclipse
+Laboratories Inc., but it may be more beneficial to think of me as a
+founding protocol engineer. The business-to-business arrangement was
+simpler.
 
-I am a Physicist turned Software Architect who worked on the
-Hyperledger Iroha distributed ledger and the Eclipse canonical bridge
-``syzygy''.  I've been working on a combination of consensus, protocol
-Instruction set architecture and zero-knowledge problems and in this
-document I'd like to provide you with a guided tour of my career and
-talk about a few of the more recent aspects of Iroha that I worked on.
+With that out of the way, allow me to address the questions that you
+have posed in the description.
 
-Firstly, I shall begin with my histoy at Soramitsu, as this is a
-closer point of comparison to the position of technical lead, than the
-work that I currently do for Eclipse.  After being hired in 2021, I've
-been swiftly promoted to technical lead in 2022. This greatly expanded
-the roster of my responsibilities. While I still solve engineering
-tasks on occasion, I now primarily focus on research, management,
-mentorship and communication between projects. I up-sized the Iroha
-team from three engineers to 12, oversaw the establishment of
-synchronisation processes between projects using Iroha, namely the
-four SDKs. From that point onward had a steady stream of monthly
-releases, reduced the number of in-production API-breakages to zero,
-established a cadence and roadmap for the project and, finally,
-produced our first LTS release.
+\vfill
+\begin{center}
+\texttt{(turn over)}
+\end{center}
+\vfill
+\pagebreak
 
-As an architect, I was mainly responsible for prototyping, researching
-and implementing the key features of our ledger. Namely, the
-smartcontract ecosystem, with triggers, executable WASM support,
-optimisations and mitigations for any technical limitations.  I was
-also responsible for identifying performance bottlenecks. As an
-example, moving away from an in-house actor implementation resulted in
-a speedup from 10 TPS to 10 000 TPS. I did not execute on all of the
-implementations, however, because that would result in a bottleneck
-and potentially put time of the dozen engineers under my supervision
-to waste.  As these engineers were of middle to junior levels (due to
-budget constraints) it was also my responsibility to break the tasks
-down into manageable chunks, and assign them such that they maximised
-the productivity and educational value.
+\textbf{The most exceptional} project that I have worked on is without
+a doubt \href{https://hyperledger.org/use/iroha/}{Hyperledger
+  Iroha}. I was in charge of the largest engineering team in
+Soramitsu, consisting 9 protocol engineers, 2 front-end developers, 2
+QA engineers, 1 DevOps and two technical writers, not counting
+external interactions with other teams.  Save for a few components,
+the design was left largely up to me, from the block format, its
+on-disk storage, things like the introduction of state Merkelisation,
+and other features, under the design constraints of deadlines, and
+collaborations with other projects, specifically the Fraud
+Intelligence Blockchain and the CSD-RTGS linkages proof-of-concept,
+which was to demonstrate the viability of Iroha version 2, in the
+CBDC/cross-border-transaction context.
 
-At Eclipse I was involved in Architectural decisions and research from
-the very start.  Though I am technically a consultant, my
-responsibilities lied on the intersection of R&D and Protocol
-Engineering, with a pinch of DevOps.  I was to design the fault proof
-protocol in collaboration with other engineers.  After finalising the
-design, I implemented a part of the canonical bridge, shifting focus
-to helping other engineers in my team.  I kept coordinating with
-DevOps and during the launch week, was able to fix several major
-issues in the canonical bridge.  As a result, despite an incredibly
-optimistic deadline, the canonical bridge was launched on time for the
-test network, and with no failures recorded to date.  In parallel I
-worked on implementing an in-house fork of Solana, which contained an
-instruction for BLS12-381 native sig-verify.
+The implementation largely was up to me; the team that I mentioned,
+with the exception of three persons was assembled by me, and included
+a large amount of junior engineers, whom I was tasked with bringing up
+to the necessary proficiency.
 
-At Eclipse the most important contribution to the business aspect was
-a comprehensive document on the comparison of various modular
-blockchain architectures.  This is where I came across Hyperlane, and
-your IBC solution.  I wrote up the equivalent of a 50 page document
-providing a relatively detailed risk-benefit analysis of the so-called
-Celestium architecture, the usage of the Celestia Blobstream (formerly
-Quantum gravity bridge), which was accepted and my responsibility to
-implement for the canonical bridge.  I've regularly advised Neel
-Somani (the CEO of Eclipse) on matters pertaining to the project,
-including the project's internal name: ``syzygy''.
+While I have many anecdotes, one that stands out is an example of how
+I was tasked with improving the performance of our consensus algorithm
+so that the throughput of the ledger could be raised from $2$ TPS to
+$2000$. The first step was understanding why the ledger was slow: I
+employed multiple tactics, the one that proved effective was usage of
+causal profiling using \texttt{coz}. It provided valuable insights
+into the cause of the problem: there were successive calls to
+asynchronous functions in Rust that resulted in thread starvation. To
+fix this, one would need to preserve the consensus algorithm, but also
+inline much of the logic. As such I gathered a task force of people
+with talents specifically suited to optimisation. By that time there
+were two looming deadlines, we had to provide a long-term support
+version, as well as base our work on cross-border delivery versus
+payment off of the branch that demonstrated the improved
+performance. There were problems with the implementation. The program
+no longer scaled down to single-threaded containers, and
+deadlocked. The solution required a good amount of extra work, but
+work that was done well, and was commended by the CEO of
+Soramitsu. The CSD-RTGS linkages project went as planned and resulted
+in a grand presentation of which I was a part of.
+
+Honourable mentions would be the Solar Eclipse, which is a fork of
+Solana used in the Eclipse main network, only given a backseat because
+it is (for the moment) closed source. I would probably give it a bit
+more limelight, because of its relevance to MEV, based on the Jito
+patch-set Additionally, I should probably mention \texttt{supernest},
+which has been the basis of two released papers, and one in the works,
+though not relevant to our discussion today as it is neither written
+in Rust, nor interesting to blockchains.
+
+\vfill
+
+\textbf{The reason why I'm looking for a new oppportunity} is simply
+that I am looking for a new challenge.  The Eclipse main network is
+nearing completion, and while there is plenty of engineering work to
+be done, to quote the late great Leonardo DaVinci, ``a mind rusts with
+disuse''.  I have always found it helpful to be aware of new
+developments. 
+
+\vfill
+
+\textbf{This begs the question of why \textit{Gattaca}}.  Aside from
+the name, and minimalist website, the promise of a challenge and an
+opportunity to delve into a new problem space, I would probably cite
+the fact that you are looking through this letter. I appreciate
+companies with a personal touch.
 
 As a closing statement, I'd like to provide you with references:
 Ry~Jones(\href{mailto:ry@linux.com}{ry@linux.com}) is the senior
@@ -139,7 +159,6 @@ interactions with. Dr~William Handley
 (\href{mailto:wh260@cam.ac.uk}{wh260@cam.ac.uk}) is my academic
 supervisor and frequent collaborator.
 
-Sincerely, \\
-\usekomavar{signature}
+\closing{Sincerely}
 \end{letter}
 \end{document}
