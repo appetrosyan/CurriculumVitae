@@ -166,7 +166,7 @@
   \vspace{0.15in}%
   \normalsize%
 }
-
+% TODO: add macros such as github, private, etc.
 \newcommand{\project}[4]
 {
   {\setlength{\parindent}{0in}
@@ -174,7 +174,7 @@
   { \large
 	\textsc{#1}
 	\footnotesize
-	\hfill \href{http://#3}{\textsf{#3}}}
+	\hfill \href{#3}{\textsf{#3}}}
   \hrule
 	\nopagebreak
 	\vspace{0.04in}
