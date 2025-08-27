@@ -34,7 +34,7 @@
 }
 
 
-% Override this to blank if you don't want to have a coverletter.
+% Override this to blank if you don't want to have a cover letter.
 \renewcommand{\coverletter} {%
 %
   I'm the CEO of the Greybeard Consulting. Over the past few years I
@@ -93,81 +93,67 @@
 
 
 \limitpages{4}
-% A C.V. should generally fit on a single double-sided page.
+
 
 \begin{document}
 \maketitle
 
-%   \eachpageornament{41}
+
 \vfill
-\section*{Consulting}
+\section*{Work}
 \job{Sep. 2023}%
     {Present}%
     {Eclipse Laboratories}%
-    {Senior Distributed Systems Consultant\footnote{I am performing
-        the duties of a full time founding protocol engineer. }}%
+    {Performance Team Lead}%
     {%
       I implemented the data availability, and Solana ingest
-      capabilities for the Eclipse main network (launching this
-      November).  I am currently in charge of the research and
-      development of the first full state Merkelisation on a Solana
-      network, implemented the upgrade paths from Solana \texttt{1.16}
-      to \texttt{1.17} to \texttt{Agave}.  I am working on the
-      canonical bridge between Ethereum and our Rollup using Solana.
-      Before then I spearheaded the initiatives for the Eclipse test
-      network and main network for developers beta launches.  I am
-      also the liaison for the collaboration with Anza on the effort
-      of the \emph{modular solana virtual machine} project.
+      capabilities for the Eclipse main network (Nov. 2024).
+      I supervised (and co-wrote) the high-throughput Merkle Authenticated Database AlDBaran.
+      I co-wrote the SIMD \texttt{ed25519} signature verification
+      library, that achieved line-rate signature processing on my home
+      computer.
+      I wrote the Eclipse Performance Thesis~\cite{eclipse-thesis},
+      enumerating and planning out the roadmap to creating GSVM, the Eclipse
+      in-house Solana-compatible Validator client, based both on prior
+      research into SVM~\cite{turan-svm} and prior work on Hyperledger
+      Iroha.
     }%
 
 \job{Feb. 2024}%
     {Sep. 2024}%
-    {Croquet/Multisynq\footnote{Former Multisync}}%
-    {Blockchain Technology Advisor}%
+    {Croquet/Multisynq}%
+    {Blockchain Technology Adviser}%
     {%
       I provided detailed explanations and expositions, guiding the
-      choice of correct blockchain technology and tokenomic model.  I've
-      done preliminary training of Multisynq employees in the
+      choice of correct blockchain technology and tokenomic model.
+      I've done preliminary training of Multisynq employees in the
       \href{https://github.com/Greybeard-Entertainment/rust}{Rust
-        programming language}, as well as vetted other contractors' work.  As
-      part of a demonstration, I implemented a toy tokenomic model based off
-      of the Helium program library.
+        programming language}, as well as vetted other contractors'
+      work.  As part of a demonstration, I implemented a toy tokenomic
+      model based on the Helium Program Library.
     }%
 
-
-\vfill
-\section*{Employment history} {%
-  \setlength{\parindent}{0in}%
-
-  \job{Sep 2024}%
-  {Present}%
-  {Greybeard Consulting}%
-  {CEO}%
-  {%
-    Founded and worked as part of a consultancy.  My job was to find
-    appropriate customers, make public appearances, and co-ordinate
-    work with the other members of the consultancy.
-  }%
-
-\job{Sep 2021}%
+    \job{Sep 2021}%
     {Sep 2023}%
     {Soramitsu}%
     {Tech Lead}%
     {%
-      I am a senior Rust software engineer, Tech Lead and product owner
-      of Hyperledger Iroha~v2.  I assembled the team that is considered
-      the best in the company, and produced the first Long-term support
-      release candidate of Iroha~v2\footnote{Pre-release but reliable
-      enough for testing on production systems}. I built a bug triage
-      system that reduced the average lifetime of a bug in Iroha~v2 to
-      just one week. I designed our trigger system (with WASM support)
-      and smartcontract system, integrated Iroha~v2 with Hyperledger
-      Cactus, improved the throughput of Iroha's consensus from 10~TPS
-      to 30000~TPS. I architected the ADB CSD/RTGS linkages PoC, results
+      I am a senior Rust software engineer, Tech Lead and product
+      owner of Hyperledger Iroha~v2.  I assembled the team that is
+      considered the best in the company, and produced the first
+      Long-term support release candidate of Iroha~v2\footnote{Used in
+        production systems for Solomon islands CBDC, CSD/RTGS linkages
+        project}. I built a bug triage system that reduced the average
+      lifetime of a bug in Iroha~v2 to just one week. I designed our
+      trigger system (with WASM support) and smart contract system,
+      integrated Iroha~v2 with Hyperledger Cactus, improved the
+      throughput of Iroha's consensus from 10~TPS to 30000~TPS. I
+      planned and designed the ADB CSD/RTGS linkages PoC, results
       presented at the Asia Impact Webinar 2023.  I'm now working on
-      integrating Iroha~v2 with Parity Substrate and Polkaswap.  I'm now
-      mainly focused on optimising the Iroha ISA, and creating a
-      stable-ABI fully programmable blockchain. }%
+      integrating Iroha~v2 with Parity Substrate and Polkaswap.  I'm
+      now mainly focused on optimising the Iroha ISA, and creating a
+      stable-ABI fully programmable blockchain.
+    }%
 
 \job{Oct 2020}%
     {Sep 2021}%
@@ -175,9 +161,8 @@
     {Software engineer}%
     {%
       Worked on \term{supernest}, which accelerates Bayesian inference
-      by a factor of 1000. Work was presented at the MaxEnt 2022
-      conference in Paris. Follow up research to be presented at MaxEnt
-      2023 in Munich.
+      by a factor of 1000. Work was presented at the MaxEnt~2022
+      conference in Paris. Follow up research to be presented at MaxEnt~2023 in Munich.
     }%
 
 
@@ -192,12 +177,12 @@
   \job{Jul 2018}{Oct 2018} {Cambridge University Computer Lab}
   {Software Development Intern} {Designed, and improved a dynamic road
     network All-pairs shortest path solver, using a highly
-    paralleliseable graph traversal framework, which improved
+    parallelised graph traversal framework, which improved
     performance by a factor of 50.  }
 \end{comment}
 
 \begin{comment}
-  \job{Jan 2013}{May 2015}  {Masterlagebra.org} {Backend Developer}
+  \job{Jan 2013}{May 2015}  {masterlagebra.org} {Backend Developer}
   {Designed and implemented problems for university level automated
     linear algebra training program. Problems were related to complex
     numbers, Gram-Schmidt ortho-normalisation process, analytical geometry
@@ -334,7 +319,7 @@
     A layered configuration parser that provides useful feedback for
     mis-configuration.  Used in \texttt{syzygy}.
   }%
-}
+
 \vfill
 \section*{Awards}
 \setlength{\parindent}{0in}%
@@ -375,13 +360,6 @@
     \item \term{DEX}
     \end{skills}
 
-    \begin{skills}{Functional}
-    \item \term{Haskell}
-    \item \term{Rust}\footnote{Although Rust isn't technically a functional language, it supports the functional style very well}
-    \item \term{Standard ML}
-    \item \term{Scheme}
-    \end{skills}
-
     \begin{skills}{CI/CD}
     \item Github actions
     \item Docker
@@ -389,7 +367,6 @@
     \item \term{DCO}
     \item Gitlab CI
     \end{skills}
-
 
     \begin{skills}{Data Science}
     \item \term{numpy/pandas/bokeh}
@@ -414,13 +391,6 @@
     \item Teaching
     \end{skills}
 
-    \begin{skills}{OOP}
-    \item \term{C++}
-    \item \term{Java/Kotlin}
-    \item \term{OCaML}
-    \end{skills}
-
-
     \begin{skills}{Testing}
     \item {\footnotesize Property-based}
     \item {\footnotesize Fuzzing}
@@ -428,23 +398,6 @@
     \item {\footnotesize Load testing}
     \item {\footnotesize Test-driven development}
     \end{skills}
-\begin{comment}
-  \begin{skills}{Other Languages}
-  \item \term{Python}
-  \item \term{Bash}
-  \item \term{Elisp}
-  \end{skills}
-\end{comment}
-\begin{comment}
-  \begin{skills}{OS/Containers}
-  \item \term{NixOS}
-  \item \term{Linux}\footnote{Mainly Arch-based, but with experience
-      of deploying Alpine based containers and static linking}
-  \item \term{BSD}
-  \item \term{Mac OS X}\footnote{With low-level API knowledge for
-      mouse tracking, key-logging, SIP circumvention}
-  \end{skills}
-\end{comment}
   \end{multicols}
 \vfill
 
