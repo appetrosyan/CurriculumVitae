@@ -109,22 +109,21 @@
 \vfill
 \section*{Work}
 \job{Sep. 2023}%
-    {Present}%
-    {Eclipse Laboratories}%
-    {Performance Team Lead}%
-    {%
-      I implemented the data availability, and Solana ingest
-      capabilities for the Eclipse main network (Nov. 2024).
-      I supervised (and co-wrote) the high-throughput Merkle Authenticated Database AlDBaran.
-      I co-wrote the SIMD \texttt{ed25519} signature verification
-      library, that achieved line-rate signature processing on my home
-      computer.
-      I wrote the Eclipse Performance Thesis~\cite{eclipse-thesis},
-      enumerating and planning out the roadmap to creating GSVM, the Eclipse
-      in-house Solana-compatible Validator client, based both on prior
-      research into SVM~\cite{turan-svm} and prior work on Hyperledger
-      Iroha.
-    }%
+{Sep. 2025}%
+{Eclipse Laboratories}%
+{Performance Team Lead}%
+{%
+  I implemented the data availability, and Solana ingest capabilities
+  for the Eclipse main network (Nov. 2024).  I supervised (and
+  co-wrote) the high-throughput Merkle Authenticated Database
+  AlDBaran~\cite{kauer2025aldbaranblazinglyfaststate}.  I co-wrote the
+  SIMD \texttt{ed25519} signature verification library, that achieved
+  line-rate signature processing on my home computer.  I wrote the
+  Eclipse Performance Thesis~\cite{eclipse-thesis}, enumerating and
+  planning out the roadmap to creating GSVM, the Eclipse in-house
+  Solana-compatible Validator client, based both on prior research
+  into SVM~\cite{turan-svm} and prior work on Hyperledger Iroha.
+}%
 
 \job{Feb. 2024}%
     {Sep. 2024}%
@@ -219,36 +218,37 @@
 \section*{Education}%
 
 \education{2019}%
-          {2020}%
-          {University of Cambridge}%
-          {MSci, \nth{1}}%
-          {Physical Natural Sciences Tripos}%
-          {%
+{2020}%
+{University of Cambridge}%
+{MSci, \nth{1}}%
+{Physical Natural Sciences Tripos}%
+{%
 
-            Took courses in Relativistic Astrophysics and Cosmology as
-            well as Quantum Field theory read by the Department of
-            Mathematics. One of the top results in my Research project
-            on ``Accelerated Nested Sampling in context of
-            Cosmological Parameter estimation''% \cite{sspr}. My
-            optimisations lead to an improvement of Nested Sampling's
-            performance by a factor of 30.
-          }%
+  Took courses in Relativistic Astrophysics and Cosmology as
+  well as Quantum Field theory read by the Department of
+  Mathematics. One of the top results in my Research project
+  on ``Accelerated Nested Sampling in context of
+  Cosmological Parameter estimation''% \cite{sspr}. My
+  optimisations lead to an improvement of Nested Sampling's
+  performance by a factor of 30.
+}%
 
 
 \education{2015}%
-          {2018}%
-          {University of Cambridge}%
-          {BA, Upper \nth{2}}%
-          {Physical Natural Sciences Tripos}%
-          {
-            Received the Cambridge Trust scholarship. Formal training
-            in Functional Programming and OOP.\@ Took optional courses
-            in Theoretical Physics. \nth{1} class in Research Review
-            on the topic of ``Charge Fractionalisation in Poly-acetylene''%
-            \cite{charge-frac}. I was forced to intermit for a year due to
-            mandatory millitary service in my home country of Armenia,
-            which resulted in a lower test score.
-          }
+{2018}%
+{University of Cambridge}%
+{BA, Upper \nth{2}}%
+{Physical Natural Sciences Tripos}%
+{
+  Received the Cambridge Trust scholarship. Formal training
+  in Functional Programming and OOP.\@ Took optional courses
+  in Theoretical Physics. \nth{1} class in Research Review
+  on the topic of ``Charge Fractionalisation in Poly-acetylene''%
+  \cite{charge-frac}. I was forced to intermit for a year due to
+  mandatory millitary service in my home country of Armenia,
+  which resulted in a lower test score.
+}
+
 \begin{comment}
   \education{2013}%
   {2015}%
@@ -268,68 +268,83 @@
 \section*{Non-exhasutive list of Projects}%
 %
 \project{Hyperledger Iroha v2.0}%
-        {2022}%
-        {https://github.com/hyperledger/iroha}%
-        {%
-          A Rust rewrite of the popular blockchain ledger based on a custom
-          RISC architecture, with vector extensions and a parallel consensus
-          algorithm without sharding.
-        }%
+{2022}%
+{https://github.com/hyperledger/iroha}%
+{%
+  A Rust rewrite of the popular blockchain ledger based on a custom
+  RISC architecture, with vector extensions and a parallel consensus
+  algorithm without sharding.
+}%
 
-  \project{Hyperledger Ursa}{2022}{https://github.com/hyperledger/ursa}{
-    The one and only cryptographic library used across hyperledger
-    projects.
-  }
+\project{Hyperledger Ursa}%
+{2022}%
+{https://github.com/hyperledger/ursa}%
+{%
+  The one and only cryptographic library used across hyperledger
+  projects.
+}%
 
-  \project{rust-in-2x}{2024}{https://github.com/Greybeard-Entertainment/rust-in-2x}
-  {%
-    A work-in-progress book on the Rust programming language.
-  }%
+\project{rust-in-2x}%
+{2024}%
+{https://github.com/Greybeard-Entertainment/rust-in-2x}%
+{%
+  A work-in-progress book on the Rust programming language.
+}%
 
-  \project{disposable-key}{2023}{https://github.com/Greybeard-Entertainment/disposable-key}
-  {%
-    Replace the annoying beep in Emacs with something far more useful,
-    by creating ephemeral key bindings for un-commonly used functions.
-  }%
+\project{disposable-key}%
+{2023}%
+{https://github.com/Greybeard-Entertainment/disposable-key}%
+{%
+  Replace the annoying beep in Emacs with something far more useful,
+  by creating ephemeral key bindings for un-commonly used functions.
+}%
 
-  \project{analgesic}{2021}{private}{A Rust reimplementation of
-    \term{getdist} for analysis of Bayesian inference samples, with an
-    emphasis on precision, and performance.
-  }
+\project{Rusty-nail}%
+{2021}%
+{https://gitlab.com/a-p-petrosyan/rusty-nail}%
+{%
+  A rewrite of Quake 1 Darkplaces engine in Rust with additional
+  Vulkan support.
+}%
 
-  \project{Rusty-nail}{2021}{https://gitlab.com/a-p-petrosyan/rusty-nail}{%
-    A rewrite of Quake 1 Darkplaces engine in Rust with additional
-    Vulkan support.
-  }
+\project{paranestamol}%
+{2020}%
+{https://github.com/appetrosyan/paranestamol}%
+{%
+  A Rust + python + QML gui front-end for \term{nestcheck} and \term{anesthetic}
+  to fix nested sampler induced headaches.
+}
 
-  \project{paranestamol}{2020}{https://github.com/appetrosyan/paranestamol}
-  {%
-    A Rust + python + QML gui front-end for \term{nestcheck} and \term{anesthetic}
-    to fix nested sampler induced headaches.
-  }
+\project{superNest}%
+{2020}%
+{https://gitlab.com/a-p-petrosyan/sspr}%
+{%
+  A python package~\cite{sspr-mdpi} for including \emph{stochastic
+    superpositional posterior repartitioning}~\cite{sspr} into your nested
+  sampler of choice.
+}%
 
-  \project{superNest}{2020}{https://gitlab.com/a-p-petrosyan/sspr}
-  {%
-    A python package~\cite{sspr-mdpi} for including \emph{stochastic
-      superpositional posterior repartitioning}~\cite{sspr} into your nested
-    sampler of choice.
-  }%
-
-  \project{anesthetic}{2020} {https://github.com/appetrosyan/anesthetic}
-  {%
-    A package for visualising and plotting posterior chains for nested
-    samplers such as \term{PolyChord}.
-  }
-
-  \project{partial-config}{2024}{https://github.com/appetrosyan/partial\_config}
-  {%
-    A layered configuration parser that provides useful feedback for
-    mis-configuration.  Used in \texttt{syzygy}.
-  }%
+\project{anesthetic}%
+{2020}%
+{https://github.com/appetrosyan/anesthetic}%
+{%
+  A package for visualising and plotting posterior chains for nested
+  samplers such as \term{PolyChord}.
+}
+  
+\project{partial-config}%
+{2024}%
+{https://github.com/appetrosyan/partial\_config}
+{%
+  A layered configuration parser that provides useful feedback for
+  mis-configuration.  Used in \texttt{syzygy}.
+}%
 
 \vfill
 \section*{Awards}
 \setlength{\parindent}{0in}%
+\award{2023}{CSD/RTGS linkages PoC competition}{\nth{1} place}
+
 \award{2020}{University of Cambridge Amateur composition competition}{\nth{2}
   place}
 
